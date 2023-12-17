@@ -3,29 +3,25 @@ const cors = require('cors')
 const morgan = require('morgan')
 const dotenv = require('dotenv')
 const connectDB = require('./config/connectDB')
-const app = express()
+
 require('colors')
 
 dotenv.config()
 
 connectDB()
 
+const app = express()
+
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(cors())
 
 // Router
-app.use('/api/v1/expense-type', require('./controllers/expenseType'))
+app.use('/api/v1', require('./routes/route'))
 
 
-
-
-
-
-const PORT = 8080 || process.env.PORT
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
-})
-
-
+    console.log(`Server is running on port ${PORT}`);
+});
