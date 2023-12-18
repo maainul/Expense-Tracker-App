@@ -33,6 +33,7 @@ const createExpType = async (req, res) => {
         // Validation log
         validationLog(validationResult)
 
+
         if (!validationResult.isValid) {
             return res.status(400).send({
                 success: false,
