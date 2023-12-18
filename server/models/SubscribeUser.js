@@ -30,6 +30,10 @@ const subscribeUserSchema = new mongoose.Schema({
         type: Boolean,
         default: true // Set default value to true
 
+    },
+    verificationCode: {
+        type: String,
+        require: [true, 'A verification Code is required to subscribe user']
     }
 })
 
