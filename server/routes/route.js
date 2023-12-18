@@ -12,6 +12,7 @@ const {
     unSubscribeUser,
     verifyUser
 } = require('../controllers/subscribeUser')
+const { createAboutUs, updateaboutUs } = require('../controllers/about')
 
 const router = express.Router()
 
@@ -30,5 +31,11 @@ router.delete('/expense/delete/:id', deleteExpense)
 router.post('/user/subscribe', subscribeUser)
 router.post('/user/verify', verifyUser)
 router.post('/user/unsubscribe', unSubscribeUser)
+
+
+// ABOUT PAGE OF SITE
+router.get('/about', createAboutUs)
+router.get('/about/:id', updateaboutUs)
+
 
 module.exports = router
