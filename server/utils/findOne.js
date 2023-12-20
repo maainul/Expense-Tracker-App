@@ -1,13 +1,14 @@
 
-const findOne = async (model, name) => {
+const findOne = async (model, field, value) => {
     try {
-        const dTyp = await model.findOne({ name: name });
+        const query = { [field]: value };
+        const dTyp = await model.findOne(query);
         console.log(`${model.modelName} found:`, dTyp);
 
         if (dTyp) {
-            return { exists: true, message: `${model.modelName} with this ${name} already exists` };
+            return { exists: true, message: `${model.modelName} with this ${value} already exists` };
         } else {
-            console.log(`${model.modelName} with name ${name} not Found`);
+            console.log(`${model.modelName} with name ${value} not Found`);
             return { exists: false, message: null };
         }
     } catch (error) {
