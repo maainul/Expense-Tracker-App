@@ -12,7 +12,15 @@ const {
     unSubscribeUser,
     verifyUser
 } = require('../controllers/subscribeUser')
-const { createAboutUs, updateaboutUs } = require('../controllers/about')
+const {
+    createAboutUs,
+    updateaboutUs
+} = require('../controllers/about')
+
+const {
+    updateUser,
+    createUser
+} = require('../controllers/user')
 
 const router = express.Router()
 
@@ -37,5 +45,9 @@ router.post('/user/unsubscribe', unSubscribeUser)
 router.get('/about', createAboutUs)
 router.get('/about/:id', updateaboutUs)
 
+
+// USER
+router.post('/user/create', createUser)
+router.put('/user/update/:id', updateUser)
 
 module.exports = router

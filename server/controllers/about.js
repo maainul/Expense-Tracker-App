@@ -67,7 +67,7 @@ const updateaboutUs = async (req, res) => {
 
         // Get Data By Id
         const aboutUsData = await AboutUsModel.findById({ _id: id })
-        const updatedAboutUs = await AboutUsModel.findByIdAndUpdate({ Iid: id }, {
+        const updatedAboutUs = await AboutUsModel.findByIdAndUpdate({ id }, {
             title: title || aboutUsData?.title,
             subtitle: subtitle || aboutUsData?.subtitle,
             description: description || aboutUsData?.description,

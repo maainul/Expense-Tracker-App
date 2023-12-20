@@ -2,7 +2,8 @@ const findOne = require("../utils/findOne");
 
 
 const MValidator = async (req, validationRules, model) => {
-    const data = req.body
+    // const data = req.body
+    const data = req
     const errors = [];
     for (const field in validationRules) {
         const value = data[field]
@@ -49,7 +50,7 @@ const MValidator = async (req, validationRules, model) => {
             const existsRule = rules.exists
             const len = existsRule && existsRule.length;
             if (len > 0 && existsRule[0]) {
-                const val = await findOne(model, value)
+                const val = await findOne(model, field, value)
                 if (val.exists) {
                     errors.push({ field, error: val.message || `${field} already exists` })
                 }
