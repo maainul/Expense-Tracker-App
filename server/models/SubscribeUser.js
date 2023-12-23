@@ -35,7 +35,7 @@ const subscribeUserSchema = new mongoose.Schema({
         type: String,
         require: [true, 'A verification Code is required to subscribe user']
     }
-})
+}, { timestamps: true })
 
 const SubscribeUserModel = mongoose.model('SubscribeUser', subscribeUserSchema)
 module.exports = SubscribeUserModel

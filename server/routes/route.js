@@ -1,17 +1,10 @@
 const express = require('express')
-const createExpType = require('../controllers/expenseType')
-const {
-    createExpense,
-    getAllExpense,
-    updateExpense,
-    deleteExpense,
-    getExpenseById,
-} = require('../controllers/expense')
-const {
-    subscribeUser,
-    unSubscribeUser,
-    verifyUser
-} = require('../controllers/subscribeUser')
+
+const { ctrl } = require('../controllers/analytics')
+const { exTypCtrl } = require('../controllers/expenseType')
+const { expCtrl } = require('../controllers/expense')
+const { subCtrl } = require('../controllers/subscribeUser')
+
 const {
     createAboutUs,
     updateaboutUs
@@ -22,24 +15,25 @@ const {
     createUser
 } = require('../controllers/user')
 
+
+
 const router = express.Router()
 
 // EXPENSE TYPE
-router.post('/expense-type/create', createExpType)
-
+router.post('/expense-type/create', exTypCtrl.createExpType)
+router.get('/expense-type/read/all', exTypCtrl.getAllExpType)
 
 // EXPENSE 
-router.post('/expense/create', createExpense)
-router.get('/expense/read/all', getAllExpense)
-router.get('/expense/read/:id', getExpenseById)
-router.put('/expense/update/:id', updateExpense)
-router.delete('/expense/delete/:id', deleteExpense)
+router.post('/expense/create', expCtrl.createExpense)
+router.post('/expense/read/all', expCtrl.getAllExpense)
+router.get('/expense/read/:id', expCtrl.getExpenseById)
+router.put('/expense/update/:id', expCtrl.updateExpense)
+router.delete('/expense/delete/:id', expCtrl.deleteExpense)
 
 // USER SUBSCRIPTION
-router.post('/user/subscribe', subscribeUser)
-router.post('/user/verify', verifyUser)
-router.post('/user/unsubscribe', unSubscribeUser)
-
+router.post('/user/subscribe', subCtrl.subscribeUser)
+router.post('/user/verify', subCtrl.verifyUser)
+router.post('/user/unsubscribe', subCtrl.unSubscribeUser)
 
 // ABOUT PAGE OF SITE
 router.get('/about', createAboutUs)
@@ -49,5 +43,30 @@ router.get('/about/:id', updateaboutUs)
 // USER
 router.post('/user/create', createUser)
 router.put('/user/update/:id', updateUser)
+
+
+// ANALYTICS
+
+// GET | Daily Expense List 
+router.get('/analytics/daily-expense', ctrl.getDailyExpense)
+
+// GET | Top 10 Expense List 
+router.get('/analytics/top-10-expense', ctrl.getTop10Expense)
+
+// Get  | Current Expense Weekly From Saturday to Friday
+router.get('/analytics/current-week-expense', ctrl.getCurrentWeekExpense)
+
+// Get | Current Month Expense
+router.get('/analytics/current-month-expense', ctrl.getCurrentMonthExpense)
+
+// GET | Current Year Expense
+router.get('/analytics/current-year-expense', ctrl.getCurrentyearExpense)
+
+// GET | Last 20 Expense
+router.get('/analytics/last-20-expense', ctrl.getLast20Expense)
+
+// GET | GET Category Wise Expense
+router.get('/analytics/credit-debit-expense', ctrl.getAllCreditAndDebit)
+
 
 module.exports = router
