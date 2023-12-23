@@ -1,6 +1,13 @@
 const MValidator = require('../validator/MValidator')
 const ExpenseModel = require('../models/Expense')
 const validationLog = require('../utils/validationLog')
+const save = require('../utils/saveUtils')
+const {
+    dateToString,
+    dateToTimestamp
+
+} = require('../utils/dateUtils');
+const { serv } = require('../service/expense');
 
 
 
@@ -11,7 +18,7 @@ const validationRules = {
         required: [true, 'Amount is required'],
     },
     date: {
-        type: 'date',
+        type: 'string',
         required: [true, 'Date is required']
     },
     description: {
@@ -33,11 +40,14 @@ const validationRules = {
 const createExpense = async (req, res) => {
     try {
         const { amount, date, description, category, expenseType } = req.body
+
         console.log(`Request data ==> \n ${JSON.stringify(req.body)}`)
+        const formattedDate = dateToString(new Date())
+        const date_sl = dateToTimestamp(new Date())
 
-        const validationResut = await MValidator(req, validationRules, ExpenseModel)
+        const validationResut = await MValidator(req.body, validationRules, ExpenseModel)
 
-        ValidationLog(validationResut)
+        validationLog(validationResut)
 
         if (!validationResut.isValid) {
             return res.status(400).send({
@@ -46,8 +56,7 @@ const createExpense = async (req, res) => {
                 errors: validationResut.errors
             })
         }
-
-        const expense = await save(ExpenseModel, { amount, date, description, category, expenseType })
+        const expense = await save(ExpenseModel, { amount, date: formattedDate, date_sl, description, category, expenseType })
         console.log(`Expense Type Added Successfully :\n ${expense}`)
 
         return res.status(201).send({
@@ -142,12 +151,13 @@ const deleteExpense = async (req, res) => {
     }
 };
 
-
+// GET ALL expenses with Custom Parameters
 const getAllExpense = async (req, res) => {
     try {
-        const expenses = await ExpenseModel.find()
-        console.log(`Expenses data ==> \n ${expenses}`);
+        const { sortOrder, category, expenseType, yearFilter, monthFilter } = req.body
+        const expenses = await serv.getCustExpService(category, sortOrder, expenseType, yearFilter, monthFilter)
 
+        console.log(`Expenses data ==> \n ${expenses}`);
         return res.status(200).send({
             success: true,
             message: 'Get all expense successfully',
@@ -196,12 +206,12 @@ const getExpenseById = async (req, res) => {
     }
 }
 
-
-
-module.exports = {
+const expCtrl = {
     createExpense,
     updateExpense,
     deleteExpense,
     getAllExpense,
     getExpenseById
 }
+
+module.exports = { expCtrl }
