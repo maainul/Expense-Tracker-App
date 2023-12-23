@@ -64,4 +64,33 @@ const createExpType = async (req, res) => {
     }
 };
 
-module.exports = createExpType;
+
+const getAllExpType = async (req, res) => {
+    try {
+        const getAllExTypes = await ExpenseTypeModel.find()
+        console.log(`Expenses data ==> \n ${getAllExTypes}`)
+
+        return res.status(200).send({
+            success: true,
+            message: 'Get all expense type successfully',
+            data: getAllExTypes
+        })
+    } catch (error) {
+        console.error('Error In Get Expense Type API.', error)
+        const status = error.status || 500
+
+        return res.status(status).send({
+            success: false,
+            message: 'Error In get all expense type',
+            error: error.message || error,
+        })
+    }
+}
+
+
+const exTypCtrl = {
+    createExpType,
+    getAllExpType
+}
+
+module.exports = { exTypCtrl };

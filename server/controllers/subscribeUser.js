@@ -171,5 +171,10 @@ const verifyUser = async (req, res) => {
     }
 }
 
+const subCtrl = {
+    subscribeUser,
+    unSubscribeUser,
+    verifyUser
+}
 
-module.exports = { subscribeUser, unSubscribeUser, verifyUser }
+module.exports = { subCtrl }
