@@ -1,5 +1,4 @@
 const express = require('express')
-const createExpType = require('../controllers/expenseType')
 const {
     createExpense,
     getAllExpense,
@@ -22,15 +21,20 @@ const {
     createUser
 } = require('../controllers/user')
 
+const expTypCtrl = require('../controllers/expenseType')
+
+
+
 const router = express.Router()
 
 // EXPENSE TYPE
-router.post('/expense-type/create', createExpType)
+router.post('/expense-type/create', expTypCtrl.createExpType)
+router.post('/expense-type/read/all', expTypCtrl.getAllExpType)
 
 
 // EXPENSE 
 router.post('/expense/create', createExpense)
-router.get('/expense/read/all', getAllExpense)
+router.post('/expense/read/all', getAllExpense)
 router.get('/expense/read/:id', getExpenseById)
 router.put('/expense/update/:id', updateExpense)
 router.delete('/expense/delete/:id', deleteExpense)

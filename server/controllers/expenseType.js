@@ -28,7 +28,7 @@ const createExpType = async (req, res) => {
         console.log(`Request data ===>\n name : ${name} icon :${icon}`.bgBlue);
 
         // Validation
-        const validationResult = await MValidator(req, validationRules, ExpenseTypeModel);
+        const validationResult = await MValidator(req.body, validationRules, ExpenseTypeModel);
 
         // Validation log
         validationLog(validationResult)
@@ -63,5 +63,33 @@ const createExpType = async (req, res) => {
         });
     }
 };
+const getAllExpType = async (req, res) => {
+    try {
+        const { sortOrder } = req.body;
+        // Set default sort order if not provided or unexpected
+        const expeTyps = await ExpenseTypeModel.find().sort({ createdAt: sortOrder === "asc" ? 1 : -1 });
 
-module.exports = createExpType;
+        console.log(`Expenses data ==> \n ${expeTyps}`);
+        return res.status(200).send({
+            success: true,
+            message: 'Get all expense Type successfully',
+            data: expeTyps
+        });
+    } catch (error) {
+        console.error('Error In Get Type Expense API:', error);
+        const status = error.status || 500;
+
+        return res.status(status).send({
+            success: false,
+            message: 'Error In get all expense Type',
+            error: error.message || error,
+        });
+    }
+};
+
+
+const exTypCtrl = {
+    createExpType, getAllExpType
+}
+
+module.exports = exTypCtrl;

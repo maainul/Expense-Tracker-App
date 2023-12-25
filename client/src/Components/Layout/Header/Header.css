@@ -1,0 +1,8 @@
+.topNavBar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(223, 195, 252);
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+}
