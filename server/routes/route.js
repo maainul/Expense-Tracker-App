@@ -6,6 +6,11 @@ const { expCtrl } = require('../controllers/expense')
 const { subCtrl } = require('../controllers/subscribeUser')
 
 const {
+    subscribeUser,
+    unSubscribeUser,
+    verifyUser
+} = require('../controllers/subscribeUser')
+const {
     createAboutUs,
     updateaboutUs
 } = require('../controllers/about')
@@ -14,6 +19,8 @@ const {
     updateUser,
     createUser
 } = require('../controllers/user')
+
+const expTypCtrl = require('../controllers/expenseType')
 
 
 
@@ -29,6 +36,7 @@ router.post('/expense/read/all', expCtrl.getAllExpense)
 router.get('/expense/read/:id', expCtrl.getExpenseById)
 router.put('/expense/update/:id', expCtrl.updateExpense)
 router.delete('/expense/delete/:id', expCtrl.deleteExpense)
+
 
 // USER SUBSCRIPTION
 router.post('/user/subscribe', subCtrl.subscribeUser)
