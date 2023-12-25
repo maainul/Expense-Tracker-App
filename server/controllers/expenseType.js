@@ -71,20 +71,20 @@ const getAllExpType = async (req, res) => {
         console.log(`Expenses data ==> \n ${getAllExTypes}`)
         return res.status(200).send({
             success: true,
-            message: 'Get all expense type successfully',
-            data: getAllExTypes
-        })
+            message: 'Get all expense Type successfully',
+            data: expeTyps
+        });
     } catch (error) {
-        console.error('Error In Get Expense Type API.', error)
-        const status = error.status || 500
+        console.error('Error In Get Type Expense API:', error);
+        const status = error.status || 500;
 
         return res.status(status).send({
             success: false,
-            message: 'Error In get all expense type',
+            message: 'Error In get all expense Type',
             error: error.message || error,
-        })
+        });
     }
-}
+};
 
 const exTypCtrl = {
     createExpType, getAllExpType

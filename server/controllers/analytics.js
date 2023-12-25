@@ -210,7 +210,7 @@ const getExpenseWithParameter = async (req, res) => {
     }
 }
 
-const ctrl = {
+const anaCtrl = {
     getTop10Expense,
     getDailyExpense,
     getCurrentyearExpense,
@@ -223,4 +223,4 @@ const ctrl = {
 }
 
 
-module.exports = { ctrl }
+module.exports = { anaCtrl }

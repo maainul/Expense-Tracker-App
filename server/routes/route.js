@@ -1,6 +1,12 @@
 const express = require('express')
 
-const { ctrl } = require('../controllers/analytics')
+const {
+    subscribeUser,
+    unSubscribeUser,
+    verifyUser
+} = require('../controllers/subscribeUser')
+
+const { anaCtrl } = require('../controllers/analytics')
 const { exTypCtrl } = require('../controllers/expenseType')
 const { expCtrl } = require('../controllers/expense')
 const { subCtrl } = require('../controllers/subscribeUser')
@@ -27,8 +33,16 @@ const expTypCtrl = require('../controllers/expenseType')
 const router = express.Router()
 
 // EXPENSE TYPE
-router.post('/expense-type/create', exTypCtrl.createExpType)
-router.get('/expense-type/read/all', exTypCtrl.getAllExpType)
+router.post('/expense-type/create', expTypCtrl.createExpType)
+router.post('/expense-type/read/all', expTypCtrl.getAllExpType)
+
+
+// EXPENSE 
+router.post('/expense/create', expCtrl.createExpense)
+router.post('/expense/read/all', expCtrl.getAllExpense)
+router.get('/expense/read/:id', expCtrl.getExpenseById)
+router.put('/expense/update/:id', expCtrl.updateExpense)
+router.delete('/expense/delete/:id', expCtrl.deleteExpense)
 
 // EXPENSE 
 router.post('/expense/create', expCtrl.createExpense)
@@ -56,25 +70,25 @@ router.put('/user/update/:id', updateUser)
 // ANALYTICS
 
 // GET | Daily Expense List 
-router.get('/analytics/daily-expense', ctrl.getDailyExpense)
+router.get('/analytics/daily-expense', anaCtrl.getDailyExpense)
 
 // GET | Top 10 Expense List 
-router.get('/analytics/top-10-expense', ctrl.getTop10Expense)
+router.get('/analytics/top-10-expense', anaCtrl.getTop10Expense)
 
 // Get  | Current Expense Weekly From Saturday to Friday
-router.get('/analytics/current-week-expense', ctrl.getCurrentWeekExpense)
+router.get('/analytics/current-week-expense', anaCtrl.getCurrentWeekExpense)
 
 // Get | Current Month Expense
-router.get('/analytics/current-month-expense', ctrl.getCurrentMonthExpense)
+router.get('/analytics/current-month-expense', anaCtrl.getCurrentMonthExpense)
 
 // GET | Current Year Expense
-router.get('/analytics/current-year-expense', ctrl.getCurrentyearExpense)
+router.get('/analytics/current-year-expense', anaCtrl.getCurrentyearExpense)
 
 // GET | Last 20 Expense
-router.get('/analytics/last-20-expense', ctrl.getLast20Expense)
+router.get('/analytics/last-20-expense', anaCtrl.getLast20Expense)
 
 // GET | GET Category Wise Expense
-router.get('/analytics/credit-debit-expense', ctrl.getAllCreditAndDebit)
+router.get('/analytics/credit-debit-expense', anaCtrl.getAllCreditAndDebit)
 
 
 module.exports = router
