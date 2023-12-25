@@ -2,14 +2,33 @@ import '../ExpeseTypes/ExpenseTypes.css'
 import useForm from '../../Helper/CustomHooks/useForm';
 import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
 import useCustomEffect from './../../Helper/CustomHooks/useCustomEffect';
+import Table from '../../Components/Table/Table';
+import SubmitBtn from './../../Components/SubmitBtn/SubmitBtn';
 
 const ExpenseTypes = () => {
+
+    const columns = [
+        { key: "icon", label: "Icon" },
+        { key: "name", label: "Name" },
+    ]
+
     // Get All Expense Type using Custom Hooks : useCustomEffect
-    const { res, error, getResponse } = useCustomEffect('http://localhost:8081/api/v1/expense-type/read/all')
+    const { response, error } = useCustomEffect('http://localhost:8081/api/v1/expense-type/read/all')
     const { formData, loading, handleChange, handleSubmit } = useForm({});
     if (error) {
         return <div>Error : {error.message}</div>
     }
+
+
+    const handleEdit = (itemId) => {
+        // Implement your logic for handling the edit action
+        console.log(`Editing item with ID: ${itemId}`);
+    };
+
+    const handleDelete = (itemId) => {
+        // Implement your logic for handling the delete action
+        console.log(`Deleting item with ID: ${itemId}`);
+    };
 
     // Submit Form Data Useing Custom Hooks useForm
     const onSubmit = (e) => {
@@ -19,27 +38,20 @@ const ExpenseTypes = () => {
 
     return (
         <MainLayout>
-            <button onClick={getResponse} >Fetch Data</button>
-            <pre>{JSON.stringify(res, null, 2)}</pre>
-
-            <div className='table-div'>
-                <table className='table-design'>
-                    <thead>
-                        <tr>
-                            <th>Header1</th>
-                            <th>Header2</th>
-                            <th>Header3</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>td1</td>
-                            <td>td2</td>
-                            <td>td3</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+            {/* Table Data */}
+            <div>
+                <h2>Expense Type Data</h2>
+                {response.success ? (
+                    <Table
+                        columns={columns}
+                        data={response.data}
+                        actions
+                        onEdit={handleEdit}
+                        onDelete={handleDelete}
+                    />
+                ) : (
+                    <p>Error fetching expense data: {response.message}</p>
+                )}
             </div>
 
             <div>Expense Types</div>
@@ -59,11 +71,8 @@ const ExpenseTypes = () => {
                     value={formData.icon || ''}
                     onChange={handleChange}
                 />
-                <button type='submit'>
-                    Submit
-                </button>
+                <SubmitBtn title={'Submit'} />
             </form>
-
         </MainLayout>
 
     )

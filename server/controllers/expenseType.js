@@ -68,14 +68,14 @@ const getAllExpType = async (req, res) => {
         const { sortOrder } = req.body;
         // Set default sort order if not provided or unexpected
         const expeTyps = await ExpenseTypeModel.find().sort({ createdAt: sortOrder === "asc" ? 1 : -1 });
-        console.log(`Expenses data ==> \n ${getAllExTypes}`)
+        console.log(`Expense Type data ==> \n ${expeTyps}`)
         return res.status(200).send({
             success: true,
             message: 'Get all expense Type successfully',
             data: expeTyps
         });
     } catch (error) {
-        console.error('Error In Get Type Expense API:', error);
+        console.error('Error In Get Expense Type API:', error);
         const status = error.status || 500;
 
         return res.status(status).send({
