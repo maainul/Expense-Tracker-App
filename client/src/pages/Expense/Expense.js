@@ -11,7 +11,9 @@ const Expense = () => {
         { key: "date", label: "Date" },
         { key: "description", label: "Description" },
         { key: "category", label: "Category" },
-        { key: "expenseType", label: "Expense Type" },
+        { key: "expenseTypeName", label: "Expense Name" },
+        { key: "expenseTypeIcon", label: "Icon" },
+
     ]
 
     // Get All Expense Data

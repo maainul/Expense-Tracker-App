@@ -156,8 +156,8 @@ const getAllExpense = async (req, res) => {
     try {
         const { sortOrder, category, expenseType, yearFilter, monthFilter } = req.body
         const expenses = await serv.getCustExpService(category, sortOrder, expenseType, yearFilter, monthFilter)
-
         console.log(`Expenses data ==> \n ${expenses}`);
+
         return res.status(200).send({
             success: true,
             message: 'Get all expense successfully',
