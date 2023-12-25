@@ -12,11 +12,6 @@ const { expCtrl } = require('../controllers/expense')
 const { subCtrl } = require('../controllers/subscribeUser')
 
 const {
-    subscribeUser,
-    unSubscribeUser,
-    verifyUser
-} = require('../controllers/subscribeUser')
-const {
     createAboutUs,
     updateaboutUs
 } = require('../controllers/about')
