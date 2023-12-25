@@ -5,9 +5,13 @@ const expenseSchema = new mongoose.Schema({
     amount: {
         type: Number,
         required: [true, 'Amount is required'],
+        index: true
+    },
+    date_sl: {
+        type: Number,
     },
     date: {
-        type: Date,
+        type: String,
         required: [true, 'Date is required']
     },
     description: {
@@ -24,6 +28,6 @@ const expenseSchema = new mongoose.Schema({
         required: true,
     },
 
-}, { timeseries: true })
+}, { timestamps: true })
 
 module.exports = mongoose.model('Expense', expenseSchema)

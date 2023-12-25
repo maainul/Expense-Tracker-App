@@ -89,7 +89,8 @@ const getAllExpType = async (req, res) => {
 
 
 const exTypCtrl = {
-    createExpType, getAllExpType
+    createExpType,
+    getAllExpType
 }
 
-module.exports = exTypCtrl;
+module.exports = { exTypCtrl };

@@ -1,5 +1,6 @@
 import React from 'react'
 import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
+<<<<<<< HEAD
 // import useCustomEffect from '../../Helper/CustomHooks/useEffect'
 import useForm from '../../Helper/CustomHooks/useForm'
 
@@ -59,9 +60,19 @@ const Expense = () => {
                 />
                 <button type='submit'>Submit</button>
             </form>
+=======
+
+const Expense = () => {
+    return (
+        <MainLayout>
+            <div>Expense</div>
+>>>>>>> a109cdf54302deef280990ceb12c73f954035289
         </MainLayout>
     )
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a109cdf54302deef280990ceb12c73f954035289
 export default Expense

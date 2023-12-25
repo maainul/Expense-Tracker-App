@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import '../ExpeseTypes/ExpenseTypes.css'
 import useForm from '../../Helper/CustomHooks/useForm';
 import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
@@ -69,6 +70,16 @@ const ExpenseTypes = () => {
             </form>
 
         </MainLayout>
+=======
+import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
+
+const ExpenseTypes = () => {
+    return (
+        <MainLayout>
+            <div>ExpenseTypes</div>
+        </MainLayout>
+
+>>>>>>> a109cdf54302deef280990ceb12c73f954035289
     )
 }
 
