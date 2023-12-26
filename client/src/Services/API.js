@@ -1,5 +1,6 @@
 
 // EXPENSE TYPE
+const C_Exp_TYP_URL = 'http://localhost:8081/api/v1/expense-type/create'
 const C_EX_TYP = '/expense-type/create'
 const R_EX_TYP = '/expense-type/read/all'
 
@@ -26,17 +27,23 @@ const C_USR = '/user/create'
 const U_USR = '/user/update/:id'
 
 const API = {
+    C_Exp_TYP_URL,
     C_EX_TYP,
+    R_EX_TYP,
+
     C_EXP,
     R_EXP_ALL,
     R_SINGLE_EXP,
     U_SINGLE_EXP,
     D_SINGLE_EXP,
+
     R_US,
     R_US_VER,
     U_UNSUB,
+
     ABOUT,
     R_SINGLE_ABOUT,
+
     C_USR,
     U_USR,
 }

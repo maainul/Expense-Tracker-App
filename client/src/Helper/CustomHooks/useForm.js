@@ -1,22 +1,26 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-const useForm = (initialState) => {
-    const [formData, setFormData] = useState(initialState);
+const useForm = ({ onSubmitURL }) => {
+    const [formData, setFormData] = useState({});
     const [loading, setLoading] = useState(false);
 
+    // Handle Change of Form Data
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
+        const { id, value } = e.target
+        setFormData({ ...formData, [id]: value });
     };
 
-    const handleSubmit = async (url) => {
+    // Save Data 
+    const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
             setLoading(true);
-            const result = await axios.post(url, { ...formData });
-            console.log(`Register Successful ${result}`);
+            const result = await axios.post(onSubmitURL, { ...formData });
+            console.log(`Data added Successfully ${result.data}`);
             setFormData({});
         } catch (error) {
-            console.log(`Invalid Transaction : ${error}`);
+            console.log(`Invalid Request : ${error}`);
         } finally {
             setLoading(false);
         }

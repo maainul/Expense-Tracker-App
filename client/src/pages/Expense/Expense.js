@@ -11,8 +11,8 @@ const Expense = () => {
         { key: "date", label: "Date" },
         { key: "description", label: "Description" },
         { key: "category", label: "Category" },
-        { key: "expenseTypeName", label: "Expense Name" },
-        { key: "expenseTypeIcon", label: "Icon" },
+        { key: "expenseType.name", label: "Expense Name" },
+        { key: "expenseType.icon", label: "Icon" },
 
     ]
 

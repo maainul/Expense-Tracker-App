@@ -28,20 +28,9 @@ const Table = ({
                         <tr key={item._id}>
                             {columns.map((column) => (
                                 <td key={`${item._id} - ${column.key}`}>
-                                    {column.key === 'expenseTypeName' ? (
-                                        // Special handling for 'expenseType' column
-                                        <>
-                                            <div>{item.expenseType.name}</div>
-                                        </>
-                                    ) : (
-                                        // Render other columns as usual
-                                        item[column.key]
-                                    )}
-                                    {column.key === 'expenseTypeIcon' ? (
-                                        // Special handling for 'expenseType' column
-                                        <>
-                                            <div>{item.expenseType.icon}</div>
-                                        </>
+                                    {column.key.startsWith('expenseType.') ? (
+                                        // Special handling for 'expenseType' properties
+                                        item.expenseType[column.key.split('.')[1]]
                                     ) : (
                                         // Render other columns as usual
                                         item[column.key]
