@@ -3,14 +3,10 @@ import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
 import useCustomEffect from './../../Helper/CustomHooks/useCustomEffect';
 import Table from '../../Components/Table/Table';
 import Form from '../../Components/Form/Form';
-// import { useNavigate } from 'react-router-dom';
 import API from './../../Services/API';
 
 
 const ExpenseTypes = () => {
-
-    // API : SAVE DATA IN DB
-
     // Get All Expense Type using Custom Hooks : useCustomEffect
     const { loading, response, error } = useCustomEffect('http://localhost:8081/api/v1/expense-type/read/all')
     if (error) {
