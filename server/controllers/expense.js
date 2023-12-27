@@ -40,11 +40,9 @@ const validationRules = {
 const createExpense = async (req, res) => {
     try {
         const { amount, date, description, category, expenseType } = req.body
-
         console.log(`Request data ==> \n ${JSON.stringify(req.body)}`)
-        const formattedDate = dateToString(new Date())
-        const date_sl = dateToTimestamp(new Date())
-
+        const formattedDate = dateToString(new Date(date))
+        const date_sl = dateToTimestamp(new Date(formattedDate))
         const validationResut = await MValidator(req.body, validationRules, ExpenseModel)
 
         validationLog(validationResut)

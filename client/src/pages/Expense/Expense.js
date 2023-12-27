@@ -6,22 +6,50 @@ import '../../Components/Table/Table.css'
 
 const Expense = () => {
 
-    const [loading, setLoading] = useState(false)
-    const [expense, setExpense] = useState({})
-    const [expenseTypes, setExpenseTypes] = useState([]);
+    const [amount, setAmount] = useState('')
+    const [date, setDate] = useState('')
+    const [category, setCategory] = useState('')
+    const [expenseType, setExpenseType] = useState('')
+    const [description, setDescription] = useState('')
     const [expenseList, setExpenseList] = useState([])
+    const [expenseTypeList, setExpenseTypeList] = useState([])
+
+    // Handle Form Change
+    const handleChange = (e) => {
+        const { id, value } = e.target
+        const parsedValue = id === 'amount' ? parseFloat(value) : value
+
+        //update stated based on the field id
+        switch (id) {
+            case 'amount':
+                setAmount(parsedValue);
+                break;
+            case 'date':
+                setDate(parsedValue);
+                break;
+            case 'category':
+                setCategory(parsedValue);
+                break;
+            case 'expenseType':
+                setExpenseType(parsedValue);
+                break;
+            case 'description':
+                setDescription(parsedValue);
+                break;
+            default:
+                break;
+        }
+    }
 
 
+    // List of All expense
     useEffect(() => {
         const getAllExpenses = async () => {
             try {
-                setLoading(true)
+                // setLoading(true)
                 const res = await axios.post(API.R_EXP_ALL_URL)
-                console.log("########################################")
-                console.log(res.data.data)
-                console.log("########################################")
                 setExpenseList(res.data.data)
-                setLoading(false)
+                // setLoading(false)
             } catch (error) {
                 console.log(`Fetch expense data failed : ${error}`)
             }
@@ -29,12 +57,12 @@ const Expense = () => {
         getAllExpenses()
     }, [])
 
-
+    // List of All expense Types
     useEffect(() => {
         const fetchExpenseTypes = async () => {
             try {
                 const response = await axios.post(API.R_EX_TYP_URL)
-                setExpenseTypes(response.data.data)
+                setExpenseTypeList(response.data.data)
             } catch (error) {
                 console.log(`Error fetching expense types : ${error}`)
             }
@@ -42,23 +70,24 @@ const Expense = () => {
         fetchExpenseTypes();
     }, [])
 
-    const handleChange = (e) => {
-        const { id, value } = e.target
-        const parsedValue = id === 'amount' ? parseFloat(value) : value
-        console.log(id + " -----" + value)
-        setExpense({ ...expense, [id]: parsedValue })
-    }
 
+    // Submit Form Data
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            setLoading(true)
-            const { response } = await axios.post(API.C_EXP_URL, { ...expense })
+            // setLoading(true)
+            const { response } = await axios.post(API.C_EXP_URL, {
+                amount,
+                date,
+                description,
+                category,
+                expenseType
+            })
             console.log(`Response Data : ${response}`)
             console.log(`Register Successfully.....`)
-            setLoading(false)
+            // setLoading(false)
         } catch (error) {
-            setLoading(false)
+            // setLoading(false)
             console.log(`Invalid Transaction : ${error}`)
         }
     }
@@ -82,7 +111,7 @@ const Expense = () => {
                     </thead>
                     <tbody>
                         {expenseList.map((exl) => (
-                            <tr>
+                            <tr key={exl.id}>
                                 <td>{exl.amount}</td>
                                 <td>{exl.date}</td>
                                 <td>{exl.category}</td>
@@ -100,6 +129,8 @@ const Expense = () => {
                     <input
                         type="number"
                         id="amount"
+                        step="0.01"
+                        value={amount}
                         placeholder="Enter Amount"
                         onChange={handleChange}
                     /><br />
@@ -107,25 +138,35 @@ const Expense = () => {
                     <input
                         type="date"
                         id="date"
+                        value={date}
                         placeholder="Enter Date"
                         onChange={handleChange}
                     /><br />
-                    <label htmlFor="description">Description</label><br />
-                    <textarea name="description" rows="10" cols="30"></textarea><br />
+
                     <label htmlFor="category">Category</label><br />
-                    <select id="category" onChange={handleChange}>
+                    <select id="category" value={category} onChange={handleChange}>
                         <option value="">-----</option>
                         <option value="debit">Expense</option>
                         <option value="credit">Income</option>
                     </select><br />
 
                     <label htmlFor="expenseType">Expense Type:</label><br />
-                    <select id="expenseType" name="expenseType" onChange={handleChange}>
+                    <select id="expenseType" value={expenseType} onChange={handleChange}>
                         <option value="">-----</option>
-                        {expenseTypes.map((exp) => (
+                        {expenseTypeList.map((exp) => (
                             <option key={exp.id} value={exp._id}>{exp.name}</option>
                         ))}
-                    </select><br /><br />
+                    </select><br />
+
+                    <label htmlFor="description">Description</label><br />
+                    <textarea
+                        rows="10"
+                        cols="30"
+                        id="description"
+                        value={description}
+                        onChange={handleChange}
+                        placeholder='Enter Description (if needed)'
+                    /><br /><br />
                     <input type="submit" defaultValue="Submit" />
                 </form>
             </div>
