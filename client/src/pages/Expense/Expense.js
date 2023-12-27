@@ -76,14 +76,24 @@ const Expense = () => {
         e.preventDefault();
         try {
             // setLoading(true)
-            const { response } = await axios.post(API.C_EXP_URL, {
+            const response = await axios.post(API.C_EXP_URL, {
                 amount,
                 date,
                 description,
                 category,
                 expenseType
             })
-            console.log(`Response Data : ${response}`)
+            // Fetch the complete expense type details separatley
+            const expenseTypeResponse = await axios.post(API.R_EX_TYP_URL, {
+                expenseTypeId: response.expenseType
+            })
+
+            console.log("#######################################")
+            console.log(response.data.data)
+            console.log("#######################################")
+
+            setExpenseList([...expenseList, { ...response.data.data, expenseType: expenseTypeResponse.data }])
+            console.log(`Response Data : ${response.data.data}`)
             console.log(`Register Successfully.....`)
             // setLoading(false)
         } catch (error) {

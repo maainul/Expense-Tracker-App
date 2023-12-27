@@ -1,14 +1,7 @@
 const express = require('express')
-
-const {
-    subscribeUser,
-    unSubscribeUser,
-    verifyUser
-} = require('../controllers/subscribeUser')
-
-const { anaCtrl } = require('../controllers/analytics')
-const { exTypCtrl } = require('../controllers/expenseType')
 const { expCtrl } = require('../controllers/expense')
+const exTypCtrl = require('../controllers/expenseType')
+const { anaCtrl } = require('../controllers/analytics')
 const { subCtrl } = require('../controllers/subscribeUser')
 
 const {
@@ -21,15 +14,13 @@ const {
     createUser
 } = require('../controllers/user')
 
-const expTypCtrl = require('../controllers/expenseType')
-
-
 
 const router = express.Router()
 
 // EXPENSE TYPE
-router.post('/expense-type/create', expTypCtrl.createExpType)
-router.post('/expense-type/read/all', expTypCtrl.getAllExpType)
+router.post('/expense-type/create', exTypCtrl.createExpType)
+router.post('/expense-type/read/all', exTypCtrl.getAllExpType)
+router.get('/expense-type/read/:id', exTypCtrl.getExpTypeById)
 
 
 // EXPENSE 
