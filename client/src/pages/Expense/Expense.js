@@ -86,7 +86,7 @@ const Expense = () => {
                 // Fetch the complete expense type details separatley
                 const exTres = await axios.get('http://localhost:8081/api/v1/expense-type/read/', { params: { id: response.data.data.expenseType } });
                 setExpenseList([...expenseList, { ...response.data.data, expenseType: exTres.data.data }])
-                console.log(`Register Successfully.....`)
+                console.log(`Expense Successfully.....`)
                 // set State to 0
                 setAmount('')
                 setDate('')
@@ -95,7 +95,7 @@ const Expense = () => {
                 setDescription('')
             }
         } catch (error) {
-            console.log(`Invalid Transaction : ${error}`)
+            console.log(`Invalid Expense : ${error}`)
         }
     }
 

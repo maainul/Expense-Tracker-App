@@ -3,7 +3,6 @@ const save = require("../utils/saveUtils");
 const validationLog = require("../utils/validationLog");
 const MValidator = require("../validator/MValidator");
 
-
 // Validation Rules
 const validationRules = {
     name: {
@@ -16,10 +15,9 @@ const validationRules = {
     icon: {
         type: 'string',
         required: true,
-        min: 1
+        min: 5
     },
 }
-
 
 
 const createExpType = async (req, res) => {
@@ -33,9 +31,8 @@ const createExpType = async (req, res) => {
         // Validation log
         validationLog(validationResult)
 
-
         if (!validationResult.isValid) {
-            return res.status(400).send({
+            return res.status(201).send({
                 success: false,
                 message: 'Validation Failed',
                 errors: validationResult.errors
@@ -63,6 +60,7 @@ const createExpType = async (req, res) => {
         });
     }
 };
+
 const getAllExpType = async (req, res) => {
     try {
         const { sortOrder } = req.body;
