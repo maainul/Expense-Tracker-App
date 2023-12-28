@@ -1,7 +1,6 @@
 
 // EXPENSE TYPE
 const C_Exp_TYP_URL = 'http://localhost:8081/api/v1/expense-type/create'
-const C_EX_TYP = '/expense-type/create'
 const R_EX_TYP_URL = 'http://localhost:8081/api/v1/expense-type/read/all'
 
 // EXPENSE 
@@ -26,9 +25,11 @@ const R_SINGLE_ABOUT = '/about/:id'
 const C_USR = '/user/create'
 const U_USR = '/user/update/:id'
 
+// Home 
+const HOME_URL = 'http://localhost:8081/api/v1/home'
+
 const API = {
     C_Exp_TYP_URL,
-    C_EX_TYP,
     R_EX_TYP_URL,
 
     C_EXP_URL,
@@ -46,6 +47,8 @@ const API = {
 
     C_USR,
     U_USR,
+
+    HOME_URL
 }
 
 export default API
