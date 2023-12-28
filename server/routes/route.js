@@ -20,7 +20,7 @@ const router = express.Router()
 // EXPENSE TYPE
 router.post('/expense-type/create', exTypCtrl.createExpType)
 router.post('/expense-type/read/all', exTypCtrl.getAllExpType)
-router.get('/expense-type/read/:id', exTypCtrl.getExpTypeById)
+router.get('/expense-type/read/', exTypCtrl.getExpTypeById)
 
 
 // EXPENSE 
@@ -29,14 +29,6 @@ router.post('/expense/read/all', expCtrl.getAllExpense)
 router.get('/expense/read/:id', expCtrl.getExpenseById)
 router.put('/expense/update/:id', expCtrl.updateExpense)
 router.delete('/expense/delete/:id', expCtrl.deleteExpense)
-
-// EXPENSE 
-router.post('/expense/create', expCtrl.createExpense)
-router.post('/expense/read/all', expCtrl.getAllExpense)
-router.get('/expense/read/:id', expCtrl.getExpenseById)
-router.put('/expense/update/:id', expCtrl.updateExpense)
-router.delete('/expense/delete/:id', expCtrl.deleteExpense)
-
 
 // USER SUBSCRIPTION
 router.post('/user/subscribe', subCtrl.subscribeUser)

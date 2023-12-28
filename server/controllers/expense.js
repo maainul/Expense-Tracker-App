@@ -48,12 +48,13 @@ const createExpense = async (req, res) => {
         validationLog(validationResut)
 
         if (!validationResut.isValid) {
-            return res.status(400).send({
+            return res.status(201).send({
                 success: false,
                 message: 'Validation Failed',
                 errors: validationResut.errors
             })
         }
+
         const expense = await save(ExpenseModel, { amount, date: formattedDate, date_sl, description, category, expenseType })
         console.log(`Expense Type Added Successfully :\n ${expense}`)
 

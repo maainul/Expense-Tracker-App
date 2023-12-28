@@ -10,7 +10,7 @@ const MValidator = async (req, validationRules, model) => {
         const rules = validationRules[field]
 
         // Check if the field is required
-        if (rules.required && (value === undefined || value === null)) {
+        if (rules.required && (value === undefined || value === null || value === "")) {
             errors.push({ field, error: `${field} is required` })
         } else if (value !== undefined && value !== null) {
 

@@ -7,7 +7,7 @@ const R_EX_TYP_URL = 'http://localhost:8081/api/v1/expense-type/read/all'
 // EXPENSE 
 const C_EXP_URL = 'http://localhost:8081/api/v1/expense/create'
 const R_EXP_ALL_URL = 'http://localhost:8081/api/v1/expense/read/all'
-const R_SINGLE_EXP = '/expense/read/:id'
+const R_SINGLE_EXP_URL = 'http://localhost:8081/api/v1/expense/read/:id'
 const U_SINGLE_EXP = '/expense/update/:id'
 const D_SINGLE_EXP = '/expense/delete/:id'
 
@@ -33,7 +33,7 @@ const API = {
 
     C_EXP_URL,
     R_EXP_ALL_URL,
-    R_SINGLE_EXP,
+    R_SINGLE_EXP_URL,
     U_SINGLE_EXP,
     D_SINGLE_EXP,
 

@@ -5,7 +5,6 @@ import API from './../../Services/API';
 import '../../Components/Table/Table.css'
 
 const Expense = () => {
-
     const [amount, setAmount] = useState('')
     const [date, setDate] = useState('')
     const [category, setCategory] = useState('')
@@ -13,6 +12,7 @@ const Expense = () => {
     const [description, setDescription] = useState('')
     const [expenseList, setExpenseList] = useState([])
     const [expenseTypeList, setExpenseTypeList] = useState([])
+    const [errors, setErrors] = useState([])
 
     // Handle Form Change
     const handleChange = (e) => {
@@ -41,15 +41,12 @@ const Expense = () => {
         }
     }
 
-
     // List of All expense
     useEffect(() => {
         const getAllExpenses = async () => {
             try {
-                // setLoading(true)
                 const res = await axios.post(API.R_EXP_ALL_URL)
                 setExpenseList(res.data.data)
-                // setLoading(false)
             } catch (error) {
                 console.log(`Fetch expense data failed : ${error}`)
             }
@@ -70,12 +67,10 @@ const Expense = () => {
         fetchExpenseTypes();
     }, [])
 
-
     // Submit Form Data
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // setLoading(true)
             const response = await axios.post(API.C_EXP_URL, {
                 amount,
                 date,
@@ -83,21 +78,23 @@ const Expense = () => {
                 category,
                 expenseType
             })
-            // Fetch the complete expense type details separatley
-            const expenseTypeResponse = await axios.post(API.R_EX_TYP_URL, {
-                expenseTypeId: response.expenseType
-            })
 
-            console.log("#######################################")
-            console.log(response.data.data)
-            console.log("#######################################")
-
-            setExpenseList([...expenseList, { ...response.data.data, expenseType: expenseTypeResponse.data }])
-            console.log(`Response Data : ${response.data.data}`)
-            console.log(`Register Successfully.....`)
-            // setLoading(false)
+            if (response.data.errors) {
+                setErrors(response.data.errors)
+            } else {
+                setErrors([])
+                // Fetch the complete expense type details separatley
+                const exTres = await axios.get('http://localhost:8081/api/v1/expense-type/read/', { params: { id: response.data.data.expenseType } });
+                setExpenseList([...expenseList, { ...response.data.data, expenseType: exTres.data.data }])
+                console.log(`Register Successfully.....`)
+                // set State to 0
+                setAmount('')
+                setDate('')
+                setCategory('')
+                setExpenseType('')
+                setDescription('')
+            }
         } catch (error) {
-            // setLoading(false)
             console.log(`Invalid Transaction : ${error}`)
         }
     }
@@ -117,6 +114,7 @@ const Expense = () => {
                             <th>Expense Name</th>
                             <th>Icons</th>
                             <th>Description</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -128,6 +126,10 @@ const Expense = () => {
                                 <td>{exl.expenseType.name}</td>
                                 <td>{exl.expenseType.icon}</td>
                                 <td>{exl.description}</td>
+                                <td>
+                                    <button value={exl.id}>Edit</button>
+                                    <button value={exl.id}>Delete</button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
@@ -135,48 +137,59 @@ const Expense = () => {
             </div>
             <div>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="amount">Amount:</label><br />
-                    <input
-                        type="number"
-                        id="amount"
-                        step="0.01"
-                        value={amount}
-                        placeholder="Enter Amount"
-                        onChange={handleChange}
-                    /><br />
-                    <label htmlFor="date">Date:</label><br />
-                    <input
-                        type="date"
-                        id="date"
-                        value={date}
-                        placeholder="Enter Date"
-                        onChange={handleChange}
-                    /><br />
-
-                    <label htmlFor="category">Category</label><br />
-                    <select id="category" value={category} onChange={handleChange}>
-                        <option value="">-----</option>
-                        <option value="debit">Expense</option>
-                        <option value="credit">Income</option>
-                    </select><br />
-
-                    <label htmlFor="expenseType">Expense Type:</label><br />
-                    <select id="expenseType" value={expenseType} onChange={handleChange}>
-                        <option value="">-----</option>
-                        {expenseTypeList.map((exp) => (
-                            <option key={exp.id} value={exp._id}>{exp.name}</option>
-                        ))}
-                    </select><br />
-
-                    <label htmlFor="description">Description</label><br />
-                    <textarea
-                        rows="10"
-                        cols="30"
-                        id="description"
-                        value={description}
-                        onChange={handleChange}
-                        placeholder='Enter Description (if needed)'
-                    /><br /><br />
+                    <div>
+                        <label htmlFor="amount">Amount:</label><br />
+                        <input
+                            type="number"
+                            id="amount"
+                            step="0.01"
+                            value={amount}
+                            placeholder="Enter Amount"
+                            onChange={handleChange}
+                        /><br />
+                        {errors.map((error) => error.field === 'amount' && <div key={error.field} style={{ color: 'red' }}>{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor="date">Date:</label><br />
+                        <input
+                            type="date"
+                            id="date"
+                            value={date}
+                            placeholder="Enter Date"
+                            onChange={handleChange}
+                        /><br />
+                        {errors.map((error) => error.field === 'date' && <div key={error.field} style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor="category">Category</label><br />
+                        <select id="category" value={category} onChange={handleChange}>
+                            <option value="">-----</option>
+                            <option value="debit">Expense</option>
+                            <option value="credit">Income</option>
+                        </select><br />
+                        {errors.map((error) => error.field === 'category' && <div key={error.field} style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor="expenseType">Expense Type:</label><br />
+                        <select id="expenseType" value={expenseType} onChange={handleChange}>
+                            <option value="">-----</option>
+                            {expenseTypeList.map((exp) => (
+                                <option key={exp.id} value={exp._id}>{exp.name}</option>
+                            ))}
+                        </select><br />
+                        {errors.map((error) => error.field === 'expenseType' && <div key={error.field} style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor="description">Description</label><br />
+                        <textarea
+                            rows="10"
+                            cols="30"
+                            id="description"
+                            value={description}
+                            onChange={handleChange}
+                            placeholder='Enter Description ( if needed )'
+                        /><br /><br />
+                    </div>
                     <input type="submit" defaultValue="Submit" />
                 </form>
             </div>

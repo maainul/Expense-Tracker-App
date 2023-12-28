@@ -89,17 +89,9 @@ const getAllExpType = async (req, res) => {
 
 const getExpTypeById = async (req, res) => {
     try {
-        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-        // console.log(id)
-        // console.log(expeTyps)
-        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-        const id = req.parms.id
+        const id = req.query.id;
         // Set default sort order if not provided or unexpected
         const expeTyps = await ExpenseTypeModel.findById(id)
-        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-        console.log(id)
-        console.log(expeTyps)
-        console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
         console.log(`Expense Type data ==> \n ${expeTyps}`)
         return res.status(200).send({
             success: true,

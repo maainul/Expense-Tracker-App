@@ -1,6 +1,15 @@
-const dateToString = (date) => `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+const dateToString = (date) => {
+    if (date !== undefined && date !== null && date !== '' && !isNaN(date) && date instanceof Date) {
+        return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+    }
+}
 
-const dateToTimestamp = (date) => date.getTime()
+const dateToTimestamp = (date) => {
+    if (date !== undefined && date !== null && date !== '' && !isNaN(date) && date instanceof Date) {
+        return date.getTime()
+    }
+
+}
 
 const timestampToDate = (timestamp) => new Date(timestamp)
 
