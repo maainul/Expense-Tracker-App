@@ -1,0 +1,18 @@
+
+
+
+
+// Get  | Current Expense Weekly From Saturday to Friday
+router.get('/analytics/current-week-expense', anaCtrl.getCurrentWeekExpense)
+
+// Get | Current Month Expense
+router.get('/analytics/current-month-expense', anaCtrl.getCurrentMonthExpense)
+
+// GET | Current Year Expense
+router.get('/analytics/current-year-expense', anaCtrl.getCurrentyearExpense)
+
+// GET | Last 20 Expense
+router.get('/analytics/last-20-expense', anaCtrl.getLast20Expense)
+
+// GET | GET Category Wise Expense
+router.get('/analytics/credit-debit-expense', anaCtrl.getAllCreditAndDebit)

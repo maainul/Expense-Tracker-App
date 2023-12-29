@@ -15,11 +15,9 @@ const R_US = '/user/subscribe'
 const R_US_VER = '/user/verify'
 const U_UNSUB = '/user/unsubscribe'
 
-
 // ABOUT PAGE OF SITE
 const ABOUT = '/about'
 const R_SINGLE_ABOUT = '/about/:id'
-
 
 // USER
 const C_USR = '/user/create'
@@ -27,6 +25,14 @@ const U_USR = '/user/update/:id'
 
 // Home 
 const HOME_URL = 'http://localhost:8081/api/v1/home'
+
+// ANALYTICS
+const TOP_10_EXP_URL = 'http://localhost:8081/api/v1/analytics/top-10-expense'
+const DAILY_EXP_URL = 'http://localhost:8081/api/v1/analytics/daily-expense'
+const CUR_WEEK_EXP_URL = 'http://localhost:8081/api/v1/analytics/current-week-expense'
+const CUR_MONTH_EXP_URL = 'http://localhost:8081/api/v1/analytics/current-month-expense'
+const CUR_YEAR_EXP_URL = 'http://localhost:8081/api/v1/analytics/current-year-expense'
+const CAT_WISE_EXP_URL = 'http://localhost:8081/api/v1/analytics/credit-debit-expense'
 
 const API = {
     C_Exp_TYP_URL,
@@ -48,7 +54,14 @@ const API = {
     C_USR,
     U_USR,
 
-    HOME_URL
+    HOME_URL,
+
+    TOP_10_EXP_URL,
+    DAILY_EXP_URL,
+    CUR_WEEK_EXP_URL,
+    CUR_MONTH_EXP_URL,
+    CUR_YEAR_EXP_URL,
+    CAT_WISE_EXP_URL
 }
 
 export default API
