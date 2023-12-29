@@ -8,20 +8,28 @@ import Registration from './pages/Auth/Registration/Registration';
 import Login from './pages/Auth/Login/Login';
 import Profile from './pages/Profile/Profile';
 import Analytics from './pages/Analytics/Analytics';
+import './App.css';
+import Sidebar from './Components/Layout/Sidebar/Sidebar';
+
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path={'/'} element={<Home />} />
-        <Route path={'/about'} element={<About />} />
-        <Route path={'/expense'} element={<Expense />} />
-        <Route path={'/expense-type'} element={<ExpenseTypes />} />
-        <Route path={'/registration'} element={<Registration />} />
-        <Route path={'/analytics'} element={<Analytics />} />
-        <Route path={'/login'} element={<Login />} />
-        <Route path={'/profile'} element={<Profile />} />
-      </Routes>
+      <div className='App'>
+        <div className='AppGlass'>
+          <Sidebar />
+          <Routes>
+            <Route path={'/'} element={<Home />} />
+            <Route path={'/about'} element={<About />} />
+            <Route path={'/expense'} element={<Expense />} />
+            <Route path={'/expense-type'} element={<ExpenseTypes />} />
+            <Route path={'/registration'} element={<Registration />} />
+            <Route path={'/analytics'} element={<Analytics />} />
+            <Route path={'/login'} element={<Login />} />
+            <Route path={'/profile'} element={<Profile />} />
+          </Routes>
+        </div>
+      </div>
     </>
   );
 }
