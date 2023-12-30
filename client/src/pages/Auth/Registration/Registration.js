@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import MainLayout from '../../../Components/Layout/MainLayout/MainLayout'
 import API from './../../../Services/API'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 
 const Registration = () => {
-
     const [firstname, setFirstName] = useState()
     const [lastname, setLastName] = useState()
     const [mobileNumber, setMobileNumber] = useState()
@@ -17,6 +17,8 @@ const Registration = () => {
     const [town, setTown] = useState()
     const [city, setCity] = useState()
     const [errors, setErrors] = useState([])
+
+    const navigate = useNavigate()
 
     // handle Change 
     const handleChange = (e) => {
@@ -82,6 +84,8 @@ const Registration = () => {
                 setArea('')
                 setTown('')
                 setCity('')
+                navigate('/')
+
             }
         } catch (error) {
             console.log(`Invalid Request : ${error}`)
@@ -115,7 +119,7 @@ const Registration = () => {
                             id='lastname'
                             onChange={handleChange}
                         />
-                        {errors.map((error) => error.field === 'lasttname' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                        {errors.map((error) => error.field === 'lastname' && <div style={{ color: 'red' }} >{error.error}</div>)}
                     </div>
                     <div>
                         <label htmlFor='mobileNumber'>Mobile Number</label>
