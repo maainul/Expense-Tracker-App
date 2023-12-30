@@ -10,6 +10,7 @@ import Profile from './pages/Profile/Profile';
 import Analytics from './pages/Analytics/Analytics';
 import './App.css';
 import Sidebar from './Components/Layout/Sidebar/Sidebar';
+import User from './pages/User/User';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path={'/analytics'} element={<Analytics />} />
             <Route path={'/login'} element={<Login />} />
             <Route path={'/profile'} element={<Profile />} />
+            <Route path={'/user-list'} element={<User />} />
           </Routes>
         </div>
       </div>

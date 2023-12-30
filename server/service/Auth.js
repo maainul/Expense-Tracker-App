@@ -1,6 +1,4 @@
-
 const UserModel = require('../models/User');
-const findOne = require('../utils/findOne');
 const save = require('../utils/saveUtils');
 
 
@@ -11,6 +9,7 @@ const LoginService = async () => {
 
     }
 }
+
 
 const RegisterUserService = async (body) => {
     try {

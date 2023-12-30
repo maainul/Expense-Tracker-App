@@ -22,7 +22,8 @@ const R_SINGLE_ABOUT = '/about/:id'
 // USER
 const C_USR_URL = 'http://localhost:8081/api/v1/user/create'
 const U_USR_URL = 'http://localhost:8081/api/v1/user/update'
-
+const R_USR_URL = 'http://localhost:8081/api/v1/user/list'
+const R_SINGLE_URL = 'http://localhost:8081/api/v1/user/read'
 // Home 
 const HOME_URL = 'http://localhost:8081/api/v1/home'
 
@@ -40,6 +41,8 @@ const API = {
     C_Exp_TYP_URL,
     C_EXP_URL,
     C_USR_URL,
+    R_USR_URL,
+    R_SINGLE_URL,
     R_EX_TYP_URL,
     R_EXP_ALL_URL,
     R_SINGLE_EXP_URL,

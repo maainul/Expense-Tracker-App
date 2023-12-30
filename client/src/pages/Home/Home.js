@@ -1,12 +1,13 @@
 import React from 'react'
+import MainLayout from './../../Components/Layout/MainLayout/MainLayout';
 
 import { useTop10Expenses } from '../../Hooks/useTop10Expenses'
-import MainLayout from './../../Components/Layout/MainLayout/MainLayout';
 import { useGetDailyExpense } from './../../Hooks/useGetDailyExpense';
 import { useCurWeekExp } from './../../Hooks/useCurWeekExp';
 import { useCurYearExp } from './../../Hooks/useCurYearExp';
 import { useCatWiseExp } from '../../Hooks/useCatWiseExp';
 import { useExpenseTypeWise } from '../../Hooks/useExpenseTypeWise';
+import { useAllUser } from '../../Hooks/useAllUser';
 
 const Home = () => {
 
@@ -16,6 +17,7 @@ const Home = () => {
     const { curYearExpList, curYearTotal, numberOfTransaction } = useCurYearExp()
     const { catWiseExpList, creditExpTotal, debitExpTotal, numberOfCredit, numberOfDebit } = useCatWiseExp()
     const expenseTypeWiseList = useExpenseTypeWise()
+    const userlist = useAllUser()
     return (
         <MainLayout>
             <div></div>

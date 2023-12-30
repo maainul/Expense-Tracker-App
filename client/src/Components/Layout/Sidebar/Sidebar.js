@@ -23,6 +23,7 @@ const Sidebar = () => {
                 <Link to={'/login'}>Login</Link>
                 <Link to={'/registration'}>Registration</Link>
                 <Link to={'/about'}>About</Link>
+                <Link to={'/user-list'}>Accounts</Link>
                 <div className='menu-last '>
                     <div className='menuItem'>
                         <i class="menu-icon tf-icons bx bx-support"></i>

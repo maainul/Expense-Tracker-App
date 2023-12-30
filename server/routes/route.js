@@ -11,7 +11,8 @@ const {
 
 const {
     updateUser,
-    createUser
+    createUser,
+    listUser
 } = require('../controllers/user')
 
 
@@ -43,7 +44,7 @@ router.get('/about/:id', updateaboutUs)
 // USER
 router.post('/user/create', createUser)
 router.put('/user/update/:id', updateUser)
-
+router.get('/user/list', listUser)
 
 // ANALYTICS
 
