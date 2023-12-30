@@ -9,8 +9,6 @@ const {
 } = require('../utils/dateUtils');
 const { serv } = require('../service/expense');
 
-
-
 // validation Rules
 const validationRules = {
     amount: {
@@ -186,6 +184,7 @@ const getExpenseById = async (req, res) => {
                 data: expense
             })
         }
+
         console.log(`Expenses data By Id==> \n ${expense}`);
 
         return res.status(200).send({

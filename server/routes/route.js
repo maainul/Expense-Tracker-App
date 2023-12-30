@@ -68,5 +68,8 @@ router.get('/analytics/last-20-expense', anaCtrl.getLast20Expense)
 // GET | GET Category Wise Expense
 router.get('/analytics/credit-debit-expense', anaCtrl.getAllCreditAndDebit)
 
+// GET | GET Category Wise Expense
+router.get('/analytics/expense-type-wise', anaCtrl.getAllDataExpTypeWise)
+
 
 module.exports = router

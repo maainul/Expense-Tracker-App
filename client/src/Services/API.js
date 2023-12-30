@@ -33,35 +33,32 @@ const CUR_WEEK_EXP_URL = 'http://localhost:8081/api/v1/analytics/current-week-ex
 const CUR_MONTH_EXP_URL = 'http://localhost:8081/api/v1/analytics/current-month-expense'
 const CUR_YEAR_EXP_URL = 'http://localhost:8081/api/v1/analytics/current-year-expense'
 const CAT_WISE_EXP_URL = 'http://localhost:8081/api/v1/analytics/credit-debit-expense'
+const EXP_TYP_WISE_URL = 'http://localhost:8081/api/v1/analytics/expense-type-wise'
+
 
 const API = {
     C_Exp_TYP_URL,
-    R_EX_TYP_URL,
-
     C_EXP_URL,
+    C_USR,
+    R_EX_TYP_URL,
     R_EXP_ALL_URL,
     R_SINGLE_EXP_URL,
-    U_SINGLE_EXP,
-    D_SINGLE_EXP,
-
     R_US,
     R_US_VER,
-    U_UNSUB,
-
-    ABOUT,
     R_SINGLE_ABOUT,
-
-    C_USR,
+    U_SINGLE_EXP,
+    U_UNSUB,
     U_USR,
-
+    D_SINGLE_EXP,
+    ABOUT,
     HOME_URL,
-
     TOP_10_EXP_URL,
     DAILY_EXP_URL,
     CUR_WEEK_EXP_URL,
     CUR_MONTH_EXP_URL,
     CUR_YEAR_EXP_URL,
-    CAT_WISE_EXP_URL
+    CAT_WISE_EXP_URL,
+    EXP_TYP_WISE_URL
 }
 
 export default API

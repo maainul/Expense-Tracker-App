@@ -11,7 +11,7 @@ export const useCatWiseExp = () => {
     const [numberOfCredit, setNumberOfCredit] = useState()
     const [numberOfDebit, setNumberOfDebit] = useState()
 
-    // Daily Expense
+    // Category Wise Expense
     const catWiseExp = async () => {
         try {
             const getExp = await axios.get(API.CAT_WISE_EXP_URL)

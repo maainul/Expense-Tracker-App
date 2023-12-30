@@ -210,6 +210,30 @@ const getExpenseWithParameter = async (req, res) => {
     }
 }
 
+const getAllDataExpTypeWise = async (req, res) => {
+    try {
+        console.log("#####################################")
+        console.log("#####################################")
+        const result = await serv.getExpTypeWiseService()
+        console.log(`Get Expense Type Wise Expense Data ===> ${result}`)
+
+        return res.status(200).send({
+            success: true,
+            message: 'Get all expense type successfully',
+            data: result
+        })
+    } catch (error) {
+        console.log(`Error in Get Expenes Type Wise Data`, error);
+        const status = error.status || 500
+        return res.status(status).send({
+            success: false,
+            message: 'Error In Get Expense Type Wise Data',
+            error: error.message || error
+        })
+    }
+}
+
+
 const anaCtrl = {
     getTop10Expense,
     getDailyExpense,
@@ -220,6 +244,7 @@ const anaCtrl = {
     getAllCreditAndDebit,
     getCurrentMonthExpense,
     getExpenseWithParameter,
+    getAllDataExpTypeWise
 }
 
 

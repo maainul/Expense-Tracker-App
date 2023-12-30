@@ -1,6 +1,6 @@
 const ExpenseModel = require("../models/Expense");
+const ExpenseType = require("../models/ExpenseType");
 const { dateToTimestamp, dateUtils } = require("../utils/dateUtils");
-
 
 // Top 10 Expenses
 const getTopExpService = async (limit) => {
@@ -63,8 +63,6 @@ const getLastExpService = async (st, limit) => {
     ])
     return lastExps
 }
-
-
 
 // Current Month Data
 const getCurMonthExpService = async () => {
@@ -156,8 +154,6 @@ const getCurYearExp = async (sortBy) => {
     return expThisMonth
 }
 
-
-
 // Current Week
 const getCurrentWeekExpService = async (str, end) => {
     const curWeekexp = await ExpenseModel.find({
@@ -168,7 +164,6 @@ const getCurrentWeekExpService = async (str, end) => {
     })
     return curWeekexp
 }
-
 
 // Expense Categorywise Expense
 const getCatWiseExpService = async () => {
@@ -229,9 +224,7 @@ const getCustExpService = async (category, sortOrder, expenseType, yearFilter, m
         const ldmt = new Date(yearFilter || new Date().getFullYear(), monthFilter, 0)
 
         fdmt.setUTCHours(0, 0, 0, 0); // 12 AM 0:0:0
-        console.log(fdmt)
         ldmt.setUTCHours(23, 59, 59, 0);
-        console.log(ldmt)
         query.date_sl = {
             ...query.date_sl,
             $gte: fdmt.getTime(),
@@ -239,12 +232,38 @@ const getCustExpService = async (category, sortOrder, expenseType, yearFilter, m
         }
     }
 
-    console.log(query)
     const custExp = await ExpenseModel.find(query)
         .populate('expenseType', 'name icon') // Populate the 'expenseType' field with 'name' and 'icon'
         .sort({ date_sl: so })
     return custExp
 }
+
+const getExpTypeWiseService = async () => {
+    const expenses = await ExpenseModel.aggregate([
+        {
+            $sort: { date_sl: -1 }
+        },
+        {
+            $group: {
+                _id: "$expenseType",
+                count: { $sum: 1 },
+                totalAmount: { $sum: "$amount" },
+                expenses: { $push: "$$ROOT" }
+            }
+        }
+    ]);
+
+    const enrichedExpenses = await Promise.all(expenses.map(async (expense) => {
+        const expenseTypeDetails = await ExpenseType.findById(expense._id);
+        return {
+            ...expense,
+            expenseTypeName: expenseTypeDetails ? expenseTypeDetails.name : null,
+            expenseTypeIcon: expenseTypeDetails ? expenseTypeDetails.icon : null,
+        };
+    }));
+
+    return enrichedExpenses;
+};
 
 const serv = {
     getTopExpService,
@@ -253,7 +272,8 @@ const serv = {
     getLastExpService,
     getCurYearExp,
     getCatWiseExpService,
-    getCustExpService
+    getCustExpService,
+    getExpTypeWiseService,
 }
 
 module.exports = { serv }

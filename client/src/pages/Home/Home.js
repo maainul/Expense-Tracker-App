@@ -6,21 +6,16 @@ import { useGetDailyExpense } from './../../Hooks/useGetDailyExpense';
 import { useCurWeekExp } from './../../Hooks/useCurWeekExp';
 import { useCurYearExp } from './../../Hooks/useCurYearExp';
 import { useCatWiseExp } from '../../Hooks/useCatWiseExp';
+import { useExpenseTypeWise } from '../../Hooks/useExpenseTypeWise';
 
 const Home = () => {
 
-    const top10ExpList = useTop10Expenses()
+    const { top10ExpList, debitCount, creditCount, debitTotalAmount, creditTotalAmount } = useTop10Expenses()
     const dailyExp = useGetDailyExpense()
     const curWeekExp = useCurWeekExp()
     const { curYearExpList, curYearTotal, numberOfTransaction } = useCurYearExp()
     const { catWiseExpList, creditExpTotal, debitExpTotal, numberOfCredit, numberOfDebit } = useCatWiseExp()
-    console.log("####################################")
-    console.log(catWiseExpList)
-    console.log(creditExpTotal)
-    console.log(debitExpTotal)
-    console.log(numberOfCredit)
-    console.log(numberOfDebit)
-    console.log("####################################")
+    const expenseTypeWiseList = useExpenseTypeWise()
     return (
         <MainLayout>
             <div></div>
@@ -87,8 +82,8 @@ const Home = () => {
             <div>Expese Category with image</div>
             <div>Total Balance</div>
             <div>Credit/Debit Wise Total Exp
-                <p> Credit : {creditExpTotal}</p>
-                <p> Debit : {debitExpTotal}</p>
+                {/* <p> Credit : {creditExpTotal}</p> */}
+                {/* <p> Debit : {debitExpTotal}</p> */}
             </div>
 
         </MainLayout>
