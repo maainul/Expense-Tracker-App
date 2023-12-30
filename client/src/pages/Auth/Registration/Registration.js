@@ -1,11 +1,203 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MainLayout from '../../../Components/Layout/MainLayout/MainLayout'
+import API from './../../../Services/API'
+import axios from 'axios'
+
 
 const Registration = () => {
+
+    const [firstname, setFirstName] = useState()
+    const [lastname, setLastName] = useState()
+    const [mobileNumber, setMobileNumber] = useState()
+    const [email, setEmail] = useState()
+    const [username, setUserName] = useState()
+    const [password, setPassword] = useState()
+    // const [confirmPassword, setConfirmPassword] = useState()
+    const [area, setArea] = useState()
+    const [town, setTown] = useState()
+    const [city, setCity] = useState()
+    const [errors, setErrors] = useState([])
+
+    // handle Change 
+    const handleChange = (e) => {
+        const { id, value } = e.target
+        switch (id) {
+            case 'firstname':
+                setFirstName(value)
+                break;
+            case 'lastname':
+                setLastName(value)
+                break;
+            case 'mobileNumber':
+                setMobileNumber(value)
+                break;
+            case 'email':
+                setEmail(value)
+                break;
+            case 'username':
+                setUserName(value)
+                break;
+            case 'password':
+                setPassword(value)
+                break;
+            case 'area':
+                setArea(value)
+                break;
+            case 'town':
+                setTown(value)
+                break;
+            case 'city':
+                setCity(value)
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        try {
+            const res = await axios.post(API.C_USR_URL, {
+                firstname,
+                lastname,
+                mobileNumber,
+                email,
+                username,
+                password,
+                area,
+                town,
+                city
+            })
+            if (res.data.errors) {
+                setErrors(res.data.errors)
+            } else {
+                setErrors([])
+                setFirstName('')
+                setLastName('')
+                setMobileNumber('')
+                setEmail('')
+                setUserName('')
+                setPassword('')
+                setArea('')
+                setTown('')
+                setCity('')
+            }
+        } catch (error) {
+            console.log(`Invalid Request : ${error}`)
+        }
+    }
+
     return (
 
         <MainLayout>
-            <div>Registration</div>
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor='firstName'>First Name</label>
+
+                        <input
+                            type='text'
+                            placeholder='Enter First Name'
+                            value={firstname}
+                            id='firstname'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'firstname' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+
+                        <label htmlFor='lastname'>Last Name</label>
+                        <input
+                            type='text'
+                            placeholder='Enter Last Name'
+                            value={lastname}
+                            id='lastname'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'lasttname' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor='mobileNumber'>Mobile Number</label>
+                        <input
+                            type='text'
+                            placeholder='Enter Mobile Name'
+                            value={mobileNumber}
+                            id='mobileNumber'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'mobileNumber' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor='username'>Username</label>
+                        <input
+                            type='text'
+                            placeholder='Enter username '
+                            value={username}
+                            id='username'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'username' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor='email'>Email</label>
+                        <input
+                            type='text'
+                            placeholder='Enter email'
+                            value={email}
+                            id='email'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'email' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor='password'>Password</label>
+                        <input
+                            type='password'
+                            placeholder='Enter password'
+                            value={password}
+                            id='password'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'password' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor='area'>Area</label>
+                        <input
+                            type='text'
+                            placeholder='Enter area Name'
+                            value={area}
+                            id='area'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'area' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor='town'>Town</label>
+                        <input
+                            type='text'
+                            placeholder='Enter town Name'
+                            value={town}
+                            id='town'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'town' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+
+                    <div>
+                        <label htmlFor='city'>City</label>
+                        <input
+                            type='text'
+                            placeholder='Enter city Name'
+                            value={city}
+                            id='city'
+                            onChange={handleChange}
+                        />
+                        {errors.map((error) => error.field === 'city' && <div style={{ color: 'red' }} >{error.error}</div>)}
+                    </div>
+                    <button type='submit' >Submit</button>
+                </form>
+            </div>
         </MainLayout>
     )
 }

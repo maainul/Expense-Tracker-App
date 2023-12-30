@@ -20,8 +20,8 @@ const ABOUT = '/about'
 const R_SINGLE_ABOUT = '/about/:id'
 
 // USER
-const C_USR = '/user/create'
-const U_USR = '/user/update/:id'
+const C_USR_URL = 'http://localhost:8081/api/v1/user/create'
+const U_USR_URL = 'http://localhost:8081/api/v1/user/update'
 
 // Home 
 const HOME_URL = 'http://localhost:8081/api/v1/home'
@@ -39,7 +39,7 @@ const EXP_TYP_WISE_URL = 'http://localhost:8081/api/v1/analytics/expense-type-wi
 const API = {
     C_Exp_TYP_URL,
     C_EXP_URL,
-    C_USR,
+    C_USR_URL,
     R_EX_TYP_URL,
     R_EXP_ALL_URL,
     R_SINGLE_EXP_URL,
@@ -48,7 +48,7 @@ const API = {
     R_SINGLE_ABOUT,
     U_SINGLE_EXP,
     U_UNSUB,
-    U_USR,
+    U_USR_URL,
     D_SINGLE_EXP,
     ABOUT,
     HOME_URL,

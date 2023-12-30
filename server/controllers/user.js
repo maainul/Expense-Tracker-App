@@ -2,13 +2,17 @@ const MValidator = require('../validator/MValidator')
 const validationLog = require('../utils/validationLog');
 const UserModel = require('../models/User');
 const save = require('../utils/saveUtils');
-
-
-
+const { AuthServ } = require('../service/Auth');
 
 // Validation Rules
 const validationRules = {
-    name: {
+    firstname: {
+        type: 'string',
+        required: true,
+        max: 50,
+        min: 3,
+    },
+    lastname: {
         type: 'string',
         required: true,
         max: 50,
@@ -20,21 +24,36 @@ const validationRules = {
         max: 50,
         min: 3,
         exists: [true, 'Email already exists']
-    }
+    },
+    username: {
+        type: 'string',
+        required: true,
+        max: 50,
+        min: 3,
+        exists: [true, 'Email already exists']
+    },
+    password: {
+        type: 'string',
+        required: true,
+        max: 50,
+        min: 3,
+    },
+    mobileNumber: {
+        type: 'string',
+        required: true,
+        max: 13,
+        min: 8,
+        exists: [true, 'Mobile already exists']
+    },
+
 }
 
 const createUser = async (req, res) => {
     try {
-        const { name, email, mobileNumber } = req.body;
-        console.log(`Request data ===>\n name : ${name} email :${email}  mobileNumber:${mobileNumber}`.bgBlue);
-
         // Validation
         const validationResult = await MValidator(req.body, validationRules, UserModel);
-
         // Validation log
         validationLog(validationResult)
-
-
         if (!validationResult.isValid) {
             return res.status(400).send({
                 success: false,
@@ -42,15 +61,12 @@ const createUser = async (req, res) => {
                 errors: validationResult.errors
             });
         }
-
-        // Save Data in Database
-        const user = await save(UserModel, { name, email, mobileNumber })
-        console.log(`User Added Successfully :\n ${user}`);
-
+        //Registration Service Call
+        const user = await AuthServ.RegisterUserService(req.body)
         return res.status(201).send({
-            success: true,
-            message: 'User Added Successfully',
-            data: user,
+            success: user.success,
+            message: user.message,
+            data: user.data,
         });
 
     } catch (error) {

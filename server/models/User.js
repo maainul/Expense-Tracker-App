@@ -1,18 +1,43 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    name: {
+    firstname: {
         type: String,
-        required: [true, "Name is required"],
-        minlength: [3, 'Name must be three characters long'],
-        maxlength: [50, 'User name can not be longer than 50 characters long']
+        required: [true, "firstname is required"],
+        minlength: [3, 'firstname must be three characters long'],
+        maxlength: [50, 'User firstname can not be longer than 50 characters long']
+    },
+    lastname: {
+        type: String,
+        required: [true, "lastname is required"],
+        minlength: [3, 'lastname must be three characters long'],
+        maxlength: [50, 'User lastname can not be longer than 50 characters long']
     },
     email: {
         type: String,
         required: [true, "Email is required"],
         unique: true
     },
+    username: {
+        type: String,
+        required: [true, "username is required"],
+        unique: true
+    },
+    password: {
+        type: String,
+        required: [true, "password is required"],
+    },
     mobileNumber: {
+        type: String,
+        required: [true, "mobile number is required"],
+    },
+    area: {
+        type: String,
+    },
+    town: {
+        type: String,
+    },
+    city: {
         type: String,
     },
     role: {
