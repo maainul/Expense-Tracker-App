@@ -81,10 +81,17 @@ const listUser = async (req, res) => {
     }
 }
 
+const getUserInfo = async (req, res) => {
+    // TODO : Get Data From Param
+}
+
+
+
 
 const usrCtrl = {
     updateUser,
     listUser,
+    getUserInfo
 }
 
 module.exports = { usrCtrl }
