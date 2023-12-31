@@ -181,7 +181,7 @@ const loginUser = async (req, res) => {
         }
 
         const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET)
-        const expiryDate = new Date(Date.now() + process.env.EXPIRY_TIME)
+        const expiryDate = new Date(Date.now() + 3600000)
         validUser.password = undefined
 
         return res.cookie('access_token', token, {

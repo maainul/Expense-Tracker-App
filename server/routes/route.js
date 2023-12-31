@@ -41,7 +41,7 @@ router.get('/about/:id', updateaboutUs)
 router.post('/user/create', usrCtrl.createUser)
 router.put('/user/update/:id', usrCtrl.updateUser)
 router.get('/user/list', usrCtrl.listUser)
-router.get('/user/login', usrCtrl.loginUser)
+router.post('/user/login', usrCtrl.loginUser)
 
 // ANALYTICS
 
