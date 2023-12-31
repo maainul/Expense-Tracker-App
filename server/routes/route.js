@@ -1,19 +1,15 @@
 const express = require('express')
 const { expCtrl } = require('../controllers/expense')
-const exTypCtrl = require('../controllers/expenseType')
+const { exTypCtrl } = require('../controllers/expenseType')
 const { anaCtrl } = require('../controllers/analytics')
 const { subCtrl } = require('../controllers/subscribeUser')
+const { usrCtrl } = require('../controllers/user')
 
 const {
     createAboutUs,
     updateaboutUs
 } = require('../controllers/about')
 
-const {
-    updateUser,
-    createUser,
-    listUser
-} = require('../controllers/user')
 
 
 const router = express.Router()
@@ -42,9 +38,10 @@ router.get('/about/:id', updateaboutUs)
 
 
 // USER
-router.post('/user/create', createUser)
-router.put('/user/update/:id', updateUser)
-router.get('/user/list', listUser)
+router.post('/user/create', usrCtrl.createUser)
+router.put('/user/update/:id', usrCtrl.updateUser)
+router.get('/user/list', usrCtrl.listUser)
+router.get('/user/login', usrCtrl.loginUser)
 
 // ANALYTICS
 

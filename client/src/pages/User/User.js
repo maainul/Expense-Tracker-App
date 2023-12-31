@@ -3,11 +3,7 @@ import { useAllUser } from '../../Hooks/useAllUser'
 import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
 
 const User = () => {
-
     const userList = useAllUser()
-    console.log("#####################################")
-    console.log(userList.userList)
-    console.log("#####################################")
     return (
         <>
             <MainLayout>
@@ -33,6 +29,7 @@ const User = () => {
                                     <td>{ulst.area} {ulst.town} {ulst.city} </td>
                                     <td>{ulst.role}</td>
                                     <td>
+                                        <button value={ulst.id}>View</button>
                                         <button value={ulst.id}>Edit</button>
                                         <button value={ulst.id}>Delete</button>
                                     </td>

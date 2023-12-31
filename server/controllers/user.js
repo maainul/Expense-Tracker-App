@@ -1,7 +1,11 @@
+
+const bcryptjs = require('bcryptjs')
 const MValidator = require('../validator/MValidator')
 const validationLog = require('../utils/validationLog');
 const UserModel = require('../models/User');
 const { AuthServ } = require('../service/Auth');
+const jwt = require('jsonwebtoken');
+
 
 // Validation Rules
 const validationRules = {
@@ -44,7 +48,6 @@ const validationRules = {
         min: 8,
         exists: [true, 'Mobile already exists']
     },
-
 }
 
 const createUser = async (req, res) => {
@@ -80,7 +83,6 @@ const createUser = async (req, res) => {
     }
 };
 
-
 const updateUser = async (req, res) => {
     try {
 
@@ -108,7 +110,6 @@ const updateUser = async (req, res) => {
 
         // Validation log
         validationLog(validationResult)
-
 
         if (!validationResult.isValid) {
             return res.status(400).send({
@@ -139,7 +140,6 @@ const updateUser = async (req, res) => {
     }
 };
 
-
 const listUser = async (req, res) => {
     try {
         const ulist = await UserModel.find()
@@ -162,5 +162,51 @@ const listUser = async (req, res) => {
     }
 }
 
+const loginUser = async (req, res) => {
+    try {
+        const { username, password } = req.body
+        const validUser = await UserModel.findOne({ username });
+        if (!validUser) {
+            return res.status(201).send({
+                success: true,
+                message: 'User Not Found',
+            });
+        }
+        const validPassword = bcryptjs.compareSync(password, validUser.password)
+        if (!validPassword) {
+            return res.status(201).send({
+                success: true,
+                message: 'Wrong Credentials',
+            });
+        }
 
-module.exports = { createUser, updateUser, listUser };
+        const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET)
+        const expiryDate = new Date(Date.now() + process.env.EXPIRY_TIME)
+        validUser.password = undefined
+
+        return res.cookie('access_token', token, {
+            httpOnly: true,
+            expires: expiryDate
+        }).status(201).json({
+            success: true,
+            message: "Successfully Logged In",
+            user: validUser
+        })
+    } catch (error) {
+        console.error('Internal Server Error', error)
+        const status = error.status || 500
+        return res.status(status).send({
+            success: false,
+            message: 'Internal Server Error',
+        });
+    }
+}
+
+const usrCtrl = {
+    createUser,
+    updateUser,
+    listUser,
+    loginUser
+}
+
+module.exports = { usrCtrl }

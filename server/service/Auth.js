@@ -1,6 +1,6 @@
 const UserModel = require('../models/User');
 const save = require('../utils/saveUtils');
-
+const bcryptjs = require('bcryptjs')
 
 const LoginService = async () => {
     try {
@@ -14,6 +14,7 @@ const LoginService = async () => {
 const RegisterUserService = async (body) => {
     try {
         const { firstname, lastname, mobileNumber, email, username, password, area, town, city } = body;
+        const hashedPassword = bcryptjs.hashSync(password, 10)
         console.log(`Request data ===>\n name : ${firstname} email :${email}  mobileNumber:${mobileNumber}`.bgBlue);
         // Save Data in Database
         const user = await save(UserModel, {
@@ -22,7 +23,7 @@ const RegisterUserService = async (body) => {
             mobileNumber,
             email,
             username,
-            password,
+            password: hashedPassword,
             area,
             town,
             city

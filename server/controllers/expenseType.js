@@ -112,4 +112,4 @@ const exTypCtrl = {
     createExpType, getAllExpType, getExpTypeById
 }
 
-module.exports = exTypCtrl;
+module.exports = { exTypCtrl };
