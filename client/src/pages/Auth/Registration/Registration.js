@@ -60,7 +60,7 @@ const Registration = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post(API.C_USR_URL, {
+            const res = await axios.post(API.SIGNUP_URL, {
                 firstname,
                 lastname,
                 mobileNumber,

@@ -1,7 +1,22 @@
 
+// Home 
+const HOME_URL = 'http://localhost:8081/api/v1/home'
+
+// AUTH
+const SIGNUP_URL = 'http://localhost:8081/api/v1/auth/signup'
+const SIGNIN_URL = 'http://localhost:8081/api/v1/auth/signin'
+
+
+// USER
+const U_USR_URL = 'http://localhost:8081/api/v1/user/update'
+const R_USR_URL = 'http://localhost:8081/api/v1/user/list'
+const R_SINGLE_URL = 'http://localhost:8081/api/v1/user/read'
+
+
 // EXPENSE TYPE
 const C_Exp_TYP_URL = 'http://localhost:8081/api/v1/expense-type/create'
 const R_EX_TYP_URL = 'http://localhost:8081/api/v1/expense-type/read/all'
+
 
 // EXPENSE 
 const C_EXP_URL = 'http://localhost:8081/api/v1/expense/create'
@@ -10,22 +25,17 @@ const R_SINGLE_EXP_URL = 'http://localhost:8081/api/v1/expense/read/:id'
 const U_SINGLE_EXP = '/expense/update/:id'
 const D_SINGLE_EXP = '/expense/delete/:id'
 
+
 // USER SUBSCRIPTION
 const R_US = '/user/subscribe'
 const R_US_VER = '/user/verify'
 const U_UNSUB = '/user/unsubscribe'
 
+
 // ABOUT PAGE OF SITE
 const ABOUT = '/about'
 const R_SINGLE_ABOUT = '/about/:id'
 
-// USER
-const C_USR_URL = 'http://localhost:8081/api/v1/user/create'
-const U_USR_URL = 'http://localhost:8081/api/v1/user/update'
-const R_USR_URL = 'http://localhost:8081/api/v1/user/list'
-const R_SINGLE_URL = 'http://localhost:8081/api/v1/user/read'
-// Home 
-const HOME_URL = 'http://localhost:8081/api/v1/home'
 
 // ANALYTICS
 const TOP_10_EXP_URL = 'http://localhost:8081/api/v1/analytics/top-10-expense'
@@ -40,8 +50,9 @@ const EXP_TYP_WISE_URL = 'http://localhost:8081/api/v1/analytics/expense-type-wi
 const API = {
     C_Exp_TYP_URL,
     C_EXP_URL,
-    C_USR_URL,
     R_USR_URL,
+    SIGNUP_URL,
+    SIGNIN_URL,
     R_SINGLE_URL,
     R_EX_TYP_URL,
     R_EXP_ALL_URL,

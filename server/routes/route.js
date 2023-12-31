@@ -9,6 +9,7 @@ const {
     createAboutUs,
     updateaboutUs
 } = require('../controllers/about')
+const { authServ } = require('../controllers/auth')
 
 
 
@@ -38,10 +39,13 @@ router.get('/about/:id', updateaboutUs)
 
 
 // USER
-router.post('/user/create', usrCtrl.createUser)
+
 router.put('/user/update/:id', usrCtrl.updateUser)
 router.get('/user/list', usrCtrl.listUser)
-router.post('/user/login', usrCtrl.loginUser)
+
+// AUTH
+router.post('/auth/signin', authServ.signin)
+router.post('/auth/signup', authServ.signup)
 
 // ANALYTICS
 
