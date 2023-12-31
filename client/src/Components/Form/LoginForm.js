@@ -2,13 +2,15 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import API from "../../Services/API"
 import axios from 'axios';
+import { toast } from 'react-toastify';
+
+
+
 
 const LoginForm = () => {
     const [username, setUserName] = useState('')
     const [password, setPassword] = useState('')
-
     const [errors, setErrors] = useState([])
-
     const navigate = useNavigate()
 
     // handle Change 
@@ -41,7 +43,7 @@ const LoginForm = () => {
                 setUserName('')
                 setPassword('')
                 navigate('/')
-
+                toast.success('Login Successfull')
             }
         } catch (error) {
             console.log(`Invalid Request : ${error}`)

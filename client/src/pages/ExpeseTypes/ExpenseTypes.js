@@ -3,7 +3,7 @@ import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import API from './../../Services/API';
-
+import { toast } from 'react-toastify';
 const ExpenseTypes = () => {
     const [name, setName] = useState('')
     const [icon, setIcon] = useState('')
@@ -51,6 +51,7 @@ const ExpenseTypes = () => {
                 setExpenseTypeList([...expenseTypeList, res.data.data]);
                 setName('')
                 setIcon('')
+                toast.success('Expense type added successfully')
             }
         } catch (error) {
             console.log(`Invalid Expense Types : ${error}`)

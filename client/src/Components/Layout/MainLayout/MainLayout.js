@@ -1,16 +1,13 @@
 import React from 'react'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
 import './MainLayout.css'
-import Sidebar from './../Sidebar/Sidebar';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const MainLayout = ({ children }) => {
     return (
-        <>
-            <div className='container'>
-                {children}
-            </div>
-        </>
+        <div className='container'>
+            <ToastContainer />
+            {children}
+        </div>
     )
 }
 

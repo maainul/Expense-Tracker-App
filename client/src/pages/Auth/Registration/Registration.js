@@ -3,7 +3,7 @@ import MainLayout from '../../../Components/Layout/MainLayout/MainLayout'
 import API from './../../../Services/API'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
+import { toast } from 'react-toastify';
 
 const Registration = () => {
     const [firstname, setFirstName] = useState()
@@ -85,6 +85,7 @@ const Registration = () => {
                 setTown('')
                 setCity('')
                 navigate('/')
+                toast.success('Registration Successfull')
 
             }
         } catch (error) {

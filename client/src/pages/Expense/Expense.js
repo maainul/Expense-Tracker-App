@@ -3,6 +3,7 @@ import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
 import axios from 'axios'
 import API from './../../Services/API';
 import '../../Components/Table/Table.css'
+import { toast } from 'react-toastify';
 
 const Expense = () => {
     const [amount, setAmount] = useState('')
@@ -93,6 +94,7 @@ const Expense = () => {
                 setCategory('')
                 setExpenseType('')
                 setDescription('')
+                toast.success('Expense added successfully')
             }
         } catch (error) {
             console.log(`Invalid Expense : ${error}`)
