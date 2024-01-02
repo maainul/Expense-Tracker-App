@@ -8,6 +8,7 @@ import { useCurYearExp } from './../../Hooks/useCurYearExp';
 import { useCatWiseExp } from '../../Hooks/useCatWiseExp';
 import { useExpenseTypeWise } from '../../Hooks/useExpenseTypeWise';
 import { useAllUser } from '../../Hooks/useAllUser';
+import { useAuth } from '../../context/auth';
 
 const Home = () => {
 
@@ -18,11 +19,14 @@ const Home = () => {
     const { catWiseExpList, creditExpTotal, debitExpTotal, numberOfCredit, numberOfDebit } = useCatWiseExp()
     const expenseTypeWiseList = useExpenseTypeWise()
     const userlist = useAllUser()
+    const [auth, setAuth] = useAuth()
+
     return (
         <MainLayout>
             <div></div>
             <div>congrats</div>
             <div>Top Expense(10)
+                <pre>{JSON.stringify(auth, null, 4)}</pre>
                 <div>
                     {/* {top10ExpList.map((exp) => (
                         <p>{exp.category} -{exp.count} - {exp.totalAmount}

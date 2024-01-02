@@ -1,21 +1,11 @@
 const UserModel = require('../models/User');
+const { hashPassword } = require('../utils/authHelper');
 const save = require('../utils/saveUtils');
-const bcryptjs = require('bcryptjs')
-
-const LoginService = async () => {
-    try {
-
-    } catch (error) {
-
-    }
-}
-
 
 const RegisterUserService = async (body) => {
     try {
         const { firstname, lastname, mobileNumber, email, username, password, area, town, city } = body;
-        const hashedPassword = bcryptjs.hashSync(password, 10)
-        console.log(`Request data ===>\n name : ${firstname} email :${email}  mobileNumber:${mobileNumber}`.bgBlue);
+        const hashedPassword = await hashPassword(password)
         // Save Data in Database
         const user = await save(UserModel, {
             firstname,
@@ -44,9 +34,6 @@ const RegisterUserService = async (body) => {
 }
 
 
-const AuthServ = {
-    RegisterUserService,
-    LoginService
-}
+const AuthServ = { RegisterUserService }
 
 module.exports = { AuthServ }

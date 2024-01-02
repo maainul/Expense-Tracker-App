@@ -12,14 +12,15 @@ connectDB()
 
 const app = express()
 
-const corsOptions = {
-    origin: 'http://localhost:3000', // Replace with your frontend domain
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Enable credentials (cookies)
-    optionsSuccessStatus: 204, // For preflight requests
-};
+// const corsOptions = {
+//     origin: 'http://localhost:3000', // Replace with your frontend domain
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true, // Enable credentials (cookies)
+//     optionsSuccessStatus: 204, // For preflight requests
+// };
 
-app.use(cors(corsOptions))
+// app.use(cors(corsOptions))
+app.use(cors())
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(cookieParser());
@@ -28,7 +29,7 @@ app.use(cookieParser());
 app.use('/api/v1', require('./routes/route'))
 
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

@@ -2,16 +2,6 @@ const findOne = require("../utils/findOne");
 
 
 const MValidator = async (req, validationRules, model) => {
-    let countDocument = 10;
-    model.countDocuments({})
-        .then(count => {
-            countDocument = count
-            console.log(`Number of users in the collection: ${count}`);
-        })
-        .catch(err => {
-            console.error(err);
-        })
-    console.log(countDocument)
     // const data = req.body
     const data = req
     const errors = [];
@@ -20,7 +10,7 @@ const MValidator = async (req, validationRules, model) => {
         const rules = validationRules[field]
 
         // Check if the field is required
-        if (rules.required && countDocument > 0 && (value === undefined || value === null || value === "")) {
+        if (rules.required && (value === undefined || value === null || value === "")) {
             errors.push({ field, error: `${field} is required` })
         } else if (value !== undefined && value !== null) {
 
@@ -33,7 +23,6 @@ const MValidator = async (req, validationRules, model) => {
             if (rules.min && value.length < rules.min) {
                 errors.push({ field, error: `${field} must be at least ${rules.min} characters` });
             }
-
 
             // Check if the field has max value
             if (rules.max && value.length > rules.max) {

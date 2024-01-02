@@ -1,10 +1,11 @@
 
-const bcryptjs = require('bcryptjs')
+
 const MValidator = require('../validator/MValidator')
 const validationLog = require('../utils/validationLog');
 const UserModel = require('../models/User');
 const { AuthServ } = require('../service/Auth');
-const jwt = require('jsonwebtoken');
+const JWT = require('jsonwebtoken');
+const { comparePassword } = require('../utils/authHelper');
 
 
 // Validation Rules
@@ -33,7 +34,7 @@ const validationRules = {
         required: true,
         max: 50,
         min: 3,
-        exists: [true, 'Email already exists']
+        exists: [true, 'Username already exists']
     },
     password: {
         type: 'string',
@@ -46,7 +47,7 @@ const validationRules = {
         required: true,
         max: 13,
         min: 8,
-        exists: [true, 'Mobile already exists']
+        exists: [true, 'Mobile Number already exists']
     },
 }
 
@@ -63,16 +64,6 @@ const validationRulesLogin = {
 
 const signin = async (req, res) => {
     try {
-        const { username, password } = req.body
-        const validUser = await UserModel.findOne({ username });
-        if (!validUser) {
-            return res.status(201).send({
-                success: true,
-                message: 'User Not Found',
-                errors: [{ "field": "username", "error": "user not found" }]
-            });
-        }
-
         const validationResult = await MValidator(req.body, validationRulesLogin, UserModel);
         // Validation log
         validationLog(validationResult)
@@ -84,7 +75,17 @@ const signin = async (req, res) => {
             });
         }
 
-        const validPassword = bcryptjs.compareSync(password, validUser.password)
+        const { username, password } = req.body
+        const validUser = await UserModel.findOne({ username });
+        if (!validUser) {
+            return res.status(201).send({
+                success: true,
+                message: 'User Not Found',
+                errors: [{ "field": "username", "error": "user not found" }]
+            });
+        }
+
+        const validPassword = await comparePassword(password, validUser.password)
         if (!validPassword) {
             return res.status(201).send({
                 success: true,
@@ -93,20 +94,22 @@ const signin = async (req, res) => {
             });
         }
 
-        const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET)
-        const expiryDate = new Date(Date.now() + 3600000)
-        validUser.password = undefined
-
-        res.cookie('access_token', token, {
-            httpOnly: true,
-            expires: expiryDate
+        const token = JWT.sign({ id: validUser._id }, process.env.JWT_SECRET, {
+            expiresIn: "7d"
         })
-            .status(200)
-            .json({
-                success: true,
-                message: "Successully Logged In",
-                user: validUser
-            });
+
+        return res.status(200).send({
+            success: true,
+            message: "Signin Successfull",
+            user: {
+                _id: validUser._id,
+                username: validUser.username,
+                email: validUser.email,
+                mobileNumber: validUser.mobileNumber
+            },
+            token
+        })
+
     } catch (error) {
         console.error('Internal Server Error', error)
         const status = error.status || 500
@@ -140,12 +143,12 @@ const signup = async (req, res) => {
         });
 
     } catch (error) {
-        console.error('Error In Create User:', error)
+        console.error('Error In User Registration.', error)
 
         const status = error.status || 500
         return res.status(status).send({
             success: false,
-            message: 'Error In Create User',
+            message: 'Error In User Registration.',
             error: error.message || error,
         });
     }
