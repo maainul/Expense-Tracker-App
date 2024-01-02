@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import MainLayout from '../../../Components/Layout/MainLayout/MainLayout'
-import API from './../../../Services/API'
+import API from '../../../Services/API'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
 
-const Registration = () => {
+const Signup = () => {
     const [firstname, setFirstName] = useState()
     const [lastname, setLastName] = useState()
     const [mobileNumber, setMobileNumber] = useState()
@@ -101,7 +101,6 @@ const Registration = () => {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor='firstName'>First Name</label>
-
                         <input
                             type='text'
                             placeholder='Enter First Name'
@@ -208,4 +207,4 @@ const Registration = () => {
     )
 }
 
-export default Registration
+export default Signup

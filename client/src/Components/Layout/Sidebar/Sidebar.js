@@ -20,8 +20,8 @@ const Sidebar = () => {
                 <Link to={'/expense-type'}>Expense Type</Link>
                 <Link to={'/profile'}>Profile</Link>
                 <Link to={'/analytics'}>Analytics</Link>
-                <Link to={'/login'}>Login</Link>
-                <Link to={'/registration'}>Registration</Link>
+                <Link to={'/signin'}>Signin</Link>
+                <Link to={'/signup'}>Signup</Link>
                 <Link to={'/about'}>About</Link>
                 <Link to={'/user-list'}>Accounts</Link>
                 <div className='menu-last '>

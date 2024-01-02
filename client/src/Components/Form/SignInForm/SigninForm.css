@@ -1,0 +1,158 @@
+.auth-inner {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 60% 40%;
+}
+
+.left-div {
+    max-width: 100%;
+}
+
+.brand-logo-text {
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    padding-left: 30px;
+}
+
+.formgroup label {
+    font-size: 14px;
+}
+
+.pass-forgot-pass {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.forgot-pass {
+    color: #7367F0;
+    text-decoration: none;
+}
+
+
+
+.brand-logo-text svg {
+    color: #7367F0;
+}
+
+.brand-text {
+    color: #7367F0;
+    font-weight: 600;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+
+.left-big-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.left-big-img svg {
+    margin-top: 10%;
+}
+
+.loginform form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right-div {
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginform {
+    width: 80%;
+}
+
+.formgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formgroup input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+.formgroup input:focus {
+    border-color: #7367F0 !important;
+    outline: none;
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+}
+
+.formgroup input ::placeholder {
+    font-size: 15px;
+}
+
+.remember-me {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.create-account {
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+.crt-text {
+    text-decoration: none;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.card-text {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.btn {
+    background-color: #7367F0;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3725f8;
+    font-weight: 500;
+
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) ease;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.create-account {
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.auth-footer-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

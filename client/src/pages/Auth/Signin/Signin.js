@@ -1,14 +1,14 @@
 import React from 'react'
 import MainLayout from '../../../Components/Layout/MainLayout/MainLayout'
-import LoginForm from '../../../Components/Form/LoginForm/LoginForm';
+import SigninForm from '../../../Components/Form/SignInForm/SigninForm';
 
-const Login = () => {
+const Signin = () => {
 
     return (
         <MainLayout>
-            <LoginForm />
+            <SigninForm />
         </MainLayout >
     )
 }
 
-export default Login
+export default Signin
