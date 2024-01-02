@@ -71,9 +71,7 @@ const Registration = () => {
                 town,
                 city
             })
-            console.log("#################################################")
-            console.log(res)
-            console.log("#################################################")
+
             if (res.data.errors) {
                 setErrors(res.data.errors)
             } else {

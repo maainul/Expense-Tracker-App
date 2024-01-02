@@ -4,8 +4,7 @@ const validationLog = require("../utils/validationLog")
 const save = require("../utils/saveUtils")
 const { sendMail } = require("../utils/sendVerificationEmail")
 const generateVerificationCode = require("../utils/getVerificationCode")
-const findOne = require("../utils/findOne")
-const SubscribeUserModel = require("../models/SubscribeUser")
+
 
 const validationRules = {
     name: {
@@ -113,27 +112,6 @@ const unSubscribeUser = async (req, res) => {
         })
     }
 }
-
-
-// User Info Test Data Remove after user registration and login
-const UserInfo = [
-    {
-        email: 'test1@user.com',
-        name: 'Mr. Test 1 User',
-    },
-    {
-        email: 'user2@gmail.com',
-        name: 'Mr. Test 2 User',
-
-    },
-    {
-        email: 'test3@user.com',
-        name: 'Mr. Test 3 User',
-
-    }
-]
-
-
 
 const verifyUser = async (req, res) => {
     try {
