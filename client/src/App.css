@@ -11,6 +11,14 @@
     --textFrontSize: 1rem;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 13% 77%;
+    column-gap: 7.2rem;
+    min-height: 99vh;
+    background-color: var(--bgMain);
+}
+
 .App {
     display: flex;
     align-items: center;
@@ -107,7 +115,6 @@
     gap: 5px;
 }
 
-
 .formContainer {
     width: 80%;
 }
@@ -196,30 +203,6 @@
     border-left: 1px solid #ececec;
 }
 
-
-/* *********** Footer *********************** */
-/* .footer {
-    background-color: rgb(223, 195, 252);
-    height: 10%;
-}
-
-.sidebar {
-    background-color: ;
-}
-
-
-.main-container {
-    width: 90%;
-} */
-
-.container {
-    display: grid;
-    grid-template-columns: 13% 77%;
-    column-gap: 7.2rem;
-    height: 99vh;
-    background-color: var(--bgMain);
-}
-
 /* ******************************************* */
 /* ***************  SIDEBAR  **************** */
 /* ******************************************* */
@@ -255,7 +238,6 @@
     font-size: 15px;
 }
 
-
 .menuItem {
     display: flex;
     align-items: center;
@@ -278,20 +260,17 @@
     padding-left: 20px;
 }
 
-
 .active {
     background-color: rgba(105, 108, 255, .16) !important;
     color: var(--navColor);
     height: 3rem;
     border-radius: 5px;
-
 }
 
 .menu-icon {
     font-size: 20px;
     color: var(--textColor);
 }
-
 
 .menu-last-active {
     background-color: rgba(105, 108, 255, .16) !important;
@@ -314,13 +293,11 @@
 /* ************************************** */
 .main-container {
     display: grid;
-    grid-template-rows: 20% auto 5%;
+    grid-template-rows: 7% 80% 8%;
+    gap: 3%;
     /* row-gap: 10px; */
 }
 
-.header {
-    height: 10%;
-}
 
 .footer {
     background-color: var(--bgMain);

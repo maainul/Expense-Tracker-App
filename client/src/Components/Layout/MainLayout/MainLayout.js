@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
                 <Sidebar />
                 <div className='main-container'>
                     <div className='header'>Header</div>
-                    <div className='main-container'>
+                    <div className='main'>
                         {children}
                         <Toaster />
                     </div>
