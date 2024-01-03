@@ -6,7 +6,7 @@ const findOne = async (model, field, value) => {
         console.log(`${model.modelName} found:`, dTyp);
 
         if (dTyp) {
-            return { exists: true, message: `${model.modelName} with this ${value} already exists` };
+            return { exists: true, message: `${model.modelName} with ${value} already exists` };
         } else {
             console.log(`${model.modelName} with name ${value} not Found`);
             return { exists: false, message: null };

@@ -10,18 +10,7 @@ const { comparePassword } = require('../utils/authHelper');
 
 // Validation Rules
 const validationRules = {
-    firstname: {
-        type: 'string',
-        required: true,
-        max: 50,
-        min: 3,
-    },
-    lastname: {
-        type: 'string',
-        required: true,
-        max: 50,
-        min: 3,
-    },
+
     email: {
         type: 'string',
         required: true,
@@ -42,17 +31,16 @@ const validationRules = {
         max: 50,
         min: 3,
     },
-    mobileNumber: {
-        type: 'string',
-        required: true,
-        max: 13,
-        min: 8,
-        exists: [true, 'Mobile Number already exists']
-    },
 }
 
 // 
 const validationRulesLogin = {
+    username: {
+        type: 'string',
+        required: true,
+        max: 50,
+        min: 3,
+    },
     password: {
         type: 'string',
         required: true,
@@ -64,6 +52,7 @@ const validationRulesLogin = {
 
 const signin = async (req, res) => {
     try {
+        const { username, password } = req.body
         const validationResult = await MValidator(req.body, validationRulesLogin, UserModel);
         // Validation log
         validationLog(validationResult)
@@ -75,7 +64,6 @@ const signin = async (req, res) => {
             });
         }
 
-        const { username, password } = req.body
         const validUser = await UserModel.findOne({ username });
         if (!validUser) {
             return res.status(201).send({
@@ -134,6 +122,7 @@ const signup = async (req, res) => {
                 errors: validationResult.errors
             });
         }
+
         //Registration Service Call
         const user = await AuthServ.RegisterUserService(req.body)
         return res.status(201).send({

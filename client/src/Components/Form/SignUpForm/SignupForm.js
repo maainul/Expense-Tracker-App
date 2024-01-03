@@ -11,6 +11,7 @@ import Twitter from "../../SocialIcons/Twitter";
 import BrandLogo from './../../Logos/BrandLogo/BrandLogo';
 import BrandTitle from "../../BrandTitle/BrandTitle";
 import SignupImage from './../../SignupImage/SignupImage';
+import Input from "../../Input/Input";
 
 const SignupForm = () => {
     const [email, setEmail] = useState()
@@ -19,28 +20,10 @@ const SignupForm = () => {
     const [errors, setErrors] = useState([])
     const navigate = useNavigate()
 
-    // handle Change 
-    const handleChange = (e) => {
-        const { id, value } = e.target
-        switch (id) {
-            case 'username':
-                setUserName(value)
-                break;
-            case 'email':
-                setEmail(value)
-                break;
-            case 'password':
-                setPassword(value)
-                break;
-            default:
-                break;
-        }
-    }
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post(API.SIGNIN_URL, {
+            const res = await axios.post(API.SIGNUP_URL, {
                 email,
                 username,
                 password,
@@ -52,7 +35,7 @@ const SignupForm = () => {
                 setUserName('')
                 setEmail('')
                 setPassword('')
-                navigate('/')
+                navigate('/signin')
                 toast.success('Signup Successfull')
             }
         } catch (error) {
@@ -80,57 +63,65 @@ const SignupForm = () => {
                             <p class="text-secondary padddingBottom20">Make your app management easy and fun!</p>
                         </div>
                         <form onSubmit={handleSubmit}>
-                            <div className="formgroup">
-                                <label htmlFor='email' className="text-secondary">Email</label>
-                                <input
-                                    type='text'
-                                    placeholder='Enter email'
-                                    value={email}
-                                    id='email'
-                                    onChange={handleChange}
-                                />
-                                {errors.map((error) => error.field === 'email' && <div style={{ color: 'red' }} >{error.error}</div>)}
-                            </div>
-                            <div className="formgroup">
-                                <label htmlFor='username' className="text-secondary">Username</label>
-                                <input
-                                    type='text'
-                                    placeholder='Enter username'
-                                    value={username}
-                                    id='username'
-                                    onChange={handleChange}
-                                />
-                                {errors.map((error) => error.field === 'username' && <div style={{ color: 'red' }} >{error.error}</div>)}
-                            </div>
+                            <Input
+                                type='text'
+                                fieldName='email'
+                                placeholder='Enter Email'
+                                state={email}
+                                setState={setEmail}
+                                errorState={errors}
+                                label={true}
+                            />
+                            <Input
+                                type='text'
+                                fieldName='username'
+                                placeholder='Enter username'
+                                state={username}
+                                setState={setUserName}
+                                errorState={errors}
+                                label={true}
+                            />
+
                             <div className="grid-column-2" >
-                                <div className="formgroup">
-                                    <label htmlFor='password' className="text-secondary">Password</label>
-                                    <input
-                                        type='text'
-                                        placeholder='Enter password'
-                                        value={password}
-                                        id='password'
-                                        onChange={handleChange}
-                                    />
-                                    {errors.map((error) => error.field === 'password' && <div style={{ color: 'red' }} >{error.error}</div>)}
-                                </div>
-                                <div className="formgroup">
-                                    <label htmlFor='password' className="text-secondary">Confirm Password</label>
-                                    <input
-                                        type='text'
-                                        placeholder='Enter password'
-                                        value={password}
-                                        id='password'
-                                        onChange={handleChange}
-                                    />
-                                    {errors.map((error) => error.field === 'password' && <div style={{ color: 'red' }} >{error.error}</div>)}
-                                </div>
+                                <Input
+                                    type='text'
+                                    fieldName='password'
+                                    placeholder='Enter password'
+                                    state={password}
+                                    setState={setPassword}
+                                    errorState={errors}
+                                    label={true}
+                                />
+                                <Input
+                                    type='text'
+                                    fieldName='password'
+                                    placeholder='Enter confirm password'
+                                    state={password}
+                                    setState={setPassword}
+                                    errorState={errors}
+                                    label={true}
+                                />
+
                             </div>
-                            <p className="text-secondary"><span>I agree to <span className="text-secondary text-deco-color" >privacy policy & terms</span></span></p>
+                            <p className="text-secondary">
+                                <span>
+                                    I agree to <span className="text-secondary text-deco-color" >privacy policy & terms</span>
+                                </span>
+                            </p>
                             <div>
                                 <Submit title={"Sign up"} />
                             </div>
-                            <p className="text-secondary center"><span>Already have an account?</span><a className="text-secondary text-deco-color" href="auth-register-cover.html"><span>&nbsp;Sign in instead</span></a></p>
+                            <p className="text-secondary center">
+                                <span>
+                                    Already have an account?
+
+                                </span>
+                                <a
+                                    className="text-secondary text-deco-color"
+                                    href={"/signin"}>
+                                    <span>&nbsp;Sign in instead</span>
+                                </a>
+                            </p>
                         </form>
                         <div class="flex-align-center gap10">
                             <Facebook />

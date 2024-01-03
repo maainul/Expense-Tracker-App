@@ -11,8 +11,8 @@ const hashPassword = async (pass) => {
     }
 }
 
-const comparePassword = async (pass, hashPassword) => {
-    return bycrypt.compare(pass, comparePassword)
+const comparePassword = async (pass, hp) => {
+    return bycrypt.compare(pass, hp)
 }
 
 

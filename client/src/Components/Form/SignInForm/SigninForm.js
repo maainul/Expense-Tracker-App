@@ -19,21 +19,6 @@ const SigninForm = () => {
     const [errors, setErrors] = useState([])
     const navigate = useNavigate()
 
-    // handle Change
-    const handleChange = (e) => {
-        const { id, value } = e.target
-        switch (id) {
-            case 'username':
-                setUserName(value)
-                break;
-            case 'password':
-                setPassword(value)
-                break;
-            default:
-                break;
-        }
-    }
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
@@ -81,24 +66,36 @@ const SigninForm = () => {
                                 state={username}
                                 setState={setUserName}
                                 errorState={errors}
+                                label={true}
                             />
                             <div className="formgroup">
                                 <div className="grid-col-2-space-between">
-                                    <label htmlFor='password'>Password</label>
+                                    <label htmlFor="password" >password</label>
                                     <a className="text-deco-color" href="/">Forgot Password ?</a>
                                 </div>
-                                <input
+                                <Input
                                     type='text'
+                                    fieldName='password'
                                     placeholder='Enter password'
-                                    value={password}
-                                    id='password'
-                                    onChange={handleChange}
+                                    state={password}
+                                    setState={setPassword}
+                                    errorState={errors}
+                                    label={false}
                                 />
-                                {errors.map((error) => error.field === 'password' && <div style={{ color: 'red' }} >{error.error}</div>)}
                             </div>
-                            <p className="text-secondary"><span>Remember Me</span></p>
+                            <p className="text-secondary">
+                                <span>Remember Me</span>
+                            </p>
                             <Submit title={"Sign in"} />
-                            <p className="text-secondary center"><span>New on our platform?</span><a className="text-secondary text-deco-color" href="auth-register-cover.html"><span>&nbsp;Create an account</span></a></p>
+                            <p className="text-secondary center">
+                                <span>New on our platform?</span>
+                                <a
+                                    className="text-secondary text-deco-color"
+                                    href={"/signup"}
+                                >
+                                    <span>&nbsp;Create an account</span>
+                                </a>
+                            </p>
                         </form>
 
                         <div class="flex-align-center gap10">

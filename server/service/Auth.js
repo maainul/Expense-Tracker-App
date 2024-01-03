@@ -1,23 +1,16 @@
 const UserModel = require('../models/User');
 const { hashPassword } = require('../utils/authHelper');
-const save = require('../utils/saveUtils');
+const { saveToDb } = require('../utils/saveUtils');
 
 const RegisterUserService = async (body) => {
     try {
-        const { firstname, lastname, mobileNumber, email, username, password, area, town, city } = body;
+        const { email, username, password } = body;
         const hashedPassword = await hashPassword(password)
         // Save Data in Database
-        const user = await save(UserModel, {
-            firstname,
-            lastname,
-            mobileNumber,
+        const user = await saveToDb(UserModel, {
             email,
             username,
             password: hashedPassword,
-            area,
-            town,
-            city
-
         })
         return {
             success: true,

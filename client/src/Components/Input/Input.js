@@ -8,6 +8,7 @@ const Input = ({
     state,
     setState,
     errorState,
+    label
 }) => {
 
     // handle Change 
@@ -18,7 +19,7 @@ const Input = ({
 
     return (
         <div className="formgroup">
-            <label htmlFor={fieldName} >{fieldName}</label>
+            {label && <label htmlFor={fieldName} >{fieldName}</label>}
             <input
                 type={type}
                 placeholder={placeholder}

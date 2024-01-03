@@ -3,13 +3,11 @@ const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
     firstname: {
         type: String,
-        required: [true, "firstname is required"],
         minlength: [3, 'firstname must be three characters long'],
         maxlength: [50, 'User firstname can not be longer than 50 characters long']
     },
     lastname: {
         type: String,
-        required: [true, "lastname is required"],
         minlength: [3, 'lastname must be three characters long'],
         maxlength: [50, 'User lastname can not be longer than 50 characters long']
     },
@@ -29,7 +27,6 @@ const userSchema = new mongoose.Schema({
     },
     mobileNumber: {
         type: String,
-        required: [true, "mobile number is required"],
     },
     area: {
         type: String,
