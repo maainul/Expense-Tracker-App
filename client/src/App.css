@@ -155,6 +155,49 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
+/* Button With Icons */
+
+.btn.button-with-icon {
+    padding: 10px 20px;
+    background-color: #696cff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.button-icons-text i {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.btn.profile-btn:hover {
+    background-color: #5a59e5;
+}
+
+
+.btn-negative {
+    padding: 10px 20px;
+    background-color: #FF3E1D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-negative:hover {
+    background-color: #ff654a;
+}
+
 /* *********************************** */
 /* Login and SignUp Form Design  */
 /* ******************************** */
@@ -303,4 +346,77 @@
     background-color: var(--bgMain);
     text-align: left;
     padding: 10px;
+}
+
+/* Profile */
+.profile {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 2%;
+    width: fit-content;
+    color: var(--textColor);
+    /* min-height: 100vh; */
+}
+
+.profile .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile .details .details-card {
+    background-color: #FFF;
+    font-size: 15px;
+
+}
+
+.card-header {
+    align-items: center;
+    text-align: center;
+}
+
+.card-data p {
+    font-weight: 500;
+}
+
+.profile .details .plan-card {
+    background-color: #FFF;
+}
+
+.details-card card {
+    background-color: #FFFFFF;
+}
+
+
+.card-data {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.upper-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.heading-primary {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.button-betwen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }

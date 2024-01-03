@@ -1,5 +1,5 @@
 import React from 'react'
-import '../SubmitBtn/SubmitBtn.css'
+
 
 
 const SubmitBtn = ({ title }) => {

@@ -28,12 +28,12 @@ const Sidebar = () => {
                     <Link to={'/expense'} className='menu-link'>Expense</Link>
                 </div>
                 <div className='menuItem'>
-                    <i class="menu-icon tf-icons bx bx-user"></i>
-                    <Link to={'/profile'} className='menu-link'>Profile</Link>
-                </div>
-                <div className='menuItem'>
                     <i class="menu-icon tf-icons bx bx-chart"></i>
                     <Link to={'/analytics'} className='menu-link'>Analytics</Link>
+                </div>
+                <div className='menuItem'>
+                    <i class="menu-icon tf-icons bx bx-user"></i>
+                    <Link to={'/profile'} className='menu-link'>Profile</Link>
                 </div>
                 {/* <Link to={'/about'}>About</Link> */}
                 {/* <Link to={'/user-list'}>Accounts</Link> */}
