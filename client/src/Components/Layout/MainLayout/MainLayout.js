@@ -1,11 +1,11 @@
 import React from 'react'
 import './MainLayout.css'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toaster } from 'react-hot-toast';
+
 const MainLayout = ({ children }) => {
     return (
         <div className='container'>
-            <ToastContainer />
+            <Toaster />
             {children}
         </div>
     )

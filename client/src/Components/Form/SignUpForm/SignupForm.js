@@ -2,8 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import API from "../../../Services/API"
 import axios from 'axios';
-import { toast } from 'react-toastify';
-import './SignupForm.css'
+import { toast } from 'react-hot-toast';
 import Submit from './../../Buttons/Submit';
 import Facebook from "../../SocialIcons/Facebook";
 import Gmail from "../../SocialIcons/Gmail";
@@ -18,9 +17,7 @@ const SignupForm = () => {
     const [username, setUserName] = useState()
     const [password, setPassword] = useState()
     const [errors, setErrors] = useState([])
-
     const navigate = useNavigate()
-
 
     // handle Change 
     const handleChange = (e) => {
@@ -71,19 +68,20 @@ const SignupForm = () => {
                         <BrandLogo />
                         <BrandTitle />
                     </div>
-
-                    <div className="left-big-img">
+                    <div className="flex-align-center">
                         <SignupImage />
                     </div>
                 </div>
 
                 <div className="right-div">
-                    <div className="loginform">
-                        <h2 class="card-title">Adventure starts here 🚀</h2>
-                        <p class="card-text">Make your app management easy and fun!</p>
+                    <div className="formContainer">
+                        <div className="form-header">
+                            <h2 class="text-primary">Adventure starts here 🚀</h2>
+                            <p class="text-secondary padddingBottom20">Make your app management easy and fun!</p>
+                        </div>
                         <form onSubmit={handleSubmit}>
                             <div className="formgroup">
-                                <label htmlFor='email'>Email</label>
+                                <label htmlFor='email' className="text-secondary">Email</label>
                                 <input
                                     type='text'
                                     placeholder='Enter email'
@@ -94,7 +92,7 @@ const SignupForm = () => {
                                 {errors.map((error) => error.field === 'email' && <div style={{ color: 'red' }} >{error.error}</div>)}
                             </div>
                             <div className="formgroup">
-                                <label htmlFor='username'>Username</label>
+                                <label htmlFor='username' className="text-secondary">Username</label>
                                 <input
                                     type='text'
                                     placeholder='Enter username'
@@ -106,7 +104,7 @@ const SignupForm = () => {
                             </div>
                             <div className="grid-column-2" >
                                 <div className="formgroup">
-                                    <label htmlFor='password'>Password</label>
+                                    <label htmlFor='password' className="text-secondary">Password</label>
                                     <input
                                         type='text'
                                         placeholder='Enter password'
@@ -117,7 +115,7 @@ const SignupForm = () => {
                                     {errors.map((error) => error.field === 'password' && <div style={{ color: 'red' }} >{error.error}</div>)}
                                 </div>
                                 <div className="formgroup">
-                                    <label htmlFor='password'>Confirm Password</label>
+                                    <label htmlFor='password' className="text-secondary">Confirm Password</label>
                                     <input
                                         type='text'
                                         placeholder='Enter password'
@@ -128,14 +126,13 @@ const SignupForm = () => {
                                     {errors.map((error) => error.field === 'password' && <div style={{ color: 'red' }} >{error.error}</div>)}
                                 </div>
                             </div>
-                            <p className="remember-me"><span>I agree to privacy policy & terms</span></p>
+                            <p className="text-secondary"><span>I agree to <span className="text-secondary text-deco-color" >privacy policy & terms</span></span></p>
                             <div>
                                 <Submit title={"Sign up"} />
                             </div>
-                            <p className="create-account"><span>Already have an account?</span><a className="crt-text" href="auth-register-cover.html"><span>&nbsp;Sign in instead</span></a></p>
+                            <p className="text-secondary center"><span>Already have an account?</span><a className="text-secondary text-deco-color" href="auth-register-cover.html"><span>&nbsp;Sign in instead</span></a></p>
                         </form>
-
-                        <div class="auth-footer-btn">
+                        <div class="flex-align-center gap10">
                             <Facebook />
                             <Twitter />
                             <Gmail />

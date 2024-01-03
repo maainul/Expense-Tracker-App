@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Sidebar.css'
 import 'boxicons/css/boxicons.min.css';
-import { SidebarData } from './../../Data/Data';
 import { Link } from 'react-router-dom';
 
-
-
 const Sidebar = () => {
-    const [selected, setSelected] = useState(0)
+
     return (
         <div className='Sidebar'>
             <div className='logo'>

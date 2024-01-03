@@ -4,6 +4,10 @@
     gap: 5px;
 }
 
+.formgroup label {
+    font-size: 15px;
+}
+
 .formgroup input {
     padding: 12px;
     border-radius: 5px;

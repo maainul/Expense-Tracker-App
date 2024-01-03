@@ -3,7 +3,7 @@ import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
 import axios from 'axios'
 import API from './../../Services/API';
 import '../../Components/Table/Table.css'
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 
 const Expense = () => {
     const [amount, setAmount] = useState('')

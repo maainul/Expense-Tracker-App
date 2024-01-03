@@ -2,8 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import API from "../../../Services/API"
 import axios from 'axios';
-import { toast } from 'react-toastify';
-import './SigninForm.css'
+import { toast } from 'react-hot-toast';
 import Submit from './../../Buttons/Submit';
 import Facebook from "../../SocialIcons/Facebook";
 import Gmail from "../../SocialIcons/Gmail";
@@ -13,9 +12,6 @@ import BrandLogo from "../../Logos/BrandLogo/BrandLogo";
 import BrandTitle from "../../BrandTitle/BrandTitle";
 import Signinimage from "../../SIgninImage/Signinimage";
 import Input from "../../Input/Input";
-
-
-
 
 const SigninForm = () => {
     const [username, setUserName] = useState('')
@@ -67,14 +63,16 @@ const SigninForm = () => {
                         <BrandLogo />
                         <BrandTitle />
                     </div>
-                    <div className="left-big-img">
+                    <div className="flex-align-center">
                         <Signinimage />
                     </div>
                 </div>
                 <div className="right-div">
-                    <div className="loginform">
-                        <h2 class="card-title">Welcome to Vuexy! 👋</h2>
-                        <p class="card-text">Please sign-in to your account and start the adventure</p>
+                    <div className="formContainer gap10">
+                        <div className="form-header">
+                            <h2 class="text-primary">Welcome to Vuexy! 👋</h2>
+                            <p class="text-secondary padddingBottom20">Please sign-in to your account and start the adventure</p>
+                        </div>
                         <form onSubmit={handleSubmit}>
                             <Input
                                 type='text'
@@ -85,9 +83,9 @@ const SigninForm = () => {
                                 errorState={errors}
                             />
                             <div className="formgroup">
-                                <div className="pass-forgot-pass">
+                                <div className="grid-col-2-space-between">
                                     <label htmlFor='password'>Password</label>
-                                    <a className="forgot-pass" href="/">Forgot Password ?</a>
+                                    <a className="text-deco-color" href="/">Forgot Password ?</a>
                                 </div>
                                 <input
                                     type='text'
@@ -98,12 +96,12 @@ const SigninForm = () => {
                                 />
                                 {errors.map((error) => error.field === 'password' && <div style={{ color: 'red' }} >{error.error}</div>)}
                             </div>
-                            <p className="remember-me"><span>Remember Me</span></p>
+                            <p className="text-secondary"><span>Remember Me</span></p>
                             <Submit title={"Sign in"} />
-                            <p className="create-account"><span>New on our platform?</span><a className="crt-text" href="auth-register-cover.html"><span>&nbsp;Create an account</span></a></p>
+                            <p className="text-secondary center"><span>New on our platform?</span><a className="text-secondary text-deco-color" href="auth-register-cover.html"><span>&nbsp;Create an account</span></a></p>
                         </form>
 
-                        <div class="auth-footer-btn">
+                        <div class="flex-align-center gap10">
                             <Facebook />
                             <Twitter />
                             <Gmail />

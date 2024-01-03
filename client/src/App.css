@@ -1,25 +1,14 @@
 :root {
 
     --bgMain: #F5F5F9;
-    --bgSec: #FFFFFF;
+    --bgWhitePrimary: #FFFFFF;
     --textColor: #566a7f;
     --navColor: #696cff;
     --navHover: #F8F8F9;
     --iconColor: #697A8D;
     --navBorder: #696bfe;
-
-    /* 
-    --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
-    --orange: #fca61f;
-    --black: #242d49;
-    --gray: #788097;
-    --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
-    --pink: #FF919D;
-    --glass: rgba(255, 255, 255, 0.54);
-    --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
-    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
-    --activeItem: #f799a354; 
-    */
+    --primaryColor : #7367F0;
+    --textFrontSize : 1rem;
 }
 
 .App {
@@ -28,7 +17,7 @@
     justify-content: center;
     height: 100vh;
     background: var(--bgMain);
-    color: #566a7f;
+    color: var(--textColor);
     font-family: 'Inter', sans-serif;
 
 }
@@ -40,3 +29,166 @@
     overflow: scroll;
     grid-template-columns: 260px auto;
 }
+
+/* ********************************************* */
+/* REUSEABLE DESING */
+/* ********************************************* */
+
+.flex-align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.center {
+    align-items: center;
+    text-align: center;
+}
+
+.grid-col-2-space-between {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--textFrontSize)
+}
+
+/* Text Design and Color Start */
+.text-deco-color {
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+
+.text-primary {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.text-secondary {
+    font-size: var(--textFrontSize);
+}
+
+.padddingBottom20{
+    padding-bottom: 20px;
+}
+
+/********** Text Design and Color End*****/
+/******************************************************************** */
+/************ GRID : Start **************/
+
+.grid-70-30{
+    grid-template-columns: 70% 30%;
+}
+
+.gap10{
+    gap: 10px;
+}
+
+.grid-column-2{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+/************ GRID : End **************/
+/******************************************************************** */
+/*********** FORM : Start *************/
+.formContainer form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.formContainer {
+    width: 80%;
+}
+
+.formgroup input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: var(--textFrontSize);
+    font-weight: 500;
+}
+
+.formgroup input:focus {
+    border-color: var(--primaryColor) !important;
+    outline: none;
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+}
+
+.formgroup input ::placeholder {
+    font-size: var(--textFrontSize);
+}
+/*********** FORM : End *************/
+/******************************************************************** */
+/* Button Design (Signup and Signin) */
+.btn {
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    font-size: var(--textFrontSize);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) ease;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+/* *********************************** */
+/* Login and SignUp Form Design  */
+/* ******************************** */
+.auth-inner {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 70% 30%;
+}
+
+
+/* Left Div */
+.left-div {
+    max-width: 100%;
+}
+
+.brand-logo-text {
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    padding-left: 30px;
+}
+
+.brand-logo-text svg {
+    color: var(--primaryColor);
+}
+
+.brand-text {
+    color: var(--primaryColor);
+    font-weight: 600;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.flex-align-center svg {
+    margin-top: 10%;
+}
+
+.right-div {
+    background-color: var(--bgWhitePrimary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ececec;
+}
+

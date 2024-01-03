@@ -3,7 +3,9 @@ import MainLayout from '../../Components/Layout/MainLayout/MainLayout'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import API from './../../Services/API';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
+
+
 const ExpenseTypes = () => {
     const [name, setName] = useState('')
     const [icon, setIcon] = useState('')
