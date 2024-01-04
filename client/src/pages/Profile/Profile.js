@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import MainLayout from './../../Components/Layout/MainLayout/MainLayout';
 import { useAuth } from '../../context/auth';
 import ButtonWithIcons from '../../Components/Buttons/ButtonWithIcons';
 import ButtonWithIconsNegative from '../../Components/Buttons/ButtonWithIconsNegative';
 
+
 const Profile = () => {
-
     const [auth, setAuth] = useAuth()
-
-    useEffect(() => {
-
-    }, [auth])
-
-
 
     return (
         <MainLayout>
@@ -20,31 +14,31 @@ const Profile = () => {
                 <div className='details'>
                     <div className='details-card'>
                         <div className='card-header'>
-                            <p>{auth.user.username}</p>
-                            <p>{auth.user.email}</p>
+                            <p></p>
+                            <p></p>
                         </div>
                         <p className='heading-primary'>Details</p>
                         <div className='card-body'>
                             <div className='card-data'>
                                 <p>Username :</p>
-                                {auth.user.username}
+
                             </div>
                             <div className='card-data'>
                                 <p>Email :</p>
-                                {auth.user.email}
+
                             </div>
                             <div className='card-data'>
                                 <p>Status :</p>
-                                {auth.user.username}
+
                             </div> <div className='card-data'>
                                 <p>Role :</p>
-                                {auth.user.username}
+
                             </div> <div className='card-data'>
                                 <p>Contact :</p>
-                                {auth.user.mobileNumber}
+
                             </div> <div className='card-data'>
                                 <p>Address :</p>
-                                {auth.user.username}
+
                             </div>
 
 

@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState, useContext, createContext, useEffect } from "react";
 
 // Context
@@ -15,8 +16,10 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const data = localStorage.getItem('auth')
+
         if (data) {
             const parseData = JSON.parse(data)
+
             setAuth({
                 ...auth,
                 user: parseData.user,

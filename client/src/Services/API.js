@@ -10,7 +10,7 @@ const SIGNIN_URL = 'http://localhost:8081/api/v1/auth/signin'
 // USER
 const U_USR_URL = 'http://localhost:8081/api/v1/user/update'
 const R_USR_URL = 'http://localhost:8081/api/v1/user/list'
-const R_SINGLE_URL = 'http://localhost:8081/api/v1/user/read'
+const R_SINGLE_URL = 'http://localhost:8081/api/v1/user/info'
 
 
 // EXPENSE TYPE
