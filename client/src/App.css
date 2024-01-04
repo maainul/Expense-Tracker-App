@@ -198,6 +198,15 @@
     background-color: #ff654a;
 }
 
+
+.button-group{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto auto;
+
+}
+
+
 /* *********************************** */
 /* Login and SignUp Form Design  */
 /* ******************************** */
@@ -341,7 +350,6 @@
     /* row-gap: 10px; */
 }
 
-
 .footer {
     background-color: var(--bgMain);
     text-align: left;
@@ -351,19 +359,26 @@
 /* Profile */
 .profile {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 50%;
     gap: 2%;
     width: fit-content;
     color: var(--textColor);
-    /* min-height: 100vh; */
+    border-radius: 5px;
+    min-height: 100vh;
 }
 
 .profile .details {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
 
+}
+.details:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 .profile .details .details-card {
     background-color: #FFF;
     font-size: 15px;
@@ -379,12 +394,17 @@
     font-weight: 500;
 }
 
+
+
 .profile .details .plan-card {
     background-color: #FFF;
 }
-
+.details-card{
+    padding: 20px;
+}
 .details-card card {
     background-color: #FFFFFF;
+    
 }
 
 
@@ -392,11 +412,6 @@
     display: flex;
     gap: 5px;
     align-items: center;
-}
-
-.upper-buttons {
-    display: flex;
-    gap: 10px;
 }
 
 .account-info {
@@ -419,4 +434,5 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding: 20px;
 }

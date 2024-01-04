@@ -32,6 +32,11 @@ const SigninForm = () => {
                 setErrors([])
                 setUserName('')
                 setPassword('')
+
+                //Save user data and token in local storage
+                localStorage.setItem('userData', JSON.stringify(res.data.user))
+                localStorage.setItem('token', res.data.token)
+
                 navigate('/')
                 toast.success('Login Successfull')
             }

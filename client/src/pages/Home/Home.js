@@ -26,7 +26,6 @@ const Home = () => {
             <div></div>
             <div>congrats</div>
             <div>Top Expense(10)
-                <pre>{JSON.stringify(auth, null, 4)}</pre>
                 <div>
                     {/* {top10ExpList.map((exp) => (
                         <p>{exp.category} -{exp.count} - {exp.totalAmount}

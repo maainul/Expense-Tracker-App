@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState, useContext, createContext, useEffect } from "react";
 
 // Context
@@ -15,18 +14,17 @@ const AuthProvider = ({ children }) => {
     })
 
     useEffect(() => {
-        const data = localStorage.getItem('auth')
-
-        if (data) {
-            const parseData = JSON.parse(data)
-
-            setAuth({
-                ...auth,
-                user: parseData.user,
-                token: parseData.token
-            })
+        const userData = localStorage.getItem('userData');
+        const token = localStorage.getItem('token');
+        if (userData) {
+            const parsedData = JSON.parse(userData);
+            setAuth(prevAuth => ({
+                ...prevAuth,
+                user: parsedData,
+                token: token // No need to parse token here
+            }));
         }
-    }, [auth])
+    }, [setAuth]); // Remove 'auth' from the dependency array
 
     return (
         <AuthContext.Provider value={[auth, setAuth]}>
@@ -38,4 +36,19 @@ const AuthProvider = ({ children }) => {
 // custom hook
 const useAuth = () => useContext(AuthContext);
 
-export { useAuth, AuthProvider };
+const useUserDetails = () => {
+    const [auth] = useAuth();
+    const getUserDetails = () => {
+        const fields = ["_id", "username", "email", "mobileNumber", "role", "firstname", "lastname", "area", "town", "city"];
+        const userDetails = {};
+        fields.forEach(field => {
+            if (auth.user && auth.user[field]) {
+                userDetails[field] = auth.user[field];
+            }
+        });
+        return userDetails;
+    }
+    return { getUserDetails }
+}
+
+export { useAuth, AuthProvider, useUserDetails };
