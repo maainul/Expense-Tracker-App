@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MainLayout from './../../Components/Layout/MainLayout/MainLayout';
 import { useAuth } from '../../context/auth';
 import ButtonWithIcons from '../../Components/Buttons/ButtonWithIcons';
@@ -7,6 +7,13 @@ import ButtonWithIconsNegative from '../../Components/Buttons/ButtonWithIconsNeg
 const Profile = () => {
 
     const [auth, setAuth] = useAuth()
+
+    useEffect(() => {
+
+    }, [auth])
+
+
+
     return (
         <MainLayout>
             <div className='profile'>

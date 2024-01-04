@@ -42,7 +42,7 @@ router.get('/about/:id', requireSignIn, updateaboutUs)
 // USER
 router.put('/user/update/:id', usrCtrl.updateUser)
 router.get('/user/list', requireSignIn, isAdmin, usrCtrl.listUser)
-router.get('/user/userinfo/:id', usrCtrl.getUserInfo)
+router.get('/user/info', requireSignIn, usrCtrl.getUserInfo)
 
 // AUTH
 router.post('/auth/signin', authServ.signin)

@@ -4,13 +4,19 @@ const UserModel = require('../models/User');
 // Protected Routes : Token Based
 const requireSignIn = async (req, res, next) => {
     try {
-        const decode = JWT.verify(req.headers.authorization, process.env.JWT_SECRET)
-        req.user = decode
-        next()
+        const decode = JWT.verify(req.headers.authorization, process.env.JWT_SECRET);
+        req.user = decode;
+        next();
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        return res.status(401).json({
+            success: false,
+            message: 'Unauthorized',
+            error: 'Invalid or expired token',
+        });
     }
-}
+};
+
 
 // Admin access
 
