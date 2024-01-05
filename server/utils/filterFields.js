@@ -9,4 +9,4 @@ const filterFields = (sourceObject, fields) => {
     );
 }
 
-module.exports = { filterFields }
+export default filterFields 

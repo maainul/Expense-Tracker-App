@@ -5,4 +5,4 @@ const generateVerificationCode = () => {
 };
 
 
-module.exports = generateVerificationCode
+export default generateVerificationCode

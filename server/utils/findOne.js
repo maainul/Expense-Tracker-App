@@ -17,4 +17,4 @@ const findOne = async (model, field, value) => {
     }
 };
 
-module.exports = findOne
+export default findOne

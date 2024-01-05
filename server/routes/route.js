@@ -1,20 +1,16 @@
-const express = require('express')
-const { expCtrl } = require('../controllers/expense')
-const { exTypCtrl } = require('../controllers/expenseType')
-const { anaCtrl } = require('../controllers/analytics')
-const { subCtrl } = require('../controllers/subscribeUser')
-const { usrCtrl } = require('../controllers/user')
+import { Router } from 'express'
+import { expCtrl } from '../controllers/expense.js'
+import { exTypCtrl } from '../controllers/expenseType.js'
+import { anaCtrl } from '../controllers/analytics.js'
+import { subCtrl } from '../controllers/subscribeUser.js'
+import { usrCtrl } from '../controllers/user.js'
+import { authServ } from '../controllers/auth.js'
 
-const {
-    createAboutUs,
-    updateaboutUs
-} = require('../controllers/about')
-const { authServ } = require('../controllers/auth')
-const { requireSignIn, isAdmin } = require('../middleware/authMiddleware')
+import requireSignIn from '../middleware/authMiddleware.js'
+import isAdmin from '../middleware/authMiddleware.js'
 
 
-
-const router = express.Router()
+const router = Router()
 
 // EXPENSE TYPE
 router.post('/expense-type/create', exTypCtrl.createExpType)
@@ -35,18 +31,23 @@ router.post('/user/verify', subCtrl.verifyUser)
 router.post('/user/unsubscribe', subCtrl.unSubscribeUser)
 
 // ABOUT PAGE OF SITE
-router.get('/about', requireSignIn, createAboutUs)
-router.get('/about/:id', requireSignIn, updateaboutUs)
+// router.get('/about', requireSignIn, createAboutUs)
+// router.get('/about/:id', requireSignIn, updateaboutUs)
 
 
 // USER
-router.put('/user/update/:id', usrCtrl.updateUser)
-router.get('/user/list', requireSignIn, isAdmin, usrCtrl.listUser)
-router.get('/user/info', requireSignIn, usrCtrl.getUserInfo)
+router.
+    put('/user/update/:id', usrCtrl.updateUser)
+router.get('/user/list', usrCtrl.listUser)
+router.get('/user/info', usrCtrl.getUserInfo)
 
 // AUTH
 router.post('/auth/signin', authServ.signin)
 router.post('/auth/signup', authServ.signup)
+router.get('/auth/user-auth', (req, res) => {
+    res.status(200).send({ ok: true })
+})
+
 
 // ANALYTICS
 
@@ -75,4 +76,4 @@ router.get('/analytics/credit-debit-expense', anaCtrl.getAllCreditAndDebit)
 router.get('/analytics/expense-type-wise', anaCtrl.getAllDataExpTypeWise)
 
 
-module.exports = router
+export default router

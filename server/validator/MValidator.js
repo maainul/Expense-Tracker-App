@@ -1,4 +1,5 @@
-const findOne = require("../utils/findOne");
+
+import findOne from './../utils/findOne.js';
 
 
 const MValidator = async (req, validationRules, model) => {
@@ -74,4 +75,4 @@ function isValidPassword(password) {
     return true;
 }
 
-module.exports = MValidator;
+export default MValidator;

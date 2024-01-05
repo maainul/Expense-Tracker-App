@@ -1,5 +1,6 @@
-const JWT = require('jsonwebtoken');
-const UserModel = require('../models/User');
+import JWT from "jsonwebtoken";
+import userModel from "../models/User.js";
+
 
 // Protected Routes : Token Based
 const requireSignIn = async (req, res, next) => {
@@ -22,7 +23,7 @@ const requireSignIn = async (req, res, next) => {
 
 const isAdmin = async (req, res, next) => {
     try {
-        const user = await UserModel.findById(req.user.id)
+        const user = await userModel.findById(req.user._id)
         if (!user.role !== 'admin') {
             return res.status(401).send({
                 success: false,
@@ -36,11 +37,12 @@ const isAdmin = async (req, res, next) => {
         console.log(error)
         return res.status(401).send({
             success: false,
-            message: "Error in Admin Middleware"
+            message: "Error in Admin Middleware",
+            error
         })
     }
 }
 
 
 
-module.exports = { requireSignIn, isAdmin }
+export default { requireSignIn, isAdmin }

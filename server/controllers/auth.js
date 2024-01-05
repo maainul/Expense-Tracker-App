@@ -1,11 +1,11 @@
 
 
-const MValidator = require('../validator/MValidator')
-const validationLog = require('../utils/validationLog');
-const UserModel = require('../models/User');
-const { AuthServ } = require('../service/Auth');
-const JWT = require('jsonwebtoken');
-const { comparePassword } = require('../utils/authHelper');
+import MValidator from '../validator/MValidator.js';
+import validationLog from '../utils/validationLog.js';
+import UserModel from '../models/User.js';
+import AuthServ from '../service/Auth.js';
+import JWT from 'jsonwebtoken';
+import comparePassword from '../utils/authHelper.js';
 
 
 // Validation Rules
@@ -144,9 +144,7 @@ const signup = async (req, res) => {
 };
 
 
-const authServ = {
+export const authServ = {
     signin,
     signup
 }
-
-module.exports = { authServ }

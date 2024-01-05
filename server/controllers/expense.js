@@ -1,13 +1,9 @@
-const MValidator = require('../validator/MValidator')
-const ExpenseModel = require('../models/Expense')
-const validationLog = require('../utils/validationLog')
-const save = require('../utils/saveUtils')
-const {
-    dateToString,
-    dateToTimestamp
-
-} = require('../utils/dateUtils');
-const { serv } = require('../service/expense');
+import MValidator from '../validator/MValidator.js';
+import ExpenseModel from '../models/Expense.js';
+import validationLog from '../utils/validationLog.js';
+import save from '../utils/saveUtils.js';
+import { dateUtils } from '../utils/dateUtils.js';
+import { serv } from '../service/expense.js';
 
 // validation Rules
 const validationRules = {
@@ -39,8 +35,8 @@ const createExpense = async (req, res) => {
     try {
         const { amount, date, description, category, expenseType } = req.body
         console.log(`Request data ==> \n ${JSON.stringify(req.body)}`)
-        const formattedDate = dateToString(new Date(date))
-        const date_sl = dateToTimestamp(new Date(formattedDate))
+        const formattedDate = dateUtils.dateToString(new Date(date))
+        const date_sl = dateUtils.dateToTimestamp(new Date(formattedDate))
         const validationResut = await MValidator(req.body, validationRules, ExpenseModel)
 
         validationLog(validationResut)
@@ -79,7 +75,7 @@ const updateExpense = async (req, res) => {
         const { amount, date, description, category, expenseType } = req.body
         console.log(`Request data ==> \n ${JSON.stringify(req.body, null, 2)}`);
 
-        const expense = await findById(id)
+        const expense = await ExpenseModel.findById(id)
         console.log(`Get expense By Id : \n ${expense}`)
         if (!expense) {
             return res.status(404).send({
@@ -204,7 +200,7 @@ const getExpenseById = async (req, res) => {
     }
 }
 
-const expCtrl = {
+export const expCtrl = {
     createExpense,
     updateExpense,
     deleteExpense,
@@ -212,4 +208,3 @@ const expCtrl = {
     getExpenseById
 }
 
-module.exports = { expCtrl }

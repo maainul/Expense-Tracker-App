@@ -1,11 +1,8 @@
-const ExpenseModel = require("../models/Expense");
+import ExpenseModel from "../models/Expense.js";
 
-const { serv } = require("../service/expense");
+import { serv } from "../service/expense.js";
 
-const {
-    getCurrentWeeKRange,
-    dateToString
-} = require("../utils/dateUtils");
+import { dateUtils } from "../utils/dateUtils.js";
 
 // Get Current Day Expense
 const getDailyExpense = async (req, res) => {
@@ -33,7 +30,7 @@ const getDailyExpense = async (req, res) => {
 // Get Current Expense Weekly From Saturday to Friday
 const getCurrentWeekExpense = async (req, res) => {
     try {
-        const dateRange = getCurrentWeeKRange()
+        const dateRange = dateUtils.getCurrentWeeKRange()
         const curWeekexp = await serv.getCurrentWeekExpService(dateRange.startWeekTimestamp, dateRange.endWeekTimestamp)
         console.log(`Get Daily Expenses data ==> \n ${curWeekexp}`);
         return res.status(200).send({
@@ -145,8 +142,8 @@ const getCurrentyearExpense = async (req, res) => {
 
 const getAllExpenseWeekly = async (req, res) => {
     try {
-        const dateStr = dateToString(new Date())
-        const dailyexp = await ExpenseModel.find({ date: dateStr })
+        const dateStr = dateUtils.dateToString(new Date())
+        const dailyexp = await find({ date: dateStr })
         console.log(`Get Daily Expenses data ==> \n ${dailyexp}`);
 
         return res.status(200).send({
@@ -190,8 +187,8 @@ const getAllCreditAndDebit = async (req, res) => {
 
 const getExpenseWithParameter = async (req, res) => {
     try {
-        const dateStr = dateToString(new Date())
-        const dailyexp = await ExpenseModel.find({ date: dateStr })
+        const dateStr = dateUtils.dateToString(new Date())
+        const dailyexp = await find({ date: dateStr })
         console.log(`Get Daily Expenses data ==> \n ${dailyexp}`);
 
         return res.status(200).send({
@@ -212,11 +209,8 @@ const getExpenseWithParameter = async (req, res) => {
 
 const getAllDataExpTypeWise = async (req, res) => {
     try {
-        console.log("#####################################")
-        console.log("#####################################")
         const result = await serv.getExpTypeWiseService()
         console.log(`Get Expense Type Wise Expense Data ===> ${result}`)
-
         return res.status(200).send({
             success: true,
             message: 'Get all expense type successfully',
@@ -234,7 +228,7 @@ const getAllDataExpTypeWise = async (req, res) => {
 }
 
 
-const anaCtrl = {
+export const anaCtrl = {
     getTop10Expense,
     getDailyExpense,
     getCurrentyearExpense,
@@ -246,6 +240,3 @@ const anaCtrl = {
     getExpenseWithParameter,
     getAllDataExpTypeWise
 }
-
-
-module.exports = { anaCtrl }

@@ -1,17 +1,16 @@
-const mongoose = require('mongoose')
-require('colors')
+
+import mongoose from "mongoose";
 
 const connectDB = async () => {
     try {
         console.log("Trying to Connect Mongo DB ....".bgYellow.bold)
-        // CONNECTION_STRING =  mongodb://127.0.0.1:27017/EXPENSEBD
-        await mongoose.connect(process.env.CONNECTION_STRING)
-        console.log(`Database Connected Successfully`.bgGreen.bold)
-        console.log(`Server Running on Host = ${mongoose.connection.host}`.random.bold)
+        const conn = await mongoose.connect(process.env.CONNECTION_STRING);
+        console.log(
+            `Conneted To Mongodb Databse ${conn.connection.host}`.bgMagenta.white
+        );
     } catch (error) {
-        console.log(`MongoDB Error ${error.message}`.bgRed)
-
+        console.log(`Errro in Mongodb ${error}`.bgRed.white);
     }
-}
+};
 
-module.exports = connectDB
+export default connectDB;

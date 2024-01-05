@@ -1,7 +1,7 @@
-const MValidator = require('../validator/MValidator')
-const validationLog = require('../utils/validationLog');
-const UserModel = require('../models/User');
-const { filterFields } = require('../utils/filterFields');
+import MValidator from '../validator/MValidator.js';
+import validationLog from '../utils/validationLog.js';
+import UserModel from '../models/User.js';
+import filterFields from '../utils/filterFields.js';
 
 const updateUser = async (req, res) => {
     try {
@@ -123,10 +123,11 @@ const getUserInfo = async (req, res) => {
 
 }
 
-const usrCtrl = {
+
+
+export const usrCtrl = {
     updateUser,
-    listUser,
-    getUserInfo
+    getUserInfo,
+    listUser
 }
 
-module.exports = { usrCtrl }

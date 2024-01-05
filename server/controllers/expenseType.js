@@ -1,7 +1,7 @@
-const ExpenseTypeModel = require("../models/ExpenseType");
-const save = require("../utils/saveUtils");
-const validationLog = require("../utils/validationLog");
-const MValidator = require("../validator/MValidator");
+import ExpenseTypeModel from "../models/ExpenseType.js";
+import save from "../utils/saveUtils.js";
+import validationLog from "../utils/validationLog.js";
+import MValidator from "../validator/MValidator.js";
 
 // Validation Rules
 const validationRules = {
@@ -108,8 +108,6 @@ const getExpTypeById = async (req, res) => {
     }
 };
 
-const exTypCtrl = {
+export const exTypCtrl = {
     createExpType, getAllExpType, getExpTypeById
 }
-
-module.exports = { exTypCtrl };

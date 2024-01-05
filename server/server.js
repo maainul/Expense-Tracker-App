@@ -1,36 +1,35 @@
-const express = require('express')
-const cors = require('cors')
-const morgan = require('morgan')
-const dotenv = require('dotenv')
-const connectDB = require('./config/connectDB')
-const cookieParser = require('cookie-parser')
-require('colors')
+import express from 'express'
+import cors from 'cors'
+import morgan from 'morgan'
+import colors from "colors";
+import connectDB from './config/connectDB.js';
+import routes from "./routes/route.js";
+import dotenv from "dotenv";
 
+
+//configure env
 dotenv.config()
 
+//databse config
 connectDB()
 
+//rest object
 const app = express()
 
-// const corsOptions = {
-//     origin: 'http://localhost:3000', // Replace with your frontend domain
-//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//     credentials: true, // Enable credentials (cookies)
-//     optionsSuccessStatus: 204, // For preflight requests
-// };
-
-// app.use(cors(corsOptions))
+//middelwares
 app.use(cors())
+app.use(express.json());
 app.use(morgan('dev'))
-app.use(express.json())
-app.use(cookieParser());
 
 // Router
-app.use('/api/v1', require('./routes/route'))
+app.use('/api/v1', routes)
 
 
 const PORT = process.env.PORT || 8081;
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(
+        `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan
+            .white
+    );
 });

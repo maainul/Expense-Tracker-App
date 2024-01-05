@@ -49,13 +49,10 @@ function getCurrentWeeKRange() {
 
 
 
-const dateUtils = {
+export const dateUtils = {
     dateToString,
     dateToTimestamp,
     timestampToDate,
     getCurrentWeeKRange,
 
 }
-
-
-module.exports = { dateToString, dateToTimestamp, timestampToDate, getCurrentWeeKRange, dateUtils }

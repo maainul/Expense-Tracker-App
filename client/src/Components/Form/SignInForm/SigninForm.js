@@ -29,15 +29,10 @@ const SigninForm = () => {
             if (res.data.errors) {
                 setErrors(res.data.errors)
             } else {
-                setErrors([])
-                setUserName('')
-                setPassword('')
-
                 //Save user data and token in local storage
                 localStorage.setItem('userData', JSON.stringify(res.data.user))
                 localStorage.setItem('token', res.data.token)
-
-                navigate('/')
+                navigate('/dashboard')
                 toast.success('Login Successfull')
             }
         } catch (error) {

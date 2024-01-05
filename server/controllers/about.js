@@ -1,6 +1,7 @@
-const AboutUsModel = require("../models/AboutUs");
-const save = require("../utils/saveUtils");
-const MValidator = require("../validator/MValidator");
+import AboutUsModel from "../models/AboutUs.js";
+import save from "../utils/saveUtils.js";
+import MValidator from "../validator/MValidator.js";
+
 // Validation Rules
 const validationRules = {
     title: {
@@ -92,4 +93,4 @@ const updateaboutUs = async (req, res) => {
     }
 };
 
-module.exports = { createAboutUs, updateaboutUs };
+export default { createAboutUs, updateaboutUs };

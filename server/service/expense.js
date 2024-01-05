@@ -1,6 +1,5 @@
-const ExpenseModel = require("../models/Expense");
-const ExpenseType = require("../models/ExpenseType");
-const { dateToTimestamp, dateUtils } = require("../utils/dateUtils");
+import ExpenseModel from "../models/Expense.js";
+import ExpenseType from "../models/ExpenseType.js";
 
 // Top 10 Expenses
 const getTopExpService = async (limit) => {
@@ -265,7 +264,7 @@ const getExpTypeWiseService = async () => {
     return enrichedExpenses;
 };
 
-const serv = {
+export const serv = {
     getTopExpService,
     getCurrentWeekExpService,
     getCurMonthExpService,
@@ -275,5 +274,3 @@ const serv = {
     getCustExpService,
     getExpTypeWiseService,
 }
-
-module.exports = { serv }

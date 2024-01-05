@@ -1,6 +1,6 @@
-const UserModel = require('../models/User');
-const { hashPassword } = require('../utils/authHelper');
-const { saveToDb } = require('../utils/saveUtils');
+import UserModel from '../models/User.js';
+import hashPassword from '../utils/authHelper.js';
+import saveToDb from '../utils/saveUtils.js';
 
 const RegisterUserService = async (body) => {
     try {
@@ -29,4 +29,4 @@ const RegisterUserService = async (body) => {
 
 const AuthServ = { RegisterUserService }
 
-module.exports = { AuthServ }
+export default { AuthServ }

@@ -13,4 +13,4 @@ const validationLog = (validationResult) => {
     }
 };
 
-module.exports = validationLog;
+export default validationLog;

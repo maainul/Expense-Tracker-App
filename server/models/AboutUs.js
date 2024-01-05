@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from "mongoose";
 
 
 const expenseSchema = new mongoose.Schema({
@@ -22,4 +22,4 @@ const expenseSchema = new mongoose.Schema({
 
 }, { timeseries: true })
 
-module.exports = mongoose.model('AboutUs', expenseSchema)
+export default mongoose.model('AboutUs', expenseSchema)

@@ -7,23 +7,23 @@ import { UilEllipsisV } from '@iconscout/react-unicons'
 
 export const SidebarData = [
     {
-        icon: <i class="menu-icon tf-icons bx bx-home-circle"></i>,
+        icon: <i className="menu-icon tf-icons bx bx-home-circle"></i>,
         heading: "Dashboard"
     },
     {
-        icon: <i class="menu-icon tf-icons bx bx-grid"></i>,
+        icon: <i className="menu-icon tf-icons bx bx-grid"></i>,
         heading: "Expense"
     },
     {
-        icon: <i class='menu-icon bx bxs-bank'></i>,
+        icon: <i className='menu-icon bx bxs-bank'></i>,
         heading: "Income"
     },
     {
-        icon: <i class="menu-icon tf-icons bx bx-detail"></i>,
+        icon: <i className="menu-icon tf-icons bx bx-detail"></i>,
         heading: "Add Ex / Income"
     },
     {
-        icon: <i class="menu-icon tf-icons bx bx-chart"></i>,
+        icon: <i className="menu-icon tf-icons bx bx-chart"></i>,
         heading: "Charts"
     }
 ]

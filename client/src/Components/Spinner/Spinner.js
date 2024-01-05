@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Spinner = () => {
-    return (
-        <div>Spinner</div>
-    )
-}
+    const navigate = useNavigate();
+    const location = useLocation();
 
-export default Spinner
+    useEffect(() => {
+        navigate("/signin", { state: location.pathname });
+    }, [navigate, location]);
+
+    return (
+        <>
+            <h1 style={{ display: "flex", textAlign: "center", justifyContent: "center" }}>
+                Redirecting...
+            </h1>
+            <div style={{ display: "flex", textAlign: "center", justifyContent: "center" }}>
+                <span>Loading...</span>
+            </div>
+        </>
+    );
+};
+
+export default Spinner;

@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState, useContext, createContext, useEffect } from "react";
 
 // Context
@@ -12,6 +13,9 @@ const AuthProvider = ({ children }) => {
         user: null,
         token: ''
     })
+
+    // axios default token
+    axios.defaults.headers.common['Authorization'] = auth?.token
 
     useEffect(() => {
         const userData = localStorage.getItem('userData');

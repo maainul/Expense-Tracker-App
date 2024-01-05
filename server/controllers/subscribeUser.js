@@ -1,9 +1,9 @@
-const MValidator = require("../validator/MValidator")
-const SubscriptionModel = require('../models/SubscribeUser')
-const validationLog = require("../utils/validationLog")
-const save = require("../utils/saveUtils")
-const { sendMail } = require("../utils/sendVerificationEmail")
-const generateVerificationCode = require("../utils/getVerificationCode")
+import MValidator from "../validator/MValidator.js"
+import SubscriptionModel from '../models/SubscribeUser.js'
+import validationLog from "../utils/validationLog.js"
+import save from "../utils/saveUtils.js"
+// import { sendMail } from "../utils/sendVerificationEmail.js"
+import generateVerificationCode from "../utils/getVerificationCode.js"
 
 
 const validationRules = {
@@ -149,10 +149,8 @@ const verifyUser = async (req, res) => {
     }
 }
 
-const subCtrl = {
+export const subCtrl = {
     subscribeUser,
     unSubscribeUser,
     verifyUser
 }
-
-module.exports = { subCtrl }
