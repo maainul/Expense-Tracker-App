@@ -9,10 +9,13 @@ import Signin from './pages/Auth/Signin/Signin';
 import { Routes, Route } from 'react-router-dom';
 import Analytics from './pages/Analytics/Analytics';
 import ExpenseTypes from './pages/ExpeseTypes/ExpenseTypes';
+import Breadcrumb from './Components/Breadcrumb/Breadcrumb';
 
 function App() {
+
   return (
     <>
+
       <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path={'/about'} element={<About />} />

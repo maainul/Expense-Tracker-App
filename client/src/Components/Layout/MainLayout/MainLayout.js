@@ -3,6 +3,7 @@ import React from 'react'
 import { Toaster } from 'react-hot-toast';
 import Sidebar from '../Sidebar/Sidebar';
 import Footer from '../Footer/Footer';
+import Breadcrumb from '../../Breadcrumb/Breadcrumb';
 
 const MainLayout = ({ children }) => {
     return (
@@ -12,6 +13,7 @@ const MainLayout = ({ children }) => {
                 <div className='main-container'>
                     <div className='header'>Header</div>
                     <div className='main'>
+                        <Breadcrumb />
                         {children}
                         <Toaster />
                     </div>

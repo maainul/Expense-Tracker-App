@@ -9,7 +9,6 @@ import { toast } from 'react-hot-toast';
 import ResetAndCancelBtn from '../../Components/Buttons/ResetAndCancelBtn';
 import ButtonPrimary from '../../Components/Buttons/ButtonPrimary';
 import profileImage from '../../img/1.png';
-import Breadcrumb from './../../Components/Breadcrumb/Breadcrumb';
 
 const Profile = () => {
     const [auth] = useAuth()
@@ -27,6 +26,9 @@ const Profile = () => {
     const [mobileNumber, setMobileNumber] = useState()
     const [errors, setErrors] = useState([])
     const navigate = useNavigate()
+
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -52,7 +54,7 @@ const Profile = () => {
     }
     return (
         <MainLayout>
-            <Breadcrumb />
+            {/* <Breadcrumb items={breadcrumbItems} /> */}
             <div className='card'>
                 <h5 class="card-header">Profile Details</h5>
                 <div className="card-header-secondary">
