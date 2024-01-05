@@ -1,5 +1,4 @@
 import React from 'react'
-import '../Input/input.css'
 
 const Input = ({
     type,
@@ -8,7 +7,8 @@ const Input = ({
     state,
     setState,
     errorState,
-    label
+    label,
+    labelTitle
 }) => {
 
     // handle Change 
@@ -19,7 +19,7 @@ const Input = ({
 
     return (
         <div className="formgroup">
-            {label && <label htmlFor={fieldName} >{fieldName}</label>}
+            {label && <label htmlFor={fieldName} >{labelTitle}</label>}
             <input
                 type={type}
                 placeholder={placeholder}

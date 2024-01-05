@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MainLayout from './../../Components/Layout/MainLayout/MainLayout';
 import { useAuth, useUserDetails } from '../../context/auth';
-import ButtonWithIcons from '../../Components/Buttons/ButtonWithIcons';
-import ButtonWithIconsNegative from '../../Components/Buttons/ButtonWithIconsNegative';
+import Input from '../../Components/Input/Input';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import API from '../../Services/API';
+import { toast } from 'react-hot-toast';
+import ResetAndCancelBtn from '../../Components/Buttons/ResetAndCancelBtn';
+import ButtonPrimary from '../../Components/Buttons/ButtonPrimary';
+import profileImage from '../../img/1.png';
+import Breadcrumb from './../../Components/Breadcrumb/Breadcrumb';
 
 const Profile = () => {
     const [auth] = useAuth()
@@ -10,96 +17,131 @@ const Profile = () => {
     const { getUserDetails } = useUserDetails();
     const userDetails = getUserDetails();
     console.log(userDetails);
+    const [firstName, setFirstName] = useState()
+    const [lastName, setLastName] = useState()
+    const [email, setEmail] = useState()
+    const [username, setUserName] = useState()
+    const [password, setPassword] = useState()
+    const [state, setState] = useState()
+    const [country, setCountry] = useState()
+    const [mobileNumber, setMobileNumber] = useState()
+    const [errors, setErrors] = useState([])
+    const navigate = useNavigate()
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        try {
+            const res = await axios.post(API.SIGNUP_URL, {
+                email,
+                username,
+                password,
+            })
+            if (res.data.errors) {
+                setErrors(res.data.errors)
+            } else {
+                setErrors([])
+                setUserName('')
+                setEmail('')
+                setPassword('')
+                navigate('/signin')
+                toast.success('Signup Successfull')
+            }
+        } catch (error) {
+            console.log(`Invalid Request : ${error}`)
+        }
+    }
     return (
         <MainLayout>
-            <div className='profile'>
-                <div className='details'>
-                    <div className='details-card'>
-                        <div className='card-header'>
-                            <p>{userDetails.username}</p>
-                            <p>{userDetails.email}</p>
+            <Breadcrumb />
+            <div className='card'>
+                <h5 class="card-header">Profile Details</h5>
+                <div className="card-header-secondary">
+                    <img src={profileImage} alt="Profile" height={100} width={100} style={{ borderRadius: '10px' }} />
+                    <div>
+                        <div className="button-wrapper">
+                            <ButtonPrimary title={"Upload new photo"} />
+                            <ResetAndCancelBtn title={"Reset"} />
                         </div>
-                        <p className='heading-primary'>Details</p>
-                        <div className='card-body'>
-                            <div className='card-data'>
-                                <p>Username :</p>
-                                <p>{userDetails.username}</p>
-                            </div>
-                            <div className='card-data'>
-                                <p>Email :</p>
-                                <p>{userDetails.email}</p>
-                            </div>
-                            <div className='card-data'>
-                                <p>Role :</p>
-                                <p>{userDetails.role}</p>
-                            </div> <div className='card-data'>
-                                <p>Contact :</p>
-                                <p>{userDetails.mobileNumber}</p>
-                            </div> <div className='card-data'>
-                                <p>Address :</p>
-                                <p>{userDetails.town}<p>{userDetails.area} <p>{userDetails.city}</p></p></p>
-                            </div>
-                            <div className='button-betwen'>
-                                <ButtonWithIcons
-                                    title={"Edit"}
-                                />
-                                <ButtonWithIconsNegative
-                                    title={"Suspended"}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='plan-card'>
-                        <div className='plan-card-header'>
-                            <p>Standard</p>
-                            <p>Price</p>
-                        </div>
-                        <div className='plan-card-details'>
-                            <ul>
-                                <li>dd</li>
-                                <li>dd</li>
-                                <li>dd</li>
-                                <li>dd</li>
-                            </ul>
-                        </div>
-                        <div className='progress-day'>
-                            <p>Days</p>
-                            <p>65% Complete</p>
-                        </div>
-                        <hr />
-                        <div className='remaining-day'>4 days remaining</div>
-                        <ButtonWithIcons title={"Upgrade Plan"} />
+                        <p className="text-muted">Allowed JPG, GIF or PNG. Max size of 800K</p>
                     </div>
                 </div>
-                <div className='account-info'>
-                    <div className='button-group'>
-                        <ButtonWithIcons
-                            clsName={"bx bx-bell me-1"}
-                            title={"Account"}
+                <hr />
+                <form onSubmit={handleSubmit}>
+                    <div className="grid-column-2" >
+                        <Input
+                            type='text'
+                            fieldName='firstname'
+                            placeholder='Enter First Name'
+                            state={firstName}
+                            setState={setFirstName}
+                            errorState={errors}
+                            label={true}
+                            labelTitle="FIRST NAME"
                         />
-                        <ButtonWithIcons
-                            clsName={"bx bx-lock-alt me-1"}
-                            title={"Security"}
-                        />
-                        <ButtonWithIcons
-                            clsName={"bx bx-detail me-1"}
-                            title={"Billing"}
-                        />
-                        <ButtonWithIcons
-                            clsName={"bx bx-bell me-1"}
-                            title={"Notifications"}
-                        />
-                        <ButtonWithIcons
-                            clsName={"bx bx-link-alt me-"}
-                            title={"Connections"}
+                        <Input
+                            type='text'
+                            fieldName='lastname'
+                            placeholder='Enter last name'
+                            state={lastName}
+                            setState={setLastName}
+                            errorState={errors}
+                            label={true}
+                            labelTitle="LAST NAME"
                         />
                     </div>
-                    <div className='lists'>
-                        list
+                    <div className="grid-column-2" >
+                        <Input
+                            type='text'
+                            fieldName='email'
+                            placeholder='Enter Email'
+                            state={email}
+                            setState={setEmail}
+                            errorState={errors}
+                            label={true}
+                            labelTitle="EMAIL"
+                        />
+                        <Input
+                            type='text'
+                            fieldName='mobileNumber'
+                            placeholder='Enter Mobile Number'
+                            state={mobileNumber}
+                            setState={setMobileNumber}
+                            errorState={errors}
+                            label={true}
+                            labelTitle="PHONE NUMBER"
+                        />
                     </div>
-                </div>
+                    <div className="grid-column-2" >
+                        <Input
+                            type='text'
+                            fieldName='password'
+                            placeholder='Enter password'
+                            state={state}
+                            setState={setState}
+                            errorState={errors}
+                            label={true}
+                            labelTitle="STATE"
+                        />
+                        <Input
+                            type='text'
+                            fieldName='country'
+                            placeholder='Enter country'
+                            state={country}
+                            setState={setCountry}
+                            errorState={errors}
+                            label={true}
+                            labelTitle="COUNTRY"
+                        />
+                    </div>
+                    <div>
+                        <div className='button-btn' style={{}}>
+                            <ButtonPrimary title={"Save Changes"} />
+                            <ResetAndCancelBtn title={"Cancel"} />
+                        </div>
+                    </div>
+                </form>
             </div>
-        </MainLayout>
+        </MainLayout >
     )
 }
 
