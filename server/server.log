@@ -4662,3 +4662,58 @@
 2024-01-06T15:52:11.583Z info: Method : signin() - Password is valid
 2024-01-06T15:52:11.584Z info: Method : signin() - JWT Token Creation
 2024-01-06T15:52:11.585Z info: Method : signin() - Token Created
+2024-01-06T15:59:29.064Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-06T15:59:29.064Z info: Method : signin() - Check User Already exists Start
+2024-01-06T15:59:29.068Z info: Method : signin() - Check User Already exists End
+2024-01-06T15:59:29.068Z info: Method : signin() - User is Valid
+2024-01-06T15:59:29.068Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-06T15:59:29.069Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-06T15:59:29.145Z info: Password Check From Compare Password : 
+2024-01-06T15:59:29.146Z info: true
+2024-01-06T15:59:29.146Z info: Method : signin() - Password is valid
+2024-01-06T15:59:29.146Z info: Method : signin() - JWT Token Creation
+2024-01-06T15:59:29.147Z info: Method : signin() - Token Created
+2024-01-06T15:59:33.232Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-06T15:59:33.233Z info: Method : signin() - Check User Already exists Start
+2024-01-06T15:59:33.236Z info: Method : signin() - Check User Already exists End
+2024-01-06T15:59:33.237Z info: Method : signin() - User is Valid
+2024-01-06T15:59:33.237Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-06T15:59:33.238Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-06T15:59:33.312Z info: Password Check From Compare Password : 
+2024-01-06T15:59:33.313Z info: true
+2024-01-06T15:59:33.313Z info: Method : signin() - Password is valid
+2024-01-06T15:59:33.313Z info: Method : signin() - JWT Token Creation
+2024-01-06T15:59:33.315Z info: Method : signin() - Token Created
+2024-01-06T15:59:44.415Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-06T15:59:44.415Z info: Method : signin() - Check User Already exists Start
+2024-01-06T15:59:44.418Z info: Method : signin() - Check User Already exists End
+2024-01-06T15:59:44.419Z info: Method : signin() - User is Valid
+2024-01-06T15:59:44.419Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-06T15:59:44.419Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-06T15:59:44.495Z info: Password Check From Compare Password : 
+2024-01-06T15:59:44.496Z info: true
+2024-01-06T15:59:44.496Z info: Method : signin() - Password is valid
+2024-01-06T15:59:44.497Z info: Method : signin() - JWT Token Creation
+2024-01-06T15:59:44.498Z info: Method : signin() - Token Created
+2024-01-06T16:05:09.508Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-06T16:05:09.509Z info: Method : signin() - Check User Already exists Start
+2024-01-06T16:05:09.512Z info: Method : signin() - Check User Already exists End
+2024-01-06T16:05:09.512Z info: Method : signin() - User is Valid
+2024-01-06T16:05:09.512Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-06T16:05:09.513Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-06T16:05:09.583Z info: Password Check From Compare Password : 
+2024-01-06T16:05:09.584Z info: true
+2024-01-06T16:05:09.585Z info: Method : signin() - Password is valid
+2024-01-06T16:05:09.586Z info: Method : signin() - JWT Token Creation
+2024-01-06T16:05:09.587Z info: Method : signin() - Token Created
+2024-01-06T16:05:32.000Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-06T16:05:32.001Z info: Method : signin() - Check User Already exists Start
+2024-01-06T16:05:32.003Z info: Method : signin() - Check User Already exists End
+2024-01-06T16:05:32.004Z info: Method : signin() - User is Valid
+2024-01-06T16:05:32.004Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-06T16:05:32.004Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-06T16:05:32.079Z info: Password Check From Compare Password : 
+2024-01-06T16:05:32.080Z info: true
+2024-01-06T16:05:32.080Z info: Method : signin() - Password is valid
+2024-01-06T16:05:32.080Z info: Method : signin() - JWT Token Creation
+2024-01-06T16:05:32.081Z info: Method : signin() - Token Created
