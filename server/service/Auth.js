@@ -1,6 +1,6 @@
 import UserModel from '../models/User.js';
-import hashPassword from '../utils/authHelper.js';
 import saveToDb from '../utils/saveUtils.js';
+import { hashPassword } from './../utils/authHelper.js';
 
 const RegisterUserService = async (body) => {
     try {

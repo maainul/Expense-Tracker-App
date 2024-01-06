@@ -5,7 +5,7 @@ import validationLog from '../utils/validationLog.js';
 import UserModel from '../models/User.js';
 import AuthServ from '../service/Auth.js';
 import JWT from 'jsonwebtoken';
-import comparePassword from '../utils/authHelper.js';
+import { comparePassword } from '../utils/authHelper.js';
 
 
 // Validation Rules
