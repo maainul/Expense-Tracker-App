@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import API from "../../../Services/API"
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
@@ -12,13 +12,18 @@ import BrandLogo from "../../Logos/BrandLogo/BrandLogo";
 import BrandTitle from "../../BrandTitle/BrandTitle";
 import Signinimage from "../../SIgninImage/Signinimage";
 import Input from "../../Input/Input";
+import { useAuth } from "../../../context/authContext";
+
 
 const SigninForm = () => {
     const [username, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [errors, setErrors] = useState([])
-    const navigate = useNavigate()
+    const [auth, setAuth] = useAuth();
 
+    const navigate = useNavigate()
+    const location = useLocation()
+    console.log(auth)
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
@@ -26,17 +31,22 @@ const SigninForm = () => {
                 username,
                 password,
             })
-            if (res.data.errors) {
-                setErrors(res.data.errors)
+            if (res && res.data.success) {
+                toast.success(res.data && res.data.message)
+                setAuth({
+                    ...auth,
+                    user: res.data.user,
+                    tokn: res.data.token
+                })
+                localStorage.setItem('auth', JSON.stringify(res.data))
+                navigate(location.state || "/dashboard")
             } else {
-                //Save user data and token in local storage
-                localStorage.setItem('userData', JSON.stringify(res.data.user))
-                localStorage.setItem('token', res.data.token)
-                navigate('/dashboard')
-                toast.success('Login Successfull')
+                setErrors(res.data.errors)
+                toast.error(res.data.message)
             }
         } catch (error) {
             console.log(`Invalid Request : ${error}`)
+            toast.error("Something went wrong");
         }
     }
 
@@ -55,7 +65,7 @@ const SigninForm = () => {
                 <div className="right-div">
                     <div className="formContainer gap10">
                         <div className="form-header">
-                            <h2 class="text-primary">Welcome to Vuexy! 👋</h2>
+                            <h2 class="text-primary">Welcome to ExTra! 👋</h2>
                             <p class="text-secondary padddingBottom20">Please sign-in to your account and start the adventure</p>
                         </div>
                         <form onSubmit={handleSubmit}>

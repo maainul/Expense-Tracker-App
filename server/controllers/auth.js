@@ -51,7 +51,6 @@ const validationRulesLogin = {
 const signin = async (req, res) => {
     try {
         const { username, password } = req.body
-
         const validationResult = await MValidator(req.body, validationRulesLogin, UserModel);
         // Validation log
         validationLog(validationResult)

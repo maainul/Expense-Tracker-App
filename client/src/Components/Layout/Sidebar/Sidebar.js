@@ -4,11 +4,20 @@ import 'boxicons/css/boxicons.min.css';
 import { Link } from 'react-router-dom';
 import BrandLogo from '../../Logos/BrandLogo/BrandLogo';
 import BrandTitle from '../../BrandTitle/BrandTitle';
+import { useAuth } from '../../../context/authContext';
+import toast from 'react-hot-toast';
 
 const Sidebar = () => {
+    const [auth, setAuth] = useAuth();
+
     const handleLogout = () => {
-        localStorage.removeItem('userData')
-        localStorage.removeItem('token')
+        setAuth({
+            ...auth,
+            user: null,
+            token: '',
+        })
+        localStorage.removeItem('auth')
+        toast.success("Logout Successfully")
     }
     return (
         <div className='sidebar'>
@@ -40,10 +49,8 @@ const Sidebar = () => {
                 </div>
                 <div className='menuItem'>
                     <i class="menu-icon tf-icons bx bx-user"></i>
-                    <Link onClick={handleLogout()} className='menu-link'>Logout</Link>
+                    <Link onClick={handleLogout} to={"/signin"} className='menu-link'>Logout</Link>
                 </div>
-                {/* <Link to={'/about'}>About</Link> */}
-                {/* <Link to={'/user-list'}>Accounts</Link> */}
                 <div className='menu-last '>
                     <div className='menuItem'>
                         <i class="menu-icon tf-icons bx bx-support"></i>

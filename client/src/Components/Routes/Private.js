@@ -9,13 +9,9 @@ import { useAuth } from "../../context/authContext";
 export default function PrivateRoute() {
     const [ok, setOk] = useState(false);
     const [auth, setAuth] = useAuth();
-    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    // console.log(auth.user)
-    // console.log(auth.token)
-    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     useEffect(() => {
         const authCheck = async () => {
-            console.log("Private Route Excess");
+            console.log("Private authCheck() Function Excess");
             const res = await axios.get(API.AUTH_URL);
             console.log(`Response From Route ${JSON.stringify(res.data, null, 4)}`); // Log the response data
             if (res.data.ok) {
@@ -26,10 +22,6 @@ export default function PrivateRoute() {
                 setOk(false);
             }
         };
-
-        // console.log(`Auth Token available Check - ${auth?.token}`);
-        // console.log(`User Auth Data - ${JSON.stringify(auth, null, 4)}`); // Log the userAuth data
-
         if (auth?.token) authCheck();
     }, [auth?.token]);
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import MainLayout from './../../Components/Layout/MainLayout/MainLayout';
-import { useAuth, useUserDetails } from '../../context/auth';
+import { useAuth } from '../../context/authContext';
 import Input from '../../Components/Input/Input';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -13,9 +13,6 @@ import profileImage from '../../img/1.png';
 const Profile = () => {
     const [auth] = useAuth()
     console.log(auth)
-    const { getUserDetails } = useUserDetails();
-    const userDetails = getUserDetails();
-    console.log(userDetails);
     const [firstName, setFirstName] = useState()
     const [lastName, setLastName] = useState()
     const [email, setEmail] = useState()
@@ -25,10 +22,8 @@ const Profile = () => {
     const [country, setCountry] = useState()
     const [mobileNumber, setMobileNumber] = useState()
     const [errors, setErrors] = useState([])
+
     const navigate = useNavigate()
-
-
-
 
     const handleSubmit = async (e) => {
         e.preventDefault()
