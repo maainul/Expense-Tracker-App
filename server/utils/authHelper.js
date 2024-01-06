@@ -1,23 +1,24 @@
 import bcrypt from 'bcrypt'
+import { logger } from '../middleware/logMiddleware.js'
 
 export const hashPassword = async (pass) => {
     try {
         const salt = 10
         const passToStr = pass.toString()
-        console.log('Hash Funciton is Called For Create Hash Password')
+        logger.info('Hash Funciton is Called For Create Hash Password')
         const hashPassword = await bcrypt.hash(passToStr, salt)
-        console.log(`${hashPassword}`)
-        console.log(`Hash Funciton Returend Successfull`)
+        logger.info(`${hashPassword}`)
+        logger.info(`Hash Funciton Returend Successfull`)
         return hashPassword
     } catch (error) {
-        console.log(`Hash Funciton :  Error While Hashed Password`)
-        console.log(error);
+        logger.info(`Hash Funciton :  Error While Hashed Password`)
+        logger.info(error);
     }
 }
 
 export const comparePassword = async (pass, hp) => {
-    console.log('Compare Password Funciton is Called')
+    logger.info('Compare Password Funciton is Called')
     const cp = bcrypt.compare(pass, hp)
-    console.log(`Compare Password After Funciton Called ${cp}`)
+    logger.info(`Compare Password After Funciton Called ${cp}`)
     return cp
 }

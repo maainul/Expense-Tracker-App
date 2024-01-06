@@ -1,0 +1,24 @@
+2024-01-06T11:21:45.233Z info: Validation Result
+2024-01-06T11:21:45.236Z error: Signup Service Start
+2024-01-06T11:21:45.237Z info: Signup Service Called.......................................
+2024-01-06T11:21:45.238Z info: Signup Service Hashed Password Start.........
+2024-01-06T11:21:45.239Z info: Hash Funciton is Called For Create Hash Password
+2024-01-06T11:21:45.318Z info: $2b$10$cGHl8.cr2MFK.LUJwfMal.CTxpLwrjvteDyQSxI..A.Q63RoGjxrS
+2024-01-06T11:21:45.319Z info: Hash Funciton Returend Successfull
+2024-01-06T11:21:45.319Z info: Signup Service Hashed Password End with info : $2b$10$cGHl8.cr2MFK.LUJwfMal.CTxpLwrjvteDyQSxI..A.Q63RoGjxrS
+2024-01-06T11:21:45.320Z info: Save Into Database start..........
+2024-01-06T11:21:45.336Z info: Save Into Database end with info
+2024-01-06T11:21:45.336Z info: {
+  email: 'cuwo@mailinator.com',
+  username: 'vynijyh',
+  password: '$2b$10$cGHl8.cr2MFK.LUJwfMal.CTxpLwrjvteDyQSxI..A.Q63RoGjxrS',
+  role: 'user',
+  _id: new ObjectId('659937c90fbb71bff4c536be'),
+  createdAt: 2024-01-06T11:21:45.330Z,
+  updatedAt: 2024-01-06T11:21:45.330Z,
+  __v: 0
+}
+2024-01-06T11:21:45.341Z info: User Added Successfully
+2024-01-06T11:21:45.342Z error: Signup Service End
+2024-01-06T11:27:02.288Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-06T11:27:02.353Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m

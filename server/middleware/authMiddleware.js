@@ -1,6 +1,6 @@
 import JWT from "jsonwebtoken";
 import userModel from "../models/User.js";
-
+import { logger } from '../middleware/logMiddleware.js'
 
 // Protected Routes : Token Based
 export const requireSignIn = async (req, res, next) => {
@@ -9,7 +9,7 @@ export const requireSignIn = async (req, res, next) => {
         req.user = decode;
         next();
     } catch (error) {
-        console.log(error);
+        logger.info(error);
         return res.status(401).json({
             success: false,
             message: 'Unauthorized',
@@ -34,7 +34,7 @@ export const isAdmin = async (req, res, next) => {
         }
 
     } catch (error) {
-        console.log(error)
+        logger.info(error)
         return res.status(401).send({
             success: false,
             message: "Error in Admin Middleware",

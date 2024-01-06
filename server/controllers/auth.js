@@ -6,6 +6,7 @@ import UserModel from '../models/User.js';
 import JWT from 'jsonwebtoken';
 import { comparePassword } from '../utils/authHelper.js';
 import { SignupUserService } from './../service/Auth.js';
+import { logger } from '../middleware/logMiddleware.js';
 
 
 // Validation Rules
@@ -52,10 +53,8 @@ const validationRulesLogin = {
 
 const signin = async (req, res) => {
     try {
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Server $$$$$$$$$$$$$$$$$$$$$$")
         const { username, password } = req.body
-        console.log(username, password)
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Server $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info(username, password)
         const validationResult = await MValidator(req.body, validationRulesLogin, UserModel);
         // Validation log
         validationLog(validationResult)
@@ -66,10 +65,10 @@ const signin = async (req, res) => {
                 errors: validationResult.errors
             });
         }
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
         const validUser = await UserModel.findOne({ username });
-        console.log(validUser)
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info(validUser)
+        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
         if (!validUser) {
             return res.status(201).send({
                 success: true,
@@ -77,10 +76,10 @@ const signin = async (req, res) => {
                 errors: [{ "field": "username", "error": "user not found" }]
             });
         }
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Valid Pass $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Valid Pass $$$$$$$$$$$$$$$$$$$$$$")
         const validPassword = await comparePassword(password, validUser.password)
-        console.log(validPassword)
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info(validPassword)
+        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
         if (!validPassword) {
             return res.status(201).send({
                 success: true,
@@ -88,12 +87,12 @@ const signin = async (req, res) => {
                 errors: [{ "field": "password", "error": "password doesn't match" }]
             });
         }
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ token $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ token $$$$$$$$$$$$$$$$$$$$$$")
         const token = JWT.sign({ id: validUser._id }, process.env.JWT_SECRET, {
             expiresIn: "1d"
         })
-        console.log(token)
-        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ token after $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info(token)
+        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ token after $$$$$$$$$$$$$$$$$$$$$$")
         return res.status(200).send({
             success: true,
             message: "Signin Successfull",
@@ -122,7 +121,7 @@ const signup = async (req, res) => {
         // Validation
         const validationResult = await MValidator(req.body, validationRules, UserModel);
         // Validation log
-        validationLog(validationResult)
+        logger.info('Validation Result');
         if (!validationResult.isValid) {
             return res.status(201).send({
                 success: true,
@@ -130,11 +129,10 @@ const signup = async (req, res) => {
                 errors: validationResult.errors
             });
         }
-
         //Registration Service Call
-        console.log('Signup Service Start')
+        logger.error('Signup Service Start')
         const user = await SignupUserService(req.body)
-        console.log(`Signup Service End With Data : ${user}`)
+        logger.error('Signup Service End')
         return res.status(201).send({
             success: user.success,
             message: user.message,
@@ -142,7 +140,7 @@ const signup = async (req, res) => {
         });
 
     } catch (error) {
-        console.error('Error In User Registration.', error)
+        logger.error('Errror in Uer Registration')
         const status = error.status || 500
         return res.status(status).send({
             success: false,

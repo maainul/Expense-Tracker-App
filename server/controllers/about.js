@@ -1,6 +1,7 @@
 import AboutUsModel from "../models/AboutUs.js";
 import save from "../utils/saveUtils.js";
 import MValidator from "../validator/MValidator.js";
+import { logger } from '../middleware/logMiddleware.js'
 
 // Validation Rules
 const validationRules = {
@@ -25,7 +26,7 @@ const validationRules = {
 const createAboutUs = async (req, res) => {
     try {
         const { title, subtitle, description, image } = req.body
-        console.log(`Request data ===>\n name : ${req.body}`.bgBlue);
+        logger.info(`Request data ===>\n name : ${req.body}`.bgBlue);
         // Validation
         const validationResult = await MValidator(req, validationRules, AboutUsModel);
 
@@ -38,7 +39,7 @@ const createAboutUs = async (req, res) => {
         }
 
         const saveData = await save(AboutUsModel, { title, subtitle, description, image })
-        console.log(`About Us Added Successfully :\n ${saveData}`);
+        logger.info(`About Us Added Successfully :\n ${saveData}`);
 
         return res.status(201).send({
             success: true,
@@ -64,7 +65,7 @@ const updateaboutUs = async (req, res) => {
     try {
         const { id } = req.params.id
         const { title, subtitle, description, image } = req.body
-        console.log(`Request data ===>\n name : ${req.body}`.bgBlue);
+        logger.info(`Request data ===>\n name : ${req.body}`.bgBlue);
 
         // Get Data By Id
         const aboutUsData = await AboutUsModel.findById({ _id: id })
@@ -74,7 +75,7 @@ const updateaboutUs = async (req, res) => {
             description: description || aboutUsData?.description,
             image: image || aboutUsData?.image
         }, { new: true })
-        console.log(`About Us Added Successfully :\n ${updatedAboutUs}`);
+        logger.info(`About Us Added Successfully :\n ${updatedAboutUs}`);
         return res.status(201).send({
             success: true,
             message: 'Data Updated successfully',

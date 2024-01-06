@@ -4,6 +4,8 @@ import validationLog from '../utils/validationLog.js';
 import { dateUtils } from '../utils/dateUtils.js';
 import { serv } from '../service/expense.js';
 import { saveToDb } from '../utils/saveUtils.js';
+import { logger } from '../middleware/logMiddleware.js'
+
 
 // validation Rules
 const validationRules = {
@@ -34,7 +36,7 @@ const validationRules = {
 const createExpense = async (req, res) => {
     try {
         const { amount, date, description, category, expenseType } = req.body
-        console.log(`Request data ==> \n ${JSON.stringify(req.body)}`)
+        logger.info(`Request data ==> \n ${JSON.stringify(req.body)}`)
         const formattedDate = dateUtils.dateToString(new Date(date))
         const date_sl = dateUtils.dateToTimestamp(new Date(formattedDate))
         const validationResut = await MValidator(req.body, validationRules, ExpenseModel)
@@ -50,7 +52,7 @@ const createExpense = async (req, res) => {
         }
 
         const expense = await saveToDb(ExpenseModel, { amount, date: formattedDate, date_sl, description, category, expenseType })
-        console.log(`Expense Type Added Successfully :\n ${expense}`)
+        logger.info(`Expense Type Added Successfully :\n ${expense}`)
 
         return res.status(201).send({
             success: true,
@@ -73,10 +75,10 @@ const updateExpense = async (req, res) => {
     try {
         const { id } = req.params.id
         const { amount, date, description, category, expenseType } = req.body
-        console.log(`Request data ==> \n ${JSON.stringify(req.body, null, 2)}`);
+        logger.info(`Request data ==> \n ${JSON.stringify(req.body, null, 2)}`);
 
         const expense = await ExpenseModel.findById(id)
-        console.log(`Get expense By Id : \n ${expense}`)
+        logger.info(`Get expense By Id : \n ${expense}`)
         if (!expense) {
             return res.status(404).send({
                 success: false,
@@ -105,7 +107,7 @@ const updateExpense = async (req, res) => {
         }
 
         const updatedExp = await ExpenseModel.findByIdAndUpdate(id, { $set: req.body }, { new: true })
-        console.log(`Expense updated successfully :\n ${updatedExp}`)
+        logger.info(`Expense updated successfully :\n ${updatedExp}`)
 
         return res.status(200).send({
             success: true,
@@ -149,7 +151,7 @@ const getAllExpense = async (req, res) => {
     try {
         const { sortOrder, category, expenseType, yearFilter, monthFilter } = req.body
         const expenses = await serv.getCustExpService(category, sortOrder, expenseType, yearFilter, monthFilter)
-        console.log(`Expenses data ==> \n ${expenses}`);
+        logger.info(`Expenses data ==> \n ${expenses}`);
 
         return res.status(200).send({
             success: true,
@@ -181,7 +183,7 @@ const getExpenseById = async (req, res) => {
             })
         }
 
-        console.log(`Expenses data By Id==> \n ${expense}`);
+        logger.info(`Expenses data By Id==> \n ${expense}`);
 
         return res.status(200).send({
             success: true,

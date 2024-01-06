@@ -2,6 +2,7 @@ import MValidator from '../validator/MValidator.js';
 import validationLog from '../utils/validationLog.js';
 import UserModel from '../models/User.js';
 import filterFields from '../utils/filterFields.js';
+import { logger } from '../middleware/logMiddleware.js'
 
 const updateUser = async (req, res) => {
     try {
@@ -16,9 +17,9 @@ const updateUser = async (req, res) => {
 
         const id = req.params.id
         const { name, email, mobileNumber } = req.body;
-        console.log(`User Input : ${JSON.stringify(req.body)}`)
+        logger.info(`User Input : ${JSON.stringify(req.body)}`)
         const userData = await UserModel.findById({ _id: id })
-        console.log(`User Already Existed Data : ${userData}`)
+        logger.info(`User Already Existed Data : ${userData}`)
 
         const updatedData = {
             name: name || userData?.name,
@@ -40,7 +41,7 @@ const updateUser = async (req, res) => {
         }
 
         const updatedUserData = await UserModel.findByIdAndUpdate(id, { $set: updatedData }, { new: true });
-        console.log(`User Updated Successfully :\n ${updatedUserData}`);
+        logger.info(`User Updated Successfully :\n ${updatedUserData}`);
 
         return res.status(201).send({
             success: true,

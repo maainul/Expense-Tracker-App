@@ -1,15 +1,16 @@
 
 import mongoose from "mongoose";
+import { logger } from '../middleware/logMiddleware.js'
 
 const connectDB = async () => {
     try {
-        console.log("Trying to Connect Mongo DB ....".bgYellow.bold)
+        logger.info("Trying to Connect Mongo DB ....".bgYellow.bold)
         const conn = await mongoose.connect(process.env.CONNECTION_STRING);
-        console.log(
+        logger.info(
             `Conneted To Mongodb Databse ${conn.connection.host}`.bgMagenta.white
         );
     } catch (error) {
-        console.log(`Errro in Mongodb ${error}`.bgRed.white);
+        logger.info(`Errro in Mongodb ${error}`.bgRed.white);
     }
 };
 

@@ -7,6 +7,7 @@ import routes from "./routes/route.js";
 import dotenv from "dotenv";
 
 
+
 //configure env
 dotenv.config()
 

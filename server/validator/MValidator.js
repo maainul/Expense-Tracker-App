@@ -3,7 +3,6 @@ import findOne from './../utils/findOne.js';
 
 
 const MValidator = async (req, validationRules, model) => {
-    console.log("################## validation called")
     const data = req
     const errors = [];
     for (const field in validationRules) {

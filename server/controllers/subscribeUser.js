@@ -4,6 +4,7 @@ import validationLog from "../utils/validationLog.js"
 import { saveToDb } from "../utils/saveUtils.js"
 // import { sendMail } from "../utils/sendVerificationEmail.js"
 import generateVerificationCode from "../utils/getVerificationCode.js"
+import { logger } from '../middleware/logMiddleware.js'
 
 
 const validationRules = {
@@ -49,14 +50,14 @@ const subscribeUser = async (req, res) => {
                 verificationCode: verificationCode
             })
 
-            console.log(`User Subscription Added Successfully :\n ${subsUser}`)
+            logger.info(`User Subscription Added Successfully :\n ${subsUser}`)
             return res.status(201).send({
                 success: true,
                 message: 'User Subscription Successful',
                 data: subsUser
             })
         } else {
-            console.log(`Email Send Failed :\n ${result.data}`)
+            logger.info(`Email Send Failed :\n ${result.data}`)
             return res.status(400).send({
                 success: result.success,
                 data: result.data,
@@ -95,7 +96,7 @@ const unSubscribeUser = async (req, res) => {
             subscriptionFor: user?.subscriptionFor,
             subscriptionStatus: false
         })
-        console.log(`User UnSubscribe Successfully :\n ${unSubsUser}`)
+        logger.info(`User UnSubscribe Successfully :\n ${unSubsUser}`)
         return res.status(201).send({
             success: true,
             message: 'User UnSubscribe Successful',
