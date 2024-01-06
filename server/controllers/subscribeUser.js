@@ -1,7 +1,7 @@
 import MValidator from "../validator/MValidator.js"
 import SubscriptionModel from '../models/SubscribeUser.js'
 import validationLog from "../utils/validationLog.js"
-import save from "../utils/saveUtils.js"
+import { saveToDb } from "../utils/saveUtils.js"
 // import { sendMail } from "../utils/sendVerificationEmail.js"
 import generateVerificationCode from "../utils/getVerificationCode.js"
 
@@ -43,7 +43,7 @@ const subscribeUser = async (req, res) => {
 
         const result = await sendMail(email, verificationCode)
         if (result.success) {
-            const subsUser = await save(SubscriptionModel, {
+            const subsUser = await saveToDb(SubscriptionModel, {
                 name: name,
                 email: email,
                 verificationCode: verificationCode
@@ -88,7 +88,7 @@ const unSubscribeUser = async (req, res) => {
             })
         }
 
-        const unSubsUser = await save(SubscriptionModel, {
+        const unSubsUser = await saveToDb(SubscriptionModel, {
             name: user?.name,
             email: user?.email,
             subscribeDate: user?.date, // Set to the current date and time

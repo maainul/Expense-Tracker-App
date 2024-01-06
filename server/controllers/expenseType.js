@@ -1,5 +1,5 @@
 import ExpenseTypeModel from "../models/ExpenseType.js";
-import save from "../utils/saveUtils.js";
+import { saveToDb } from "../utils/saveUtils.js";
 import validationLog from "../utils/validationLog.js";
 import MValidator from "../validator/MValidator.js";
 
@@ -40,7 +40,7 @@ const createExpType = async (req, res) => {
         }
 
         // Save Data in Database
-        const expenseType = await save(ExpenseTypeModel, { name, icon })
+        const expenseType = await saveToDb(ExpenseTypeModel, { name, icon })
         console.log(`Expense Type Added Successfully :\n ${expenseType}`);
 
         return res.status(201).send({

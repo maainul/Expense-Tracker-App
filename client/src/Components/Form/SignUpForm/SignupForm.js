@@ -31,15 +31,12 @@ const SignupForm = () => {
             if (res.data.errors) {
                 setErrors(res.data.errors)
             } else {
-                setErrors([])
-                setUserName('')
-                setEmail('')
-                setPassword('')
+                toast.success(res.data && res.data.message);
                 navigate('/signin')
-                toast.success('Signup Successfull')
             }
         } catch (error) {
             console.log(`Invalid Request : ${error}`)
+            toast.error("Something went wrong");
         }
     }
 

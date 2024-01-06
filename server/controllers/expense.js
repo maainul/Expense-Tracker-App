@@ -1,9 +1,9 @@
 import MValidator from '../validator/MValidator.js';
 import ExpenseModel from '../models/Expense.js';
 import validationLog from '../utils/validationLog.js';
-import save from '../utils/saveUtils.js';
 import { dateUtils } from '../utils/dateUtils.js';
 import { serv } from '../service/expense.js';
+import { saveToDb } from '../utils/saveUtils.js';
 
 // validation Rules
 const validationRules = {
@@ -49,7 +49,7 @@ const createExpense = async (req, res) => {
             })
         }
 
-        const expense = await save(ExpenseModel, { amount, date: formattedDate, date_sl, description, category, expenseType })
+        const expense = await saveToDb(ExpenseModel, { amount, date: formattedDate, date_sl, description, category, expenseType })
         console.log(`Expense Type Added Successfully :\n ${expense}`)
 
         return res.status(201).send({

@@ -3,9 +3,9 @@
 import MValidator from '../validator/MValidator.js';
 import validationLog from '../utils/validationLog.js';
 import UserModel from '../models/User.js';
-import AuthServ from '../service/Auth.js';
 import JWT from 'jsonwebtoken';
 import { comparePassword } from '../utils/authHelper.js';
+import { SignupUserService } from './../service/Auth.js';
 
 
 // Validation Rules
@@ -132,7 +132,9 @@ const signup = async (req, res) => {
         }
 
         //Registration Service Call
-        const user = await AuthServ.RegisterUserService(req.body)
+        console.log('Signup Service Start')
+        const user = await SignupUserService(req.body)
+        console.log(`Signup Service End With Data : ${user}`)
         return res.status(201).send({
             success: user.success,
             message: user.message,
@@ -141,7 +143,6 @@ const signup = async (req, res) => {
 
     } catch (error) {
         console.error('Error In User Registration.', error)
-
         const status = error.status || 500
         return res.status(status).send({
             success: false,
