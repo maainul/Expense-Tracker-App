@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Breadcrumb = () => {
     const location = useLocation();
-    const isDashboard = location.pathname.startsWith('/dashboard');
 
     let currentLink = '';
     const crumbs = location.pathname.split('/')
