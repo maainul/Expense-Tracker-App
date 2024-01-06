@@ -71,6 +71,7 @@ const SignupForm = () => {
                                 setState={setEmail}
                                 errorState={errors}
                                 label={true}
+                                labelTitle={"EMAIL"}
                             />
                             <Input
                                 type='text'
@@ -80,6 +81,7 @@ const SignupForm = () => {
                                 setState={setUserName}
                                 errorState={errors}
                                 label={true}
+                                labelTitle={"USERNAME"}
                             />
 
                             <div className="grid-column-2" >
@@ -91,6 +93,7 @@ const SignupForm = () => {
                                     setState={setPassword}
                                     errorState={errors}
                                     label={true}
+                                    labelTitle={"PASSWORD"}
                                 />
                                 <Input
                                     type='text'
@@ -100,12 +103,13 @@ const SignupForm = () => {
                                     setState={setPassword}
                                     errorState={errors}
                                     label={true}
+                                    labelTitle={"CONFIRM PASSWORD"}
                                 />
 
                             </div>
                             <p className="text-secondary">
                                 <span>
-                                    I agree to <span className="text-secondary text-deco-color" >privacy policy & terms</span>
+                                    I agree to <span className="text-secondary text-deco-color" style={{ color: "#7367F0" }}>privacy policy & terms</span>
                                 </span>
                             </p>
                             <div>
@@ -119,7 +123,7 @@ const SignupForm = () => {
                                 <a
                                     className="text-secondary text-deco-color"
                                     href={"/signin"}>
-                                    <span>&nbsp;Sign in instead</span>
+                                    <span style={{ color: "#7367F0" }}>&nbsp;Sign in instead</span>
                                 </a>
                             </p>
                         </form>

@@ -7,16 +7,17 @@ const AuthContext = createContext()
 
 // Provider
 const AuthProvider = ({ children }) => {
-
-    //Global State
     const [auth, setAuth] = useState({
         user: null,
         token: ''
     })
 
-    // axios default token
-    axios.defaults.headers.common['Authorization'] = auth?.token
+    // Update axios default token whenever 'auth.token' changes
+    useEffect(() => {
+        axios.defaults.headers.common["Authorization"] = auth?.token;
+    }, [auth.token]);
 
+    // Load user data from local storage on mount
     useEffect(() => {
         const userData = localStorage.getItem('userData');
         const token = localStorage.getItem('token');
@@ -28,7 +29,8 @@ const AuthProvider = ({ children }) => {
                 token: token // No need to parse token here
             }));
         }
-    }, [setAuth]); // Remove 'auth' from the dependency array
+        //eslint-disable-next-line
+    }, []); // No dependencies, runs once on mount
 
     return (
         <AuthContext.Provider value={[auth, setAuth]}>
@@ -38,8 +40,13 @@ const AuthProvider = ({ children }) => {
 }
 
 // custom hook
-const useAuth = () => useContext(AuthContext);
-
+const useAuth = () => {
+    const [auth, setAuth] = useContext(AuthContext)
+    //Extract Token and User directly
+    const { token, user } = auth
+    return { token, user, setAuth }
+}
+// User Details With all the infromation
 const useUserDetails = () => {
     const [auth] = useAuth();
     const getUserDetails = () => {

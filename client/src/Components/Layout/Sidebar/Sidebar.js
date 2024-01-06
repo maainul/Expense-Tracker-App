@@ -6,7 +6,10 @@ import BrandLogo from '../../Logos/BrandLogo/BrandLogo';
 import BrandTitle from '../../BrandTitle/BrandTitle';
 
 const Sidebar = () => {
-
+    const handleLogout = () => {
+        localStorage.removeItem('userData')
+        localStorage.removeItem('token')
+    }
     return (
         <div className='sidebar'>
             <div className="brand-logo-text sidebarlogo">
@@ -34,6 +37,10 @@ const Sidebar = () => {
                 <div className='menuItem'>
                     <i class="menu-icon tf-icons bx bx-user"></i>
                     <Link to={'/dashboard/profile'} className='menu-link'>Profile</Link>
+                </div>
+                <div className='menuItem'>
+                    <i class="menu-icon tf-icons bx bx-user"></i>
+                    <Link onClick={handleLogout()} className='menu-link'>Logout</Link>
                 </div>
                 {/* <Link to={'/about'}>About</Link> */}
                 {/* <Link to={'/user-list'}>Accounts</Link> */}

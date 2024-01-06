@@ -67,10 +67,11 @@ const SigninForm = () => {
                                 setState={setUserName}
                                 errorState={errors}
                                 label={true}
+                                labelTitle={"USERNAME"}
                             />
                             <div className="formgroup">
                                 <div className="grid-col-2-space-between">
-                                    <label htmlFor="password" >password</label>
+                                    <label htmlFor="password" >PASSWORD</label>
                                     <a className="text-deco-color" href="/">Forgot Password ?</a>
                                 </div>
                                 <Input
@@ -93,7 +94,7 @@ const SigninForm = () => {
                                     className="text-secondary text-deco-color"
                                     href={"/signup"}
                                 >
-                                    <span>&nbsp;Create an account</span>
+                                    <span style={{ color: "#7367F0" }} >&nbsp;Create an account</span>
                                 </a>
                             </p>
                         </form>

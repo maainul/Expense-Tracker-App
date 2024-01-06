@@ -52,7 +52,10 @@ const validationRulesLogin = {
 
 const signin = async (req, res) => {
     try {
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Server $$$$$$$$$$$$$$$$$$$$$$")
         const { username, password } = req.body
+        console.log(username, password)
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Server $$$$$$$$$$$$$$$$$$$$$$")
         const validationResult = await MValidator(req.body, validationRulesLogin, UserModel);
         // Validation log
         validationLog(validationResult)
@@ -63,8 +66,10 @@ const signin = async (req, res) => {
                 errors: validationResult.errors
             });
         }
-
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
         const validUser = await UserModel.findOne({ username });
+        console.log(validUser)
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
         if (!validUser) {
             return res.status(201).send({
                 success: true,
@@ -72,8 +77,10 @@ const signin = async (req, res) => {
                 errors: [{ "field": "username", "error": "user not found" }]
             });
         }
-
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Valid Pass $$$$$$$$$$$$$$$$$$$$$$")
         const validPassword = await comparePassword(password, validUser.password)
+        console.log(validPassword)
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
         if (!validPassword) {
             return res.status(201).send({
                 success: true,
@@ -81,11 +88,12 @@ const signin = async (req, res) => {
                 errors: [{ "field": "password", "error": "password doesn't match" }]
             });
         }
-
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ token $$$$$$$$$$$$$$$$$$$$$$")
         const token = JWT.sign({ id: validUser._id }, process.env.JWT_SECRET, {
-            expiresIn: "7d"
+            expiresIn: "1d"
         })
-
+        console.log(token)
+        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ token after $$$$$$$$$$$$$$$$$$$$$$")
         return res.status(200).send({
             success: true,
             message: "Signin Successfull",

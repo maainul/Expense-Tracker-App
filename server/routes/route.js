@@ -5,9 +5,7 @@ import { anaCtrl } from '../controllers/analytics.js'
 import { subCtrl } from '../controllers/subscribeUser.js'
 import { usrCtrl } from '../controllers/user.js'
 import { authServ } from '../controllers/auth.js'
-
-import requireSignIn from '../middleware/authMiddleware.js'
-import isAdmin from '../middleware/authMiddleware.js'
+import { requireSignIn } from './../middleware/authMiddleware.js';
 
 
 const router = Router()
@@ -43,7 +41,9 @@ router.get('/user/info', usrCtrl.getUserInfo)
 // AUTH
 router.post('/auth/signin', authServ.signin)
 router.post('/auth/signup', authServ.signup)
-router.get('/auth/user-auth', (req, res) => {
+
+// PROTECTED ROUTES : (PRIVATE ROUTE CONFIRM)
+router.get('/auth/user-auth', requireSignIn, (req, res) => {
     res.status(200).send({ ok: true })
 })
 

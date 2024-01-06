@@ -1,6 +1,7 @@
 import React from 'react'
-import { useAuth } from '../../context/auth';
+
 import MainLayout from './../../Components/Layout/MainLayout/MainLayout';
+// import { useAuth } from '../../context/authContext';
 
 //import { useTop10Expenses } from '../../Hooks/useTop10Expenses'
 //import { useGetDailyExpense } from './../../Hooks/useGetDailyExpense';
@@ -19,15 +20,17 @@ const Home = () => {
     // const { catWiseExpList, creditExpTotal, debitExpTotal, numberOfCredit, numberOfDebit } = useCatWiseExp()
     // const expenseTypeWiseList = useExpenseTypeWise()
     //  const userlist = useAllUser()
-    const [auth] = useAuth()
+    // const [auth] = useAuth()
 
     return (
         <MainLayout>
+            <h1>Dashboard</h1>
             {/* <div></div> */}
             {/* <div>congrats</div> */}
             {/* <div>Top Expense(10) */}
             {/* <div> */}
-            <p>{JSON.stringify(auth, null, 4)}</p>
+            {/* <p>{JSON.stringify(auth.user, null, 4)}</p> */}
+            {/* <p>{JSON.stringify(auth.token, null, 4)}</p> */}
             {/* {top10ExpList.map((exp) => (
                         <p>{exp.category} -{exp.count} - {exp.totalAmount}
                             <span>
