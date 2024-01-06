@@ -2,20 +2,25 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Breadcrumb = () => {
-    const location = useLocation(); // Corrected: useLocation()
+    const location = useLocation();
     let currentLink = '';
     const crumbs = location.pathname.split('/')
         .filter(crumb => crumb !== '')
-        .map(crumb => {
-            currentLink += `/${crumb}`; // Corrected: += instead of +
+        .map((crumb, index, array) => {
+            currentLink += `/${crumb}`;
+            const isLast = index === array.length - 1;
             return (
-                <div className="crumb" key={crumb}>
-                    <Link to={currentLink}>{crumb}</Link>
+                <div key={crumb}>
+                    <Link to={currentLink} style={{
+                        textDecoration: "none", color: "#566a7f", fontSize: "18px", textTransform: 'capitalize'
+                    }}>{crumb}</Link>
+                    {!isLast && <span style={{ margin: '0 5px', color: "red" }}>/</span>}
                 </div>
             );
         });
+
     return (
-        <div className='breadcrumb'>
+        <div className="breadcrumb">
             {crumbs}
         </div>
     );

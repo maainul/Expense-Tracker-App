@@ -474,13 +474,13 @@ hr {
 /* border: "#8592A3", */
 
 .breadcrumb {
+    display: flex;
+
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #e9eef1;
     margin-bottom: 20px;
+    background-color: #e9eef1;
     border-radius: 8px;
-    color: #566a7f;
-    font-size: 15px;
-    text-decoration: none;
+
 }
