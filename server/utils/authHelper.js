@@ -5,20 +5,20 @@ export const hashPassword = async (pass) => {
     try {
         const salt = 10
         const passToStr = pass.toString()
-        logger.info('Hash Funciton is Called For Create Hash Password')
+        logger.info('Method : hashPassword() - Create Hash Password')
         const hashPassword = await bcrypt.hash(passToStr, salt)
         logger.info(`${hashPassword}`)
-        logger.info(`Hash Funciton Returend Successfull`)
+        logger.info(`Method : hashPassword() - Returned Successfull`)
         return hashPassword
     } catch (error) {
-        logger.info(`Hash Funciton :  Error While Hashed Password`)
+        logger.error(`Method : hashPassword() -  Error While Hashed Password`)
         logger.info(error);
     }
 }
 
 export const comparePassword = async (pass, hp) => {
-    logger.info('Compare Password Funciton is Called')
+    logger.info('Method: comparePassword() -  Compare Password Funciton is Called')
     const cp = bcrypt.compare(pass, hp)
-    logger.info(`Compare Password After Funciton Called ${cp}`)
+    logger.info('Method : comparePassword() - Compare Password After Funciton Called')
     return cp
 }

@@ -1,5 +1,3 @@
-
-
 import MValidator from '../validator/MValidator.js';
 import validationLog from '../utils/validationLog.js';
 import UserModel from '../models/User.js';
@@ -11,7 +9,6 @@ import { logger } from '../middleware/logMiddleware.js';
 
 // Validation Rules
 const validationRules = {
-
     email: {
         type: 'string',
         required: true,
@@ -54,7 +51,7 @@ const validationRulesLogin = {
 const signin = async (req, res) => {
     try {
         const { username, password } = req.body
-        logger.info(username, password)
+
         const validationResult = await MValidator(req.body, validationRulesLogin, UserModel);
         // Validation log
         validationLog(validationResult)
@@ -65,21 +62,25 @@ const signin = async (req, res) => {
                 errors: validationResult.errors
             });
         }
-        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
+
+        logger.info("Method : signin() - Check User Already exists Start")
         const validUser = await UserModel.findOne({ username });
-        logger.info(validUser)
-        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info("Method : signin() - Check User Already exists End")
+
         if (!validUser) {
             return res.status(201).send({
                 success: true,
-                message: 'User Not Found',
+                message: 'User Not Registered',
                 errors: [{ "field": "username", "error": "user not found" }]
             });
         }
-        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Valid Pass $$$$$$$$$$$$$$$$$$$$$$")
+
+        logger.info("Method : signin() - User is Valid")
         const validPassword = await comparePassword(password, validUser.password)
+        logger.info("Password Check From Compare Password : ")
         logger.info(validPassword)
-        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Before valid user after log $$$$$$$$$$$$$$$$$$$$$$")
+        logger.info("Method : signin() - Password is valid")
+
         if (!validPassword) {
             return res.status(201).send({
                 success: true,
@@ -87,12 +88,13 @@ const signin = async (req, res) => {
                 errors: [{ "field": "password", "error": "password doesn't match" }]
             });
         }
-        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ token $$$$$$$$$$$$$$$$$$$$$$")
-        const token = JWT.sign({ id: validUser._id }, process.env.JWT_SECRET, {
+
+        logger.info("Method : signin() - JWT Token Creation")
+        const token = await JWT.sign({ _id: validUser._id }, process.env.JWT_SECRET, {
             expiresIn: "1d"
         })
-        logger.info(token)
-        logger.info("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ token after $$$$$$$$$$$$$$$$$$$$$$")
+
+        logger.info("Method : signin() - Token Created")
         return res.status(200).send({
             success: true,
             message: "Signin Successfull",
@@ -106,11 +108,13 @@ const signin = async (req, res) => {
         })
 
     } catch (error) {
-        console.error('Internal Server Error', error)
+        logger.error('Internal Server Error')
+        logger.error(error)
         const status = error.status || 500
         return res.status(status).send({
             success: false,
             message: 'Internal Server Error',
+            errors: error
         });
     }
 }
