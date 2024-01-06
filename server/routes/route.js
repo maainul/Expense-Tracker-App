@@ -36,8 +36,7 @@ router.post('/user/unsubscribe', subCtrl.unSubscribeUser)
 
 
 // USER
-router.
-    put('/user/update/:id', usrCtrl.updateUser)
+router.put('/user/update/:id', usrCtrl.updateUser)
 router.get('/user/list', usrCtrl.listUser)
 router.get('/user/info', usrCtrl.getUserInfo)
 

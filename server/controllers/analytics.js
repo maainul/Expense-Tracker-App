@@ -7,7 +7,7 @@ import { dateUtils } from "../utils/dateUtils.js";
 // Get Current Day Expense
 const getDailyExpense = async (req, res) => {
     try {
-        const dateStr = dateToString(new Date())
+        const dateStr = dateUtils.dateToString(new Date())
         const dailyexp = await ExpenseModel.find({ date: dateStr })
         console.log(`Get Daily Expenses data ==> \n ${dailyexp}`);
 

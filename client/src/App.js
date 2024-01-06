@@ -9,9 +9,8 @@ import Signin from './pages/Auth/Signin/Signin';
 import { Routes, Route } from 'react-router-dom';
 import Analytics from './pages/Analytics/Analytics';
 import ExpenseTypes from './pages/ExpeseTypes/ExpenseTypes';
-import Breadcrumb from './Components/Breadcrumb/Breadcrumb';
 import Dashboard from './pages/User/Dashboard';
-import PrivateRoute from './Components/Routes/PrivateRoute';
+// import PrivateRoute from './Components/Routes/PrivateRoute';
 
 function App() {
 
@@ -24,7 +23,7 @@ function App() {
         <Route path={'/signup'} element={<Signup />} />
         <Route path={'/signin'} element={<Signin />} />
 
-        <Route path="/dashboard" element={<PrivateRoute />}>
+        <Route path="/dashboard" >
           <Route path="" element={<Dashboard />} />
           <Route path={'/dashboard/profile'} element={<Profile />} />
           <Route path={'/dashboard/about'} element={<About />} />
@@ -34,7 +33,7 @@ function App() {
           <Route path={'/dashboard/user-list'} element={<User />} />
         </Route>
 
-      </Routes>
+      </Routes >
     </>
   );
 }

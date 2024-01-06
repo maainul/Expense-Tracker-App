@@ -23,7 +23,7 @@
 .App {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: centercenter;
     height: 100vh;
     background: var(--bgMain);
     color: var(--textColor);
@@ -430,7 +430,7 @@
 .card-header-secondary {
     /* d-flex align-items-start align-items-sm-center gap-4 */
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     gap: 20px;
     padding-bottom: 20px;
 }
