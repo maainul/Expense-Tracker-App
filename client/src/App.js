@@ -1,5 +1,4 @@
 import './App.css';
-import Home from './pages/Home/Home';
 import User from './pages/User/User';
 import About from './pages/About/About';
 import Profile from './pages/Profile/Profile';
@@ -7,20 +6,21 @@ import Expense from './pages/Expense/Expense';
 import Signup from './pages/Auth/Signup/Signup';
 import Signin from './pages/Auth/Signin/Signin';
 import { Routes, Route } from 'react-router-dom';
-import VerifyEmail from './pages/Auth/VerifyEmail';
+import VerifyEmail from './pages/Auth/VerifyEmail/VerifyEmail';
 import Analytics from './pages/Analytics/Analytics';
 import Pagenotfound from './pages/Misc/Pagenotfound';
 import NotAuthorized from './pages/Misc/NotAuthorized';
 import LaunchingSoon from './pages/Misc/LaunchingSoon';
-import ResetPassword from './pages/Auth/ResetPassword';
-import ForgotPassword from './pages/Auth/ForgotPassword';
+import ResetPassword from './pages/Auth/ResetPassword/ResetPassword';
+import ForgotPassword from './pages/Auth/ForgotPassword/ForgotPassword';
 import ExpenseTypes from './pages/ExpeseTypes/ExpenseTypes';
 import UserRoute from './Components/Layout/Routes/UserRoute';
 import UnderMaintenance from './pages/Misc/UnderMaintenance';
 import AdminRoute from './Components/Layout/Routes/AdminRoute';
 import UserDashboard from './pages/Dashboard/User/UserDashboard';
 import AdminDashboard from './pages/Dashboard/Admin/AdminDashboard';
-import TwoStepVerification from './pages/Auth/TwoStepVerification';
+import TwoStepVerification from './pages/Auth/TwoStepVerification/TwoStepVerification';
+import LandingPage from './pages/LandingPage/LandingPage';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
     <>
       <Routes>
 
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />

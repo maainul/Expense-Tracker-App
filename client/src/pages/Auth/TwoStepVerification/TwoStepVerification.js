@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import BrandLogo from '../../Components/Logos/BrandLogo/BrandLogo'
-import BrandTitle from '../../Components/BrandTitle/BrandTitle'
-import Image from '../../Components/TwoStepVerImage/TwoStepVerImage'
-import Input from '../../Components/Input/Input'
-import Submit from '../../Components/Buttons/Submit'
+import BrandLogo from '../../../Components/Logos/BrandLogo/BrandLogo'
+import BrandTitle from '../../../Components/BrandTitle/BrandTitle'
+import Image from './TwoStepVerImage'
+import Input from '../../../Components/Input/Input'
+import Submit from '../../../Components/Buttons/Submit'
 
 const TwoStepVerification = () => {
 
@@ -13,8 +13,6 @@ const TwoStepVerification = () => {
     const [code4, setCode4] = useState()
     const [code5, setCode5] = useState()
     const [code6, setCode6] = useState()
-    const [email, setEmail] = useState()
-    const [errors, setErrors] = useState([])
 
     return (
         <div className="auth-inner">

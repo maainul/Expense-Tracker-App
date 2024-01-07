@@ -10,7 +10,7 @@ import Github from "../../SocialIcons/Github";
 import Twitter from "../../SocialIcons/Twitter";
 import BrandLogo from "../../Logos/BrandLogo/BrandLogo";
 import BrandTitle from "../../BrandTitle/BrandTitle";
-import Signinimage from "../../SIgninImage/Signinimage";
+import Signinimage from "../../../pages/Auth/Signin/Signinimage";
 import Input from "../../Input/Input";
 import { useAuth } from "../../../context/authContext";
 

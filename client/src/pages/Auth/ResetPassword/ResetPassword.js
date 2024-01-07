@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import BrandLogo from '../../Components/Logos/BrandLogo/BrandLogo'
-import BrandTitle from '../../Components/BrandTitle/BrandTitle'
-import Image from '../../Components/ResetPasswordImage/ResetPasswordImage'
-import Input from '../../Components/Input/Input'
-import Submit from '../../Components/Buttons/Submit'
+import BrandLogo from '../../../Components/Logos/BrandLogo/BrandLogo'
+import BrandTitle from '../../../Components/BrandTitle/BrandTitle'
+import Image from './ResetPasswordImage'
+import Input from '../../../Components/Input/Input'
+import Submit from '../../../Components/Buttons/Submit'
 
 
 const ResetPassword = () => {

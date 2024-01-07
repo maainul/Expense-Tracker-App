@@ -10,7 +10,7 @@ import Github from "../../SocialIcons/Github";
 import Twitter from "../../SocialIcons/Twitter";
 import BrandLogo from './../../Logos/BrandLogo/BrandLogo';
 import BrandTitle from "../../BrandTitle/BrandTitle";
-import SignupImage from './../../SignupImage/SignupImage';
+import SignupImage from '../../../pages/Auth/Signup/SignupImage';
 import Input from "../../Input/Input";
 
 const SignupForm = () => {

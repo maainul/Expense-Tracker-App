@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import BrandLogo from '../../Components/Logos/BrandLogo/BrandLogo'
-import BrandTitle from '../../Components/BrandTitle/BrandTitle'
-import Image from '../../Components/TwoStepVerImage/TwoStepVerImage'
-
-import Submit from '../../Components/Buttons/Submit'
+import React from 'react'
+import BrandLogo from '../../../Components/Logos/BrandLogo/BrandLogo'
+import BrandTitle from '../../../Components/BrandTitle/BrandTitle'
+import Image from './VerifyEmailImage'
+import Submit from '../../../Components/Buttons/Submit'
 
 const VerifyEmail = () => {
 
