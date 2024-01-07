@@ -39,13 +39,13 @@ const SigninForm = () => {
                     tokn: res.data.token
                 })
                 localStorage.setItem('auth', JSON.stringify(res.data))
-                navigate(location.state || "/dashboard")
+                navigate(location.state || "/")
             } else {
                 setErrors(res.data.errors)
                 toast.error(res.data.message)
             }
         } catch (error) {
-            console.log(`Invalid Request : ${error}`)
+            // console.log(`Invalid Request : ${error}`) // For Developer Mode Use Console to debug
             toast.error("Something went wrong");
         }
     }

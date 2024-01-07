@@ -5,7 +5,8 @@ const HOME_URL = 'http://localhost:8081/api/v1/home'
 // AUTH
 const SIGNUP_URL = 'http://localhost:8081/api/v1/auth/signup'
 const SIGNIN_URL = 'http://localhost:8081/api/v1/auth/signin'
-const AUTH_URL = 'http://localhost:8081/api/v1/auth/user-auth'
+const USER_AUTH_URL = 'http://localhost:8081/api/v1/auth/user-auth'
+const ADMIN_AUTH_URL = 'http://localhost:8081/api/v1/auth/admin-auth'
 
 
 // USER
@@ -51,7 +52,8 @@ const API = {
     C_Exp_TYP_URL,
     C_EXP_URL,
     R_USR_URL,
-    AUTH_URL,
+    USER_AUTH_URL,
+    ADMIN_AUTH_URL,
     SIGNUP_URL,
     SIGNIN_URL,
     R_SINGLE_URL,

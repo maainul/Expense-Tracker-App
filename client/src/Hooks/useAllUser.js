@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import API from "../Services/API"
+import API from './../Services/API';
+
 
 export const useAllUser = () => {
     const [userList, setAllUserList] = useState([])

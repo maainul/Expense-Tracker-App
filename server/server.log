@@ -4717,3 +4717,3173 @@
 2024-01-06T16:05:32.080Z info: Method : signin() - Password is valid
 2024-01-06T16:05:32.080Z info: Method : signin() - JWT Token Creation
 2024-01-06T16:05:32.081Z info: Method : signin() - Token Created
+2024-01-06T16:08:33.032Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-06T16:08:33.133Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-06T16:08:45.532Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-06T16:08:45.599Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-06T16:08:56.832Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-06T16:08:56.917Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:00:27.511Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:00:27.514Z info: Method : signin() - Check User Already exists Start
+2024-01-07T01:00:27.549Z info: Method : signin() - Check User Already exists End
+2024-01-07T01:00:27.550Z info: Method : signin() - User is Valid
+2024-01-07T01:00:27.550Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:00:27.555Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:00:27.631Z info: Password Check From Compare Password : 
+2024-01-07T01:00:27.632Z info: true
+2024-01-07T01:00:27.633Z info: Method : signin() - Password is valid
+2024-01-07T01:00:27.633Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:00:27.651Z info: Method : signin() - Token Created
+2024-01-07T01:01:14.552Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:01:14.614Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:02:16.570Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:02:16.571Z info: Method : signin() - Check User Already exists Start
+2024-01-07T01:02:16.583Z info: Method : signin() - Check User Already exists End
+2024-01-07T01:02:16.584Z info: Method : signin() - User is Valid
+2024-01-07T01:02:16.584Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:02:16.589Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:02:16.664Z info: Password Check From Compare Password : 
+2024-01-07T01:02:16.665Z info: true
+2024-01-07T01:02:16.665Z info: Method : signin() - Password is valid
+2024-01-07T01:02:16.666Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:02:16.678Z info: Method : signin() - Token Created
+2024-01-07T01:09:37.672Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:09:37.673Z info: Method : signin() - Check User Already exists Start
+2024-01-07T01:09:37.676Z info: Method : signin() - Check User Already exists End
+2024-01-07T01:09:37.677Z info: Method : signin() - User is Valid
+2024-01-07T01:09:37.677Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:09:37.678Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:09:37.755Z info: Password Check From Compare Password : 
+2024-01-07T01:09:37.756Z info: true
+2024-01-07T01:09:37.757Z info: Method : signin() - Password is valid
+2024-01-07T01:09:37.757Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:09:37.758Z info: Method : signin() - Token Created
+2024-01-07T01:21:25.981Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:21:25.982Z info: Method : signin() - Check User Already exists Start
+2024-01-07T01:21:25.986Z info: Method : signin() - Check User Already exists End
+2024-01-07T01:21:25.986Z info: Method : signin() - User is Valid
+2024-01-07T01:21:25.987Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:21:25.987Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:21:26.065Z info: Password Check From Compare Password : 
+2024-01-07T01:21:26.065Z info: true
+2024-01-07T01:21:26.065Z info: Method : signin() - Password is valid
+2024-01-07T01:21:26.066Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:21:26.067Z info: Method : signin() - Token Created
+2024-01-07T01:25:12.148Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:25:12.149Z info: Method : signin() - Check User Already exists Start
+2024-01-07T01:25:12.151Z info: Method : signin() - Check User Already exists End
+2024-01-07T01:25:12.152Z info: Method : signin() - User is Valid
+2024-01-07T01:25:12.152Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:25:12.153Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:25:12.229Z info: Password Check From Compare Password : 
+2024-01-07T01:25:12.230Z info: true
+2024-01-07T01:25:12.230Z info: Method : signin() - Password is valid
+2024-01-07T01:25:12.231Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:25:12.233Z info: Method : signin() - Token Created
+2024-01-07T01:27:45.060Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:27:45.164Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:27:55.437Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:27:55.438Z info: Method : signin() - Check User Already exists Start
+2024-01-07T01:27:55.457Z info: {
+  _id: new ObjectId('65960fd353c7a4d44a60a8bb'),
+  email: 'mainul0800@gmail.com',
+  username: 'mainul0080',
+  password: '$2b$10$vVqnjZr.e8xcLT8kVfbynOTzOjoJGDROEyzA72xxuoSDEylrDPQp6',
+  role: 'admin',
+  createdAt: 2024-01-04T01:54:27.070Z,
+  updatedAt: 2024-01-04T01:54:27.070Z,
+  __v: 0
+}
+2024-01-07T01:27:55.872Z info: Method : signin() - Check User Already exists End
+2024-01-07T01:27:55.872Z info: Method : signin() - User is Valid
+2024-01-07T01:27:55.873Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:27:55.874Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:27:55.951Z info: Password Check From Compare Password : 
+2024-01-07T01:27:55.952Z info: true
+2024-01-07T01:27:55.953Z info: Method : signin() - Password is valid
+2024-01-07T01:27:55.953Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:27:55.957Z info: Method : signin() - Token Created
+2024-01-07T01:28:34.511Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:28:34.512Z info: Method : signin() - Check User Already exists Start
+2024-01-07T01:28:34.515Z info: {
+  _id: new ObjectId('65990c9de8262c80f5bd5a9d'),
+  email: 'kusmoni@gmail.com',
+  username: 'kusmoni',
+  password: '$2b$10$p9mwLgzUxPw.z08lnQn9/em0CN2Gs7hNjfxZKkAVBytC9PIPz9B4u',
+  role: 'user',
+  createdAt: 2024-01-06T08:17:33.235Z,
+  updatedAt: 2024-01-06T08:17:33.235Z,
+  __v: 0
+}
+2024-01-07T01:28:34.518Z info: Method : signin() - Check User Already exists End
+2024-01-07T01:28:34.519Z info: Method : signin() - User is Valid
+2024-01-07T01:28:34.519Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:28:34.519Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:28:34.598Z info: Password Check From Compare Password : 
+2024-01-07T01:28:34.599Z info: true
+2024-01-07T01:28:34.599Z info: Method : signin() - Password is valid
+2024-01-07T01:28:34.600Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:28:34.601Z info: Method : signin() - Token Created
+2024-01-07T01:29:26.838Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:29:26.927Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:29:32.223Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:29:32.224Z info: Method : signin() - Check User Already exists Start
+2024-01-07T01:29:32.235Z info: {
+  _id: new ObjectId('65990c9de8262c80f5bd5a9d'),
+  email: 'kusmoni@gmail.com',
+  username: 'kusmoni',
+  password: '$2b$10$p9mwLgzUxPw.z08lnQn9/em0CN2Gs7hNjfxZKkAVBytC9PIPz9B4u',
+  role: 'user',
+  createdAt: 2024-01-06T08:17:33.235Z,
+  updatedAt: 2024-01-06T08:17:33.235Z,
+  __v: 0
+}
+2024-01-07T01:29:32.241Z info: Method : signin() - Check User Already exists End
+2024-01-07T01:29:32.242Z info: Method : signin() - User is Valid
+2024-01-07T01:29:32.243Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:29:32.244Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:29:32.318Z info: Password Check From Compare Password : 
+2024-01-07T01:29:32.320Z info: true
+2024-01-07T01:29:32.320Z info: Method : signin() - Password is valid
+2024-01-07T01:29:32.321Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:29:32.325Z info: Method : signin() - Token Created
+2024-01-07T01:30:46.560Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:30:46.640Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:37:48.758Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:37:48.759Z info: Method : signin() - Check User Info Start
+2024-01-07T01:37:48.762Z info: {
+  _id: new ObjectId('65990c9de8262c80f5bd5a9d'),
+  email: 'kusmoni@gmail.com',
+  username: 'kusmoni',
+  password: '$2b$10$p9mwLgzUxPw.z08lnQn9/em0CN2Gs7hNjfxZKkAVBytC9PIPz9B4u',
+  role: 'user',
+  createdAt: 2024-01-06T08:17:33.235Z,
+  updatedAt: 2024-01-06T08:17:33.235Z,
+  __v: 0
+}
+2024-01-07T01:37:48.768Z info: Method : signin() - Check User Info Start End
+2024-01-07T01:37:48.769Z info: Method : signin() - User is Valid
+2024-01-07T01:37:48.770Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:37:48.771Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:37:48.845Z info: Password Check From Compare Password : 
+2024-01-07T01:37:48.846Z info: true
+2024-01-07T01:37:48.846Z info: Method : signin() - Password is valid
+2024-01-07T01:37:48.846Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:37:48.849Z info: Method : signin() - Token Created
+2024-01-07T01:40:07.360Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:40:07.437Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:43:03.804Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:43:03.895Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:44:11.382Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:44:11.444Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:44:38.663Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:44:38.719Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:45:28.948Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:45:29.069Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:45:53.505Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:45:53.564Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:46:28.386Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:46:28.460Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:46:31.113Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T01:46:31.163Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T01:54:44.983Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T01:54:44.984Z info: Method : signin() - Check User Info Start
+2024-01-07T01:54:44.998Z info: {
+  _id: new ObjectId('65990c9de8262c80f5bd5a9d'),
+  email: 'kusmoni@gmail.com',
+  username: 'kusmoni',
+  password: '$2b$10$p9mwLgzUxPw.z08lnQn9/em0CN2Gs7hNjfxZKkAVBytC9PIPz9B4u',
+  role: 'user',
+  createdAt: 2024-01-06T08:17:33.235Z,
+  updatedAt: 2024-01-06T08:17:33.235Z,
+  __v: 0
+}
+2024-01-07T01:54:45.003Z info: Method : signin() - Check User Info Start End
+2024-01-07T01:54:45.003Z info: Method : signin() - User is Valid
+2024-01-07T01:54:45.003Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T01:54:45.004Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T01:54:45.079Z info: Password Check From Compare Password : 
+2024-01-07T01:54:45.080Z info: true
+2024-01-07T01:54:45.080Z info: Method : signin() - Password is valid
+2024-01-07T01:54:45.081Z info: Method : signin() - JWT Token Creation
+2024-01-07T01:54:45.085Z info: Method : signin() - Token Created
+2024-01-07T01:54:45.150Z info: is Admin Middleware Requested user id = 65990c9de8262c80f5bd5a9d
+2024-01-07T01:54:45.151Z info: 65990c9de8262c80f5bd5a9d
+2024-01-07T01:54:45.158Z info: Is Admin MiddleWare Status - False and Unauthorized Accesss
+2024-01-07T01:56:13.091Z info: is Admin Middleware Requested user id = 65990c9de8262c80f5bd5a9d
+2024-01-07T01:56:13.101Z info: 65990c9de8262c80f5bd5a9d
+2024-01-07T01:56:13.107Z info: Is Admin MiddleWare Status - False and Unauthorized Accesss
+2024-01-07T09:08:08.952Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T09:08:09.161Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T09:08:48.904Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T09:08:48.904Z info: Method : signin() - Check User Info Start
+2024-01-07T09:08:48.974Z info: {
+  _id: new ObjectId('65990c9de8262c80f5bd5a9d'),
+  email: 'kusmoni@gmail.com',
+  username: 'kusmoni',
+  password: '$2b$10$p9mwLgzUxPw.z08lnQn9/em0CN2Gs7hNjfxZKkAVBytC9PIPz9B4u',
+  role: 'user',
+  createdAt: 2024-01-06T08:17:33.235Z,
+  updatedAt: 2024-01-06T08:17:33.235Z,
+  __v: 0
+}
+2024-01-07T09:08:48.981Z info: Method : signin() - Check User Info Start End
+2024-01-07T09:08:48.981Z info: Method : signin() - User is Valid
+2024-01-07T09:08:48.982Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T09:08:48.984Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T09:08:49.061Z info: Password Check From Compare Password : 
+2024-01-07T09:08:49.061Z info: true
+2024-01-07T09:08:49.062Z info: Method : signin() - Password is valid
+2024-01-07T09:08:49.062Z info: Method : signin() - JWT Token Creation
+2024-01-07T09:08:49.065Z info: Method : signin() - Token Created
+2024-01-07T09:18:48.450Z info: Expense Type data ==> 
+ {
+  _id: new ObjectId('6591f464f6ed756b8a1455b0'),
+  name: 'Odessa Salazar',
+  icon: 'Elit qui nihil dolo',
+  createdAt: 2023-12-31T23:08:20.352Z,
+  updatedAt: 2023-12-31T23:08:20.352Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef72dfb1e179da91077d3'),
+  name: 'Shopping',
+  icon: 'Shopping',
+  createdAt: 2023-12-29T16:43:25.357Z,
+  updatedAt: 2023-12-29T16:43:25.357Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef715fb1e179da91077d0'),
+  name: 'Medicine',
+  icon: 'Medicine',
+  createdAt: 2023-12-29T16:43:01.837Z,
+  updatedAt: 2023-12-29T16:43:01.837Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef6e6fb1e179da91077cd'),
+  name: 'Mobile Rechage',
+  icon: 'MobileIcon',
+  createdAt: 2023-12-29T16:42:14.684Z,
+  updatedAt: 2023-12-29T16:42:14.684Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95e96498e1036ecfbc6d'),
+  name: 'rrrrrrrrrrr',
+  icon: 'rrrrrr',
+  createdAt: 2023-12-28T15:36:09.963Z,
+  updatedAt: 2023-12-28T15:36:09.963Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95cd6498e1036ecfbc68'),
+  name: 'qqqqqq',
+  icon: 'qqqqqq',
+  createdAt: 2023-12-28T15:35:41.130Z,
+  updatedAt: 2023-12-28T15:35:41.130Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95ba6498e1036ecfbc62'),
+  name: 'fddffdf',
+  icon: 'dfdfdf',
+  createdAt: 2023-12-28T15:35:22.970Z,
+  updatedAt: 2023-12-28T15:35:22.970Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95986498e1036ecfbc5d'),
+  name: 'AAAAAA',
+  icon: 'aaaaaa',
+  createdAt: 2023-12-28T15:34:48.303Z,
+  updatedAt: 2023-12-28T15:34:48.303Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95436498e1036ecfbc58'),
+  name: 'MMMMM',
+  icon: 'asdfasdfasdfasdf',
+  createdAt: 2023-12-28T15:33:23.353Z,
+  updatedAt: 2023-12-28T15:33:23.353Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d94f06498e1036ecfbc53'),
+  name: 'New New New',
+  icon: 'New New',
+  createdAt: 2023-12-28T15:32:00.142Z,
+  updatedAt: 2023-12-28T15:32:00.142Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d94b26498e1036ecfbc4e'),
+  name: 'retee',
+  icon: 'erthe',
+  createdAt: 2023-12-28T15:30:58.151Z,
+  updatedAt: 2023-12-28T15:30:58.151Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d93d16498e1036ecfbc49'),
+  name: 'asdfasfd',
+  icon: 'asfdsaf',
+  createdAt: 2023-12-28T15:27:13.745Z,
+  updatedAt: 2023-12-28T15:27:13.745Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d93b46498e1036ecfbc44'),
+  name: 'dfdasfdsadf',
+  icon: 'sasdsadf',
+  createdAt: 2023-12-28T15:26:44.058Z,
+  updatedAt: 2023-12-28T15:26:44.058Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d93566498e1036ecfbc3e'),
+  name: 'trfasfs',
+  icon: 'asfasfsafaf',
+  createdAt: 2023-12-28T15:25:10.567Z,
+  updatedAt: 2023-12-28T15:25:10.567Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d92e96498e1036ecfbc39'),
+  name: 'myicon',
+  icon: 'icond',
+  createdAt: 2023-12-28T15:23:21.809Z,
+  updatedAt: 2023-12-28T15:23:21.809Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d92a96498e1036ecfbc32'),
+  name: 'NewTest',
+  icon: 'icontest',
+  createdAt: 2023-12-28T15:22:17.119Z,
+  updatedAt: 2023-12-28T15:22:17.119Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d92896498e1036ecfbc2b'),
+  name: 'Name',
+  icon: 'namename',
+  createdAt: 2023-12-28T15:21:45.493Z,
+  updatedAt: 2023-12-28T15:21:45.493Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d8f3c6498e1036ecfbc20'),
+  name: 'First Name',
+  icon: 'First Icon',
+  createdAt: 2023-12-28T15:07:40.207Z,
+  updatedAt: 2023-12-28T15:07:40.207Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ada8832ae0364285c4116'),
+  name: 'late night',
+  icon: 'party',
+  createdAt: 2023-12-26T13:52:08.510Z,
+  updatedAt: 2023-12-26T13:52:08.510Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a2ed58e6895448e47f012'),
+  name: 'sfsaf',
+  icon: 'asfdasdf',
+  createdAt: 2023-12-26T01:39:33.517Z,
+  updatedAt: 2023-12-26T01:39:33.517Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a2ebc8e6895448e47f00d'),
+  name: 'reff',
+  icon: 'rerww',
+  createdAt: 2023-12-26T01:39:08.101Z,
+  updatedAt: 2023-12-26T01:39:08.101Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a214b8e6895448e47efdd'),
+  name: 'Mainul Hasan',
+  icon: 'Hasan',
+  createdAt: 2023-12-26T00:41:47.559Z,
+  updatedAt: 2023-12-26T00:41:47.559Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a212f8e6895448e47efd8'),
+  name: 'Goog Morning',
+  icon: 'Mor',
+  createdAt: 2023-12-26T00:41:19.244Z,
+  updatedAt: 2023-12-26T00:41:19.244Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a21168e6895448e47efd3'),
+  name: 'New Morning Data',
+  icon: 'Morning Data',
+  createdAt: 2023-12-26T00:40:54.975Z,
+  updatedAt: 2023-12-26T00:40:54.975Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a03bb8e6895448e47ef9c'),
+  name: 'New fff',
+  icon: 'pou',
+  createdAt: 2023-12-25T22:35:39.947Z,
+  updatedAt: 2023-12-25T22:35:39.947Z,
+  __v: 0
+},{
+  _id: new ObjectId('6589fee78e6895448e47ef89'),
+  name: 'Tire',
+  icon: 'tire',
+  createdAt: 2023-12-25T22:15:03.817Z,
+  updatedAt: 2023-12-25T22:15:03.817Z,
+  __v: 0
+},{
+  _id: new ObjectId('6589fed88e6895448e47ef84'),
+  name: 'New Type',
+  icon: 'new icon',
+  createdAt: 2023-12-25T22:14:48.186Z,
+  updatedAt: 2023-12-25T22:14:48.186Z,
+  __v: 0
+},{
+  _id: new ObjectId('6589607bc09c74646fc780a3'),
+  name: 'Gaas Bil',
+  icon: 'ioru',
+  createdAt: 2023-12-25T10:59:07.717Z,
+  updatedAt: 2023-12-25T10:59:07.717Z,
+  __v: 0
+},{
+  _id: new ObjectId('65893fe37014fccb9148e486'),
+  name: 'Gas bill',
+  icon: 'newicon',
+  createdAt: 2023-12-25T08:40:03.917Z,
+  updatedAt: 2023-12-25T08:40:03.917Z,
+  __v: 0
+},{
+  _id: new ObjectId('65893bf586be786ea992c07e'),
+  name: 'Bazar',
+  icon: 'Bazar kora',
+  createdAt: 2023-12-25T08:23:17.201Z,
+  updatedAt: 2023-12-25T08:23:17.201Z,
+  __v: 0
+},{
+  _id: new ObjectId('65893b8b86be786ea992c07a'),
+  name: 'Mobile',
+  icon: 'MOBILEicon',
+  createdAt: 2023-12-25T08:21:31.277Z,
+  updatedAt: 2023-12-25T08:21:31.277Z,
+  __v: 0
+},{
+  _id: new ObjectId('65893b0286be786ea992c06f'),
+  name: 'Gsza bill',
+  icon: 'newicon',
+  createdAt: 2023-12-25T08:19:14.594Z,
+  updatedAt: 2023-12-25T08:19:14.594Z,
+  __v: 0
+},{
+  _id: new ObjectId('657d7c444105e44b9a336b0a'),
+  name: 'erty',
+  icon: 'wergdf',
+  createdAt: 2023-12-16T10:30:28.082Z,
+  updatedAt: 2023-12-16T10:30:28.082Z,
+  __v: 0
+},{
+  _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+  name: 'rttrertfffr',
+  icon: 'wergdf',
+  createdAt: 2023-12-16T10:23:17.740Z,
+  updatedAt: 2023-12-16T10:23:17.740Z,
+  __v: 0
+},{
+  _id: new ObjectId('657d71d4b6918ad483037a63'),
+  name: 'rttrertr',
+  icon: 'wergdf',
+  createdAt: 2023-12-16T09:45:56.304Z,
+  updatedAt: 2023-12-16T09:45:56.304Z,
+  __v: 0
+}
+2024-01-07T09:18:48.625Z info: Expenses data ==> 
+ {
+  _id: new ObjectId('658e2c086498e1036ecfbce3'),
+  amount: 500,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'This is description',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658d8f3c6498e1036ecfbc20'),
+    name: 'First Name',
+    icon: 'First Icon'
+  },
+  createdAt: 2023-12-29T02:16:40.617Z,
+  updatedAt: 2023-12-29T02:16:40.617Z,
+  __v: 0
+},{
+  _id: new ObjectId('658e2c256498e1036ecfbce6'),
+  amount: 700,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'This is description',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('658d92e96498e1036ecfbc39'),
+    name: 'myicon',
+    icon: 'icond'
+  },
+  createdAt: 2023-12-29T02:17:09.607Z,
+  updatedAt: 2023-12-29T02:17:09.607Z,
+  __v: 0
+},{
+  _id: new ObjectId('658e2c416498e1036ecfbce9'),
+  amount: 800,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'This is expense list',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('658d92a96498e1036ecfbc32'),
+    name: 'NewTest',
+    icon: 'icontest'
+  },
+  createdAt: 2023-12-29T02:17:37.141Z,
+  updatedAt: 2023-12-29T02:17:37.141Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef78cfb1e179da91077db'),
+  amount: 160,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'Neprochine\n',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef715fb1e179da91077d0'),
+    name: 'Medicine',
+    icon: 'Medicine'
+  },
+  createdAt: 2023-12-29T16:45:00.152Z,
+  updatedAt: 2023-12-29T16:45:00.152Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef7d6fb1e179da91077de'),
+  amount: 500,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'Shopping Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef72dfb1e179da91077d3'),
+    name: 'Shopping',
+    icon: 'Shopping'
+  },
+  createdAt: 2023-12-29T16:46:14.601Z,
+  updatedAt: 2023-12-29T16:46:14.601Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef812fb1e179da91077e4'),
+  amount: 600,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'Medicine Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef715fb1e179da91077d0'),
+    name: 'Medicine',
+    icon: 'Medicine'
+  },
+  createdAt: 2023-12-29T16:47:14.734Z,
+  updatedAt: 2023-12-29T16:47:14.734Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b89b763fe7ed0ad9a4aa9'),
+  amount: 1500,
+  date_sl: 1703721600000,
+  date: '2023-12-28',
+  description: '12364',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T02:19:35.055Z,
+  updatedAt: 2023-12-27T02:19:35.055Z,
+  __v: 0
+},{
+  _id: new ObjectId('658cd00ac0bf648a29302c2b'),
+  amount: 120,
+  date_sl: 1703721600000,
+  date: '2023-12-28',
+  description: '',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a03bb8e6895448e47ef9c'),
+    name: 'New fff',
+    icon: 'pou'
+  },
+  createdAt: 2023-12-28T01:31:54.553Z,
+  updatedAt: 2023-12-28T01:31:54.553Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef7fbfb1e179da91077e1'),
+  amount: 1800,
+  date_sl: 1703721600000,
+  date: '2023-12-28',
+  description: 'Shopping Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef72dfb1e179da91077d3'),
+    name: 'Shopping',
+    icon: 'Shopping'
+  },
+  createdAt: 2023-12-29T16:46:51.533Z,
+  updatedAt: 2023-12-29T16:46:51.533Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b6fa8dcb397d45dc41249'),
+  amount: 500,
+  date_sl: 1703636904129,
+  date: '2023-12-27',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7c444105e44b9a336b0a'),
+    name: 'erty',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T00:28:24.145Z,
+  updatedAt: 2023-12-27T00:28:24.145Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b6f07a7864c0f2b5ac06e'),
+  amount: 500,
+  date_sl: 1703636743282,
+  date: '2023-12-27',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7c444105e44b9a336b0a'),
+    name: 'erty',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T00:25:43.294Z,
+  updatedAt: 2023-12-27T00:25:43.294Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c42e3275daf2a20466b8a'),
+  amount: 500,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Mainul HHHHHHHHHHHHHAAAAAAAAA',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T15:29:39.524Z,
+  updatedAt: 2023-12-27T15:29:39.524Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4376275daf2a20466b8f'),
+  amount: 500,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Mainul HHHHHHHHHHHHHAAAAAAAAA',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T15:32:06.383Z,
+  updatedAt: 2023-12-27T15:32:06.383Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c43d2275daf2a20466ba0'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:33:38.235Z,
+  updatedAt: 2023-12-27T15:33:38.235Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4459275daf2a20466ba6'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:35:53.807Z,
+  updatedAt: 2023-12-27T15:35:53.807Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4493275daf2a20466bac'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:36:51.462Z,
+  updatedAt: 2023-12-27T15:36:51.462Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c44a4275daf2a20466bb2'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:37:08.246Z,
+  updatedAt: 2023-12-27T15:37:08.246Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c460943985f51c207029b'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:43:05.819Z,
+  updatedAt: 2023-12-27T15:43:05.819Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c467243985f51c20702a0'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:44:50.081Z,
+  updatedAt: 2023-12-27T15:44:50.081Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c46b74317d0a482760e3e'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:45:59.336Z,
+  updatedAt: 2023-12-27T15:45:59.336Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c46c94317d0a482760e40'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:46:17.106Z,
+  updatedAt: 2023-12-27T15:46:17.106Z,
+  __v: 0
+},{
+  _id: new ObjectId('658af8a5b7c9eeed717af4ca'),
+  amount: 9856,
+  date_sl: 1703606437911,
+  date: '2023-12-26',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-26T16:00:37.913Z,
+  updatedAt: 2023-12-26T16:00:37.913Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b71147efc56c0119c6f9a'),
+  amount: 960,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('6589607bc09c74646fc780a3'),
+    name: 'Gaas Bil',
+    icon: 'ioru'
+  },
+  createdAt: 2023-12-27T00:34:28.651Z,
+  updatedAt: 2023-12-27T00:34:28.651Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4283275daf2a20466b82'),
+  amount: 450,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'Mainul Hasan',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589fee78e6895448e47ef89'),
+    name: 'Tire',
+    icon: 'tire'
+  },
+  createdAt: 2023-12-27T15:28:03.888Z,
+  updatedAt: 2023-12-27T15:28:03.888Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c47118cdfef1716458415'),
+  amount: 600,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'REI ERI',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589607bc09c74646fc780a3'),
+    name: 'Gaas Bil',
+    icon: 'ioru'
+  },
+  createdAt: 2023-12-27T15:47:30.007Z,
+  updatedAt: 2023-12-27T15:47:30.007Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4aed8eb4245b153ea24f'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRHIS IS',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:03:57.672Z,
+  updatedAt: 2023-12-27T16:03:57.672Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4b278eb4245b153ea254'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRHIS IS',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:04:55.802Z,
+  updatedAt: 2023-12-27T16:04:55.802Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4b438eb4245b153ea259'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRHIS IS',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:05:23.360Z,
+  updatedAt: 2023-12-27T16:05:23.360Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4b658aa0d792c2a1a4c5'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRHIS IS',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:05:57.256Z,
+  updatedAt: 2023-12-27T16:05:57.256Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4c32916763c0533f1a4b'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'this is asf',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7c444105e44b9a336b0a'),
+    name: 'erty',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T16:09:22.081Z,
+  updatedAt: 2023-12-27T16:09:22.081Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4db9916763c0533f1a69'),
+  amount: 1200,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRimsadf',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893fe37014fccb9148e486'),
+    name: 'Gas bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:15:53.087Z,
+  updatedAt: 2023-12-27T16:15:53.087Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef8b2fb1e179da91077f5'),
+  amount: 1600,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'Kusum Mobile Rechargeable',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef6e6fb1e179da91077cd'),
+    name: 'Mobile Rechage',
+    icon: 'MobileIcon'
+  },
+  createdAt: 2023-12-29T16:49:54.044Z,
+  updatedAt: 2023-12-29T16:49:54.044Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f12834cd2f6004dee4d9'),
+  amount: 100,
+  date_sl: 1703342376426,
+  date: '2023-12-23',
+  description: 'Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:39:36.434Z,
+  updatedAt: 2023-12-23T14:39:36.434Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f12034cd2f6004dee4d7'),
+  amount: 1500,
+  date_sl: 1703342368989,
+  date: '2023-12-23',
+  description: 'Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:39:28.991Z,
+  updatedAt: 2023-12-23T14:39:28.991Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f11a34cd2f6004dee4d5'),
+  amount: 1500,
+  date_sl: 1703342362388,
+  date: '2023-12-23',
+  description: 'Expense',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:39:22.389Z,
+  updatedAt: 2023-12-23T14:39:22.389Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f10d34cd2f6004dee4d3'),
+  amount: 1500,
+  date_sl: 1703342349833,
+  date: '2023-12-23',
+  description: 'Expense',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:39:09.836Z,
+  updatedAt: 2023-12-23T14:39:09.836Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f10234cd2f6004dee4d1'),
+  amount: 500,
+  date_sl: 1703342338122,
+  date: '2023-12-23',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:38:58.138Z,
+  updatedAt: 2023-12-23T14:38:58.138Z,
+  __v: 0
+},{
+  _id: new ObjectId('658640fb0b49aa091fd28e70'),
+  amount: 500,
+  date_sl: 1703297275625,
+  date: '2023-12-23',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T02:07:55.633Z,
+  updatedAt: 2023-12-23T02:07:55.633Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b861863fe7ed0ad9a4a7c'),
+  amount: 1200,
+  date_sl: 1703289600000,
+  date: '2023-12-23',
+  description: 'This is description',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T02:04:08.979Z,
+  updatedAt: 2023-12-27T02:04:08.979Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c630caf99332a7b60de'),
+  amount: 500,
+  date_sl: 1703255139880,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:39.881Z,
+  updatedAt: 2023-12-22T14:25:39.881Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c620caf99332a7b60dc'),
+  amount: 500,
+  date_sl: 1703255138889,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:38.890Z,
+  updatedAt: 2023-12-22T14:25:38.890Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c5a0caf99332a7b60da'),
+  amount: 500,
+  date_sl: 1703255130258,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:30.259Z,
+  updatedAt: 2023-12-22T14:25:30.259Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c590caf99332a7b60d8'),
+  amount: 500,
+  date_sl: 1703255129061,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:29.062Z,
+  updatedAt: 2023-12-22T14:25:29.062Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c540caf99332a7b60d6'),
+  amount: 500,
+  date_sl: 1703255124419,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:24.420Z,
+  updatedAt: 2023-12-22T14:25:24.420Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c4c0caf99332a7b60d4'),
+  amount: 500,
+  date_sl: 1703255116858,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:16.860Z,
+  updatedAt: 2023-12-22T14:25:16.860Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c480caf99332a7b60d2'),
+  amount: 500,
+  date_sl: 1703255112596,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:12.597Z,
+  updatedAt: 2023-12-22T14:25:12.597Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c070caf99332a7b60d0'),
+  amount: 1100,
+  date_sl: 1703255047534,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:07.535Z,
+  updatedAt: 2023-12-22T14:24:07.535Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c060caf99332a7b60ce'),
+  amount: 1100,
+  date_sl: 1703255046650,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:06.652Z,
+  updatedAt: 2023-12-22T14:24:06.652Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c050caf99332a7b60cc'),
+  amount: 1100,
+  date_sl: 1703255045732,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:05.733Z,
+  updatedAt: 2023-12-22T14:24:05.733Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c040caf99332a7b60ca'),
+  amount: 1100,
+  date_sl: 1703255044870,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:04.872Z,
+  updatedAt: 2023-12-22T14:24:04.872Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c040caf99332a7b60c8'),
+  amount: 1100,
+  date_sl: 1703255044007,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:04.008Z,
+  updatedAt: 2023-12-22T14:24:04.008Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859bf60caf99332a7b60c6'),
+  amount: 1100,
+  date_sl: 1703255030929,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:50.930Z,
+  updatedAt: 2023-12-22T14:23:50.930Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859bf60caf99332a7b60c4'),
+  amount: 1100,
+  date_sl: 1703255030128,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:50.129Z,
+  updatedAt: 2023-12-22T14:23:50.129Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859bf30caf99332a7b60c2'),
+  amount: 1100,
+  date_sl: 1703255027111,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:47.113Z,
+  updatedAt: 2023-12-22T14:23:47.113Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be70caf99332a7b60c0'),
+  amount: 1100,
+  date_sl: 1703255015021,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:35.022Z,
+  updatedAt: 2023-12-22T14:23:35.022Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be60caf99332a7b60be'),
+  amount: 1100,
+  date_sl: 1703255014160,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:34.161Z,
+  updatedAt: 2023-12-22T14:23:34.161Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be50caf99332a7b60bc'),
+  amount: 1100,
+  date_sl: 1703255013501,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:33.505Z,
+  updatedAt: 2023-12-22T14:23:33.505Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be40caf99332a7b60ba'),
+  amount: 1100,
+  date_sl: 1703255012833,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:32.836Z,
+  updatedAt: 2023-12-22T14:23:32.836Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be30caf99332a7b60b8'),
+  amount: 1100,
+  date_sl: 1703255011827,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:31.828Z,
+  updatedAt: 2023-12-22T14:23:31.828Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859bca0caf99332a7b60b6'),
+  amount: 100,
+  date_sl: 1703254986093,
+  date: '2023-12-22',
+  description: 'POI',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:06.120Z,
+  updatedAt: 2023-12-22T14:23:06.120Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b8a1863fe7ed0ad9a4ac4'),
+  amount: 1800,
+  date_sl: 1703203200000,
+  date: '2023-12-22',
+  description: 'wer',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:21:12.306Z,
+  updatedAt: 2023-12-27T02:21:12.306Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b8b7063fe7ed0ad9a4add'),
+  amount: 12000,
+  date_sl: 1703116800000,
+  date: '2023-12-21',
+  description: 'retyj',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T02:26:56.869Z,
+  updatedAt: 2023-12-27T02:26:56.869Z,
+  __v: 0
+},{
+  _id: new ObjectId('658cddb928586d74ec669655'),
+  amount: 3220,
+  date_sl: 1703030400000,
+  date: '2023-12-20',
+  description: '',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-28T02:30:17.575Z,
+  updatedAt: 2023-12-28T02:30:17.575Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b72ce63fe7ed0ad9a49f6'),
+  amount: 345,
+  date_sl: 1702944000000,
+  date: '2023-12-19',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('658a21168e6895448e47efd3'),
+    name: 'New Morning Data',
+    icon: 'Morning Data'
+  },
+  createdAt: 2023-12-27T00:41:50.897Z,
+  updatedAt: 2023-12-27T00:41:50.897Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b892c63fe7ed0ad9a4a9a'),
+  amount: 1300,
+  date_sl: 1702944000000,
+  date: '2023-12-19',
+  description: '1300',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:17:16.375Z,
+  updatedAt: 2023-12-27T02:17:16.375Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b899563fe7ed0ad9a4aa1'),
+  amount: 1400,
+  date_sl: 1702944000000,
+  date: '2023-12-19',
+  description: '1400',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:19:01.107Z,
+  updatedAt: 2023-12-27T02:19:01.107Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b8a6d63fe7ed0ad9a4acf'),
+  amount: 1265,
+  date_sl: 1702944000000,
+  date: '2023-12-19',
+  description: 'tyre',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:22:37.178Z,
+  updatedAt: 2023-12-27T02:22:37.178Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b71517efc56c0119c6fa5'),
+  amount: 567,
+  date_sl: 1702857600000,
+  date: '2023-12-18',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('6589fed88e6895448e47ef84'),
+    name: 'New Type',
+    icon: 'new icon'
+  },
+  createdAt: 2023-12-27T00:35:29.774Z,
+  updatedAt: 2023-12-27T00:35:29.774Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b88f963fe7ed0ad9a4a92'),
+  amount: 1200,
+  date_sl: 1702857600000,
+  date: '2023-12-18',
+  description: '1200',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589607bc09c74646fc780a3'),
+    name: 'Gaas Bil',
+    icon: 'ioru'
+  },
+  createdAt: 2023-12-27T02:16:25.014Z,
+  updatedAt: 2023-12-27T02:16:25.014Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b89d863fe7ed0ad9a4ab7'),
+  amount: 1600,
+  date_sl: 1702512000000,
+  date: '2023-12-14',
+  description: '123654',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:20:08.575Z,
+  updatedAt: 2023-12-27T02:20:08.575Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b884463fe7ed0ad9a4a84'),
+  amount: 456,
+  date_sl: 1702339200000,
+  date: '2023-12-12',
+  description: 'sdfsdf',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:13:24.398Z,
+  updatedAt: 2023-12-27T02:13:24.398Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b8a0963fe7ed0ad9a4ac2'),
+  amount: 1700,
+  date_sl: 1702339200000,
+  date: '2023-12-12',
+  description: 'wer',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589fee78e6895448e47ef89'),
+    name: 'Tire',
+    icon: 'tire'
+  },
+  createdAt: 2023-12-27T02:20:57.776Z,
+  updatedAt: 2023-12-27T02:20:57.776Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b7ada63fe7ed0ad9a4a68'),
+  amount: 34,
+  date_sl: 1702166400000,
+  date: '2023-12-10',
+  description: 'asdfasfasfasadsfasfasdfafafafsdfsasasfaasfafasfasfasasas',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T01:16:10.168Z,
+  updatedAt: 2023-12-27T01:16:10.168Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4e34916763c0533f1a81'),
+  amount: 880,
+  date_sl: 1701712800000,
+  date: '2023-12-5',
+  description: 'Traisfda',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T16:17:56.470Z,
+  updatedAt: 2023-12-27T16:17:56.470Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b729663fe7ed0ad9a49eb'),
+  amount: 120,
+  date_sl: 1701626400000,
+  date: '2023-12-4',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('658a2ebc8e6895448e47f00d'),
+    name: 'reff',
+    icon: 'rerww'
+  },
+  createdAt: 2023-12-27T00:40:54.979Z,
+  updatedAt: 2023-12-27T00:40:54.979Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b72ff63fe7ed0ad9a49fe'),
+  amount: 456,
+  date_sl: 1701626400000,
+  date: '2023-12-4',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7c444105e44b9a336b0a'),
+    name: 'erty',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T00:42:39.779Z,
+  updatedAt: 2023-12-27T00:42:39.779Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b745363fe7ed0ad9a4a09'),
+  amount: 456,
+  date_sl: 1701626400000,
+  date: '2023-12-4',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a212f8e6895448e47efd8'),
+    name: 'Goog Morning',
+    icon: 'Mor'
+  },
+  createdAt: 2023-12-27T00:48:19.173Z,
+  updatedAt: 2023-12-27T00:48:19.173Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b895263fe7ed0ad9a4a9c'),
+  amount: 100,
+  date_sl: 1637539200000,
+  date: '2021-11-22',
+  description: 'Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T02:17:54.951Z,
+  updatedAt: 2023-12-27T02:17:54.951Z,
+  __v: 0
+},{
+  _id: new ObjectId('6591f43af6ed756b8a1455a8'),
+  amount: 99,
+  date_sl: 947354400000,
+  date: '2000-1-9',
+  description: 'Sit sunt sed perfer',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589fee78e6895448e47ef89'),
+    name: 'Tire',
+    icon: 'tire'
+  },
+  createdAt: 2023-12-31T23:07:38.735Z,
+  updatedAt: 2023-12-31T23:07:38.735Z,
+  __v: 0
+},{
+  _id: new ObjectId('6591f432f6ed756b8a1455a4'),
+  amount: 38,
+  date_sl: 523648800000,
+  date: '1986-8-6',
+  description: 'Voluptatem Nam est s',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658d8f3c6498e1036ecfbc20'),
+    name: 'First Name',
+    icon: 'First Icon'
+  },
+  createdAt: 2023-12-31T23:07:30.961Z,
+  updatedAt: 2023-12-31T23:07:30.961Z,
+  __v: 0
+},{
+  _id: new ObjectId('6591f3fdf6ed756b8a145597'),
+  amount: 81,
+  date_sl: 112644000000,
+  date: '1973-7-28',
+  description: 'Quisquam et est arch',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658d95436498e1036ecfbc58'),
+    name: 'MMMMM',
+    icon: 'asdfasdfasdfasdf'
+  },
+  createdAt: 2023-12-31T23:06:37.653Z,
+  updatedAt: 2023-12-31T23:06:37.653Z,
+  __v: 0
+}
+2024-01-07T09:27:04.424Z info: Expenses data ==> 
+ {
+  _id: new ObjectId('658e2c086498e1036ecfbce3'),
+  amount: 500,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'This is description',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658d8f3c6498e1036ecfbc20'),
+    name: 'First Name',
+    icon: 'First Icon'
+  },
+  createdAt: 2023-12-29T02:16:40.617Z,
+  updatedAt: 2023-12-29T02:16:40.617Z,
+  __v: 0
+},{
+  _id: new ObjectId('658e2c256498e1036ecfbce6'),
+  amount: 700,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'This is description',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('658d92e96498e1036ecfbc39'),
+    name: 'myicon',
+    icon: 'icond'
+  },
+  createdAt: 2023-12-29T02:17:09.607Z,
+  updatedAt: 2023-12-29T02:17:09.607Z,
+  __v: 0
+},{
+  _id: new ObjectId('658e2c416498e1036ecfbce9'),
+  amount: 800,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'This is expense list',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('658d92a96498e1036ecfbc32'),
+    name: 'NewTest',
+    icon: 'icontest'
+  },
+  createdAt: 2023-12-29T02:17:37.141Z,
+  updatedAt: 2023-12-29T02:17:37.141Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef78cfb1e179da91077db'),
+  amount: 160,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'Neprochine\n',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef715fb1e179da91077d0'),
+    name: 'Medicine',
+    icon: 'Medicine'
+  },
+  createdAt: 2023-12-29T16:45:00.152Z,
+  updatedAt: 2023-12-29T16:45:00.152Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef7d6fb1e179da91077de'),
+  amount: 500,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'Shopping Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef72dfb1e179da91077d3'),
+    name: 'Shopping',
+    icon: 'Shopping'
+  },
+  createdAt: 2023-12-29T16:46:14.601Z,
+  updatedAt: 2023-12-29T16:46:14.601Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef812fb1e179da91077e4'),
+  amount: 600,
+  date_sl: 1703808000000,
+  date: '2023-12-29',
+  description: 'Medicine Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef715fb1e179da91077d0'),
+    name: 'Medicine',
+    icon: 'Medicine'
+  },
+  createdAt: 2023-12-29T16:47:14.734Z,
+  updatedAt: 2023-12-29T16:47:14.734Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b89b763fe7ed0ad9a4aa9'),
+  amount: 1500,
+  date_sl: 1703721600000,
+  date: '2023-12-28',
+  description: '12364',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T02:19:35.055Z,
+  updatedAt: 2023-12-27T02:19:35.055Z,
+  __v: 0
+},{
+  _id: new ObjectId('658cd00ac0bf648a29302c2b'),
+  amount: 120,
+  date_sl: 1703721600000,
+  date: '2023-12-28',
+  description: '',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a03bb8e6895448e47ef9c'),
+    name: 'New fff',
+    icon: 'pou'
+  },
+  createdAt: 2023-12-28T01:31:54.553Z,
+  updatedAt: 2023-12-28T01:31:54.553Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef7fbfb1e179da91077e1'),
+  amount: 1800,
+  date_sl: 1703721600000,
+  date: '2023-12-28',
+  description: 'Shopping Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef72dfb1e179da91077d3'),
+    name: 'Shopping',
+    icon: 'Shopping'
+  },
+  createdAt: 2023-12-29T16:46:51.533Z,
+  updatedAt: 2023-12-29T16:46:51.533Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b6fa8dcb397d45dc41249'),
+  amount: 500,
+  date_sl: 1703636904129,
+  date: '2023-12-27',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7c444105e44b9a336b0a'),
+    name: 'erty',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T00:28:24.145Z,
+  updatedAt: 2023-12-27T00:28:24.145Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b6f07a7864c0f2b5ac06e'),
+  amount: 500,
+  date_sl: 1703636743282,
+  date: '2023-12-27',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7c444105e44b9a336b0a'),
+    name: 'erty',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T00:25:43.294Z,
+  updatedAt: 2023-12-27T00:25:43.294Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c42e3275daf2a20466b8a'),
+  amount: 500,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Mainul HHHHHHHHHHHHHAAAAAAAAA',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T15:29:39.524Z,
+  updatedAt: 2023-12-27T15:29:39.524Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4376275daf2a20466b8f'),
+  amount: 500,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Mainul HHHHHHHHHHHHHAAAAAAAAA',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T15:32:06.383Z,
+  updatedAt: 2023-12-27T15:32:06.383Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c43d2275daf2a20466ba0'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:33:38.235Z,
+  updatedAt: 2023-12-27T15:33:38.235Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4459275daf2a20466ba6'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:35:53.807Z,
+  updatedAt: 2023-12-27T15:35:53.807Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4493275daf2a20466bac'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:36:51.462Z,
+  updatedAt: 2023-12-27T15:36:51.462Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c44a4275daf2a20466bb2'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:37:08.246Z,
+  updatedAt: 2023-12-27T15:37:08.246Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c460943985f51c207029b'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:43:05.819Z,
+  updatedAt: 2023-12-27T15:43:05.819Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c467243985f51c20702a0'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:44:50.081Z,
+  updatedAt: 2023-12-27T15:44:50.081Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c46b74317d0a482760e3e'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:45:59.336Z,
+  updatedAt: 2023-12-27T15:45:59.336Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c46c94317d0a482760e40'),
+  amount: 1000,
+  date_sl: 1703635200000,
+  date: '2023-12-27',
+  description: 'Anik',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a214b8e6895448e47efdd'),
+    name: 'Mainul Hasan',
+    icon: 'Hasan'
+  },
+  createdAt: 2023-12-27T15:46:17.106Z,
+  updatedAt: 2023-12-27T15:46:17.106Z,
+  __v: 0
+},{
+  _id: new ObjectId('658af8a5b7c9eeed717af4ca'),
+  amount: 9856,
+  date_sl: 1703606437911,
+  date: '2023-12-26',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-26T16:00:37.913Z,
+  updatedAt: 2023-12-26T16:00:37.913Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b71147efc56c0119c6f9a'),
+  amount: 960,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('6589607bc09c74646fc780a3'),
+    name: 'Gaas Bil',
+    icon: 'ioru'
+  },
+  createdAt: 2023-12-27T00:34:28.651Z,
+  updatedAt: 2023-12-27T00:34:28.651Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4283275daf2a20466b82'),
+  amount: 450,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'Mainul Hasan',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589fee78e6895448e47ef89'),
+    name: 'Tire',
+    icon: 'tire'
+  },
+  createdAt: 2023-12-27T15:28:03.888Z,
+  updatedAt: 2023-12-27T15:28:03.888Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c47118cdfef1716458415'),
+  amount: 600,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'REI ERI',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589607bc09c74646fc780a3'),
+    name: 'Gaas Bil',
+    icon: 'ioru'
+  },
+  createdAt: 2023-12-27T15:47:30.007Z,
+  updatedAt: 2023-12-27T15:47:30.007Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4aed8eb4245b153ea24f'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRHIS IS',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:03:57.672Z,
+  updatedAt: 2023-12-27T16:03:57.672Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4b278eb4245b153ea254'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRHIS IS',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:04:55.802Z,
+  updatedAt: 2023-12-27T16:04:55.802Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4b438eb4245b153ea259'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRHIS IS',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:05:23.360Z,
+  updatedAt: 2023-12-27T16:05:23.360Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4b658aa0d792c2a1a4c5'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRHIS IS',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:05:57.256Z,
+  updatedAt: 2023-12-27T16:05:57.256Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4c32916763c0533f1a4b'),
+  amount: 500,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'this is asf',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7c444105e44b9a336b0a'),
+    name: 'erty',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T16:09:22.081Z,
+  updatedAt: 2023-12-27T16:09:22.081Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4db9916763c0533f1a69'),
+  amount: 1200,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'TRimsadf',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893fe37014fccb9148e486'),
+    name: 'Gas bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T16:15:53.087Z,
+  updatedAt: 2023-12-27T16:15:53.087Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef8b2fb1e179da91077f5'),
+  amount: 1600,
+  date_sl: 1703548800000,
+  date: '2023-12-26',
+  description: 'Kusum Mobile Rechargeable',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658ef6e6fb1e179da91077cd'),
+    name: 'Mobile Rechage',
+    icon: 'MobileIcon'
+  },
+  createdAt: 2023-12-29T16:49:54.044Z,
+  updatedAt: 2023-12-29T16:49:54.044Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f12834cd2f6004dee4d9'),
+  amount: 100,
+  date_sl: 1703342376426,
+  date: '2023-12-23',
+  description: 'Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:39:36.434Z,
+  updatedAt: 2023-12-23T14:39:36.434Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f12034cd2f6004dee4d7'),
+  amount: 1500,
+  date_sl: 1703342368989,
+  date: '2023-12-23',
+  description: 'Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:39:28.991Z,
+  updatedAt: 2023-12-23T14:39:28.991Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f11a34cd2f6004dee4d5'),
+  amount: 1500,
+  date_sl: 1703342362388,
+  date: '2023-12-23',
+  description: 'Expense',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:39:22.389Z,
+  updatedAt: 2023-12-23T14:39:22.389Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f10d34cd2f6004dee4d3'),
+  amount: 1500,
+  date_sl: 1703342349833,
+  date: '2023-12-23',
+  description: 'Expense',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:39:09.836Z,
+  updatedAt: 2023-12-23T14:39:09.836Z,
+  __v: 0
+},{
+  _id: new ObjectId('6586f10234cd2f6004dee4d1'),
+  amount: 500,
+  date_sl: 1703342338122,
+  date: '2023-12-23',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T14:38:58.138Z,
+  updatedAt: 2023-12-23T14:38:58.138Z,
+  __v: 0
+},{
+  _id: new ObjectId('658640fb0b49aa091fd28e70'),
+  amount: 500,
+  date_sl: 1703297275625,
+  date: '2023-12-23',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-23T02:07:55.633Z,
+  updatedAt: 2023-12-23T02:07:55.633Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b861863fe7ed0ad9a4a7c'),
+  amount: 1200,
+  date_sl: 1703289600000,
+  date: '2023-12-23',
+  description: 'This is description',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T02:04:08.979Z,
+  updatedAt: 2023-12-27T02:04:08.979Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c630caf99332a7b60de'),
+  amount: 500,
+  date_sl: 1703255139880,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:39.881Z,
+  updatedAt: 2023-12-22T14:25:39.881Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c620caf99332a7b60dc'),
+  amount: 500,
+  date_sl: 1703255138889,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:38.890Z,
+  updatedAt: 2023-12-22T14:25:38.890Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c5a0caf99332a7b60da'),
+  amount: 500,
+  date_sl: 1703255130258,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:30.259Z,
+  updatedAt: 2023-12-22T14:25:30.259Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c590caf99332a7b60d8'),
+  amount: 500,
+  date_sl: 1703255129061,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:29.062Z,
+  updatedAt: 2023-12-22T14:25:29.062Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c540caf99332a7b60d6'),
+  amount: 500,
+  date_sl: 1703255124419,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:24.420Z,
+  updatedAt: 2023-12-22T14:25:24.420Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c4c0caf99332a7b60d4'),
+  amount: 500,
+  date_sl: 1703255116858,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:16.860Z,
+  updatedAt: 2023-12-22T14:25:16.860Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c480caf99332a7b60d2'),
+  amount: 500,
+  date_sl: 1703255112596,
+  date: '2023-12-22',
+  description: 'Expense credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:25:12.597Z,
+  updatedAt: 2023-12-22T14:25:12.597Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c070caf99332a7b60d0'),
+  amount: 1100,
+  date_sl: 1703255047534,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:07.535Z,
+  updatedAt: 2023-12-22T14:24:07.535Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c060caf99332a7b60ce'),
+  amount: 1100,
+  date_sl: 1703255046650,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:06.652Z,
+  updatedAt: 2023-12-22T14:24:06.652Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c050caf99332a7b60cc'),
+  amount: 1100,
+  date_sl: 1703255045732,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:05.733Z,
+  updatedAt: 2023-12-22T14:24:05.733Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c040caf99332a7b60ca'),
+  amount: 1100,
+  date_sl: 1703255044870,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:04.872Z,
+  updatedAt: 2023-12-22T14:24:04.872Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859c040caf99332a7b60c8'),
+  amount: 1100,
+  date_sl: 1703255044007,
+  date: '2023-12-22',
+  description: 'Expense debit',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:24:04.008Z,
+  updatedAt: 2023-12-22T14:24:04.008Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859bf60caf99332a7b60c6'),
+  amount: 1100,
+  date_sl: 1703255030929,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:50.930Z,
+  updatedAt: 2023-12-22T14:23:50.930Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859bf60caf99332a7b60c4'),
+  amount: 1100,
+  date_sl: 1703255030128,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:50.129Z,
+  updatedAt: 2023-12-22T14:23:50.129Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859bf30caf99332a7b60c2'),
+  amount: 1100,
+  date_sl: 1703255027111,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:47.113Z,
+  updatedAt: 2023-12-22T14:23:47.113Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be70caf99332a7b60c0'),
+  amount: 1100,
+  date_sl: 1703255015021,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:35.022Z,
+  updatedAt: 2023-12-22T14:23:35.022Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be60caf99332a7b60be'),
+  amount: 1100,
+  date_sl: 1703255014160,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:34.161Z,
+  updatedAt: 2023-12-22T14:23:34.161Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be50caf99332a7b60bc'),
+  amount: 1100,
+  date_sl: 1703255013501,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:33.505Z,
+  updatedAt: 2023-12-22T14:23:33.505Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be40caf99332a7b60ba'),
+  amount: 1100,
+  date_sl: 1703255012833,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:32.836Z,
+  updatedAt: 2023-12-22T14:23:32.836Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859be30caf99332a7b60b8'),
+  amount: 1100,
+  date_sl: 1703255011827,
+  date: '2023-12-22',
+  description: 'Expense Credit',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:31.828Z,
+  updatedAt: 2023-12-22T14:23:31.828Z,
+  __v: 0
+},{
+  _id: new ObjectId('65859bca0caf99332a7b60b6'),
+  amount: 100,
+  date_sl: 1703254986093,
+  date: '2023-12-22',
+  description: 'POI',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-22T14:23:06.120Z,
+  updatedAt: 2023-12-22T14:23:06.120Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b8a1863fe7ed0ad9a4ac4'),
+  amount: 1800,
+  date_sl: 1703203200000,
+  date: '2023-12-22',
+  description: 'wer',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:21:12.306Z,
+  updatedAt: 2023-12-27T02:21:12.306Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b8b7063fe7ed0ad9a4add'),
+  amount: 12000,
+  date_sl: 1703116800000,
+  date: '2023-12-21',
+  description: 'retyj',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b0286be786ea992c06f'),
+    name: 'Gsza bill',
+    icon: 'newicon'
+  },
+  createdAt: 2023-12-27T02:26:56.869Z,
+  updatedAt: 2023-12-27T02:26:56.869Z,
+  __v: 0
+},{
+  _id: new ObjectId('658cddb928586d74ec669655'),
+  amount: 3220,
+  date_sl: 1703030400000,
+  date: '2023-12-20',
+  description: '',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-28T02:30:17.575Z,
+  updatedAt: 2023-12-28T02:30:17.575Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b72ce63fe7ed0ad9a49f6'),
+  amount: 345,
+  date_sl: 1702944000000,
+  date: '2023-12-19',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('658a21168e6895448e47efd3'),
+    name: 'New Morning Data',
+    icon: 'Morning Data'
+  },
+  createdAt: 2023-12-27T00:41:50.897Z,
+  updatedAt: 2023-12-27T00:41:50.897Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b892c63fe7ed0ad9a4a9a'),
+  amount: 1300,
+  date_sl: 1702944000000,
+  date: '2023-12-19',
+  description: '1300',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:17:16.375Z,
+  updatedAt: 2023-12-27T02:17:16.375Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b899563fe7ed0ad9a4aa1'),
+  amount: 1400,
+  date_sl: 1702944000000,
+  date: '2023-12-19',
+  description: '1400',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:19:01.107Z,
+  updatedAt: 2023-12-27T02:19:01.107Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b8a6d63fe7ed0ad9a4acf'),
+  amount: 1265,
+  date_sl: 1702944000000,
+  date: '2023-12-19',
+  description: 'tyre',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:22:37.178Z,
+  updatedAt: 2023-12-27T02:22:37.178Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b71517efc56c0119c6fa5'),
+  amount: 567,
+  date_sl: 1702857600000,
+  date: '2023-12-18',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('6589fed88e6895448e47ef84'),
+    name: 'New Type',
+    icon: 'new icon'
+  },
+  createdAt: 2023-12-27T00:35:29.774Z,
+  updatedAt: 2023-12-27T00:35:29.774Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b88f963fe7ed0ad9a4a92'),
+  amount: 1200,
+  date_sl: 1702857600000,
+  date: '2023-12-18',
+  description: '1200',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589607bc09c74646fc780a3'),
+    name: 'Gaas Bil',
+    icon: 'ioru'
+  },
+  createdAt: 2023-12-27T02:16:25.014Z,
+  updatedAt: 2023-12-27T02:16:25.014Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b89d863fe7ed0ad9a4ab7'),
+  amount: 1600,
+  date_sl: 1702512000000,
+  date: '2023-12-14',
+  description: '123654',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:20:08.575Z,
+  updatedAt: 2023-12-27T02:20:08.575Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b884463fe7ed0ad9a4a84'),
+  amount: 456,
+  date_sl: 1702339200000,
+  date: '2023-12-12',
+  description: 'sdfsdf',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893bf586be786ea992c07e'),
+    name: 'Bazar',
+    icon: 'Bazar kora'
+  },
+  createdAt: 2023-12-27T02:13:24.398Z,
+  updatedAt: 2023-12-27T02:13:24.398Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b8a0963fe7ed0ad9a4ac2'),
+  amount: 1700,
+  date_sl: 1702339200000,
+  date: '2023-12-12',
+  description: 'wer',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589fee78e6895448e47ef89'),
+    name: 'Tire',
+    icon: 'tire'
+  },
+  createdAt: 2023-12-27T02:20:57.776Z,
+  updatedAt: 2023-12-27T02:20:57.776Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b7ada63fe7ed0ad9a4a68'),
+  amount: 34,
+  date_sl: 1702166400000,
+  date: '2023-12-10',
+  description: 'asdfasfasfasadsfasfasdfafafafsdfsasasfaasfafasfasfasasas',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T01:16:10.168Z,
+  updatedAt: 2023-12-27T01:16:10.168Z,
+  __v: 0
+},{
+  _id: new ObjectId('658c4e34916763c0533f1a81'),
+  amount: 880,
+  date_sl: 1701712800000,
+  date: '2023-12-5',
+  description: 'Traisfda',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('65893b8b86be786ea992c07a'),
+    name: 'Mobile',
+    icon: 'MOBILEicon'
+  },
+  createdAt: 2023-12-27T16:17:56.470Z,
+  updatedAt: 2023-12-27T16:17:56.470Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b729663fe7ed0ad9a49eb'),
+  amount: 120,
+  date_sl: 1701626400000,
+  date: '2023-12-4',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('658a2ebc8e6895448e47f00d'),
+    name: 'reff',
+    icon: 'rerww'
+  },
+  createdAt: 2023-12-27T00:40:54.979Z,
+  updatedAt: 2023-12-27T00:40:54.979Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b72ff63fe7ed0ad9a49fe'),
+  amount: 456,
+  date_sl: 1701626400000,
+  date: '2023-12-4',
+  category: 'credit',
+  expenseType: {
+    _id: new ObjectId('657d7c444105e44b9a336b0a'),
+    name: 'erty',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T00:42:39.779Z,
+  updatedAt: 2023-12-27T00:42:39.779Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b745363fe7ed0ad9a4a09'),
+  amount: 456,
+  date_sl: 1701626400000,
+  date: '2023-12-4',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658a212f8e6895448e47efd8'),
+    name: 'Goog Morning',
+    icon: 'Mor'
+  },
+  createdAt: 2023-12-27T00:48:19.173Z,
+  updatedAt: 2023-12-27T00:48:19.173Z,
+  __v: 0
+},{
+  _id: new ObjectId('658b895263fe7ed0ad9a4a9c'),
+  amount: 100,
+  date_sl: 1637539200000,
+  date: '2021-11-22',
+  description: 'Expense',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+    name: 'rttrertfffr',
+    icon: 'wergdf'
+  },
+  createdAt: 2023-12-27T02:17:54.951Z,
+  updatedAt: 2023-12-27T02:17:54.951Z,
+  __v: 0
+},{
+  _id: new ObjectId('6591f43af6ed756b8a1455a8'),
+  amount: 99,
+  date_sl: 947354400000,
+  date: '2000-1-9',
+  description: 'Sit sunt sed perfer',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('6589fee78e6895448e47ef89'),
+    name: 'Tire',
+    icon: 'tire'
+  },
+  createdAt: 2023-12-31T23:07:38.735Z,
+  updatedAt: 2023-12-31T23:07:38.735Z,
+  __v: 0
+},{
+  _id: new ObjectId('6591f432f6ed756b8a1455a4'),
+  amount: 38,
+  date_sl: 523648800000,
+  date: '1986-8-6',
+  description: 'Voluptatem Nam est s',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658d8f3c6498e1036ecfbc20'),
+    name: 'First Name',
+    icon: 'First Icon'
+  },
+  createdAt: 2023-12-31T23:07:30.961Z,
+  updatedAt: 2023-12-31T23:07:30.961Z,
+  __v: 0
+},{
+  _id: new ObjectId('6591f3fdf6ed756b8a145597'),
+  amount: 81,
+  date_sl: 112644000000,
+  date: '1973-7-28',
+  description: 'Quisquam et est arch',
+  category: 'debit',
+  expenseType: {
+    _id: new ObjectId('658d95436498e1036ecfbc58'),
+    name: 'MMMMM',
+    icon: 'asdfasdfasdfasdf'
+  },
+  createdAt: 2023-12-31T23:06:37.653Z,
+  updatedAt: 2023-12-31T23:06:37.653Z,
+  __v: 0
+}
+2024-01-07T09:27:04.608Z info: Expense Type data ==> 
+ {
+  _id: new ObjectId('6591f464f6ed756b8a1455b0'),
+  name: 'Odessa Salazar',
+  icon: 'Elit qui nihil dolo',
+  createdAt: 2023-12-31T23:08:20.352Z,
+  updatedAt: 2023-12-31T23:08:20.352Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef72dfb1e179da91077d3'),
+  name: 'Shopping',
+  icon: 'Shopping',
+  createdAt: 2023-12-29T16:43:25.357Z,
+  updatedAt: 2023-12-29T16:43:25.357Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef715fb1e179da91077d0'),
+  name: 'Medicine',
+  icon: 'Medicine',
+  createdAt: 2023-12-29T16:43:01.837Z,
+  updatedAt: 2023-12-29T16:43:01.837Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ef6e6fb1e179da91077cd'),
+  name: 'Mobile Rechage',
+  icon: 'MobileIcon',
+  createdAt: 2023-12-29T16:42:14.684Z,
+  updatedAt: 2023-12-29T16:42:14.684Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95e96498e1036ecfbc6d'),
+  name: 'rrrrrrrrrrr',
+  icon: 'rrrrrr',
+  createdAt: 2023-12-28T15:36:09.963Z,
+  updatedAt: 2023-12-28T15:36:09.963Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95cd6498e1036ecfbc68'),
+  name: 'qqqqqq',
+  icon: 'qqqqqq',
+  createdAt: 2023-12-28T15:35:41.130Z,
+  updatedAt: 2023-12-28T15:35:41.130Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95ba6498e1036ecfbc62'),
+  name: 'fddffdf',
+  icon: 'dfdfdf',
+  createdAt: 2023-12-28T15:35:22.970Z,
+  updatedAt: 2023-12-28T15:35:22.970Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95986498e1036ecfbc5d'),
+  name: 'AAAAAA',
+  icon: 'aaaaaa',
+  createdAt: 2023-12-28T15:34:48.303Z,
+  updatedAt: 2023-12-28T15:34:48.303Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d95436498e1036ecfbc58'),
+  name: 'MMMMM',
+  icon: 'asdfasdfasdfasdf',
+  createdAt: 2023-12-28T15:33:23.353Z,
+  updatedAt: 2023-12-28T15:33:23.353Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d94f06498e1036ecfbc53'),
+  name: 'New New New',
+  icon: 'New New',
+  createdAt: 2023-12-28T15:32:00.142Z,
+  updatedAt: 2023-12-28T15:32:00.142Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d94b26498e1036ecfbc4e'),
+  name: 'retee',
+  icon: 'erthe',
+  createdAt: 2023-12-28T15:30:58.151Z,
+  updatedAt: 2023-12-28T15:30:58.151Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d93d16498e1036ecfbc49'),
+  name: 'asdfasfd',
+  icon: 'asfdsaf',
+  createdAt: 2023-12-28T15:27:13.745Z,
+  updatedAt: 2023-12-28T15:27:13.745Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d93b46498e1036ecfbc44'),
+  name: 'dfdasfdsadf',
+  icon: 'sasdsadf',
+  createdAt: 2023-12-28T15:26:44.058Z,
+  updatedAt: 2023-12-28T15:26:44.058Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d93566498e1036ecfbc3e'),
+  name: 'trfasfs',
+  icon: 'asfasfsafaf',
+  createdAt: 2023-12-28T15:25:10.567Z,
+  updatedAt: 2023-12-28T15:25:10.567Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d92e96498e1036ecfbc39'),
+  name: 'myicon',
+  icon: 'icond',
+  createdAt: 2023-12-28T15:23:21.809Z,
+  updatedAt: 2023-12-28T15:23:21.809Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d92a96498e1036ecfbc32'),
+  name: 'NewTest',
+  icon: 'icontest',
+  createdAt: 2023-12-28T15:22:17.119Z,
+  updatedAt: 2023-12-28T15:22:17.119Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d92896498e1036ecfbc2b'),
+  name: 'Name',
+  icon: 'namename',
+  createdAt: 2023-12-28T15:21:45.493Z,
+  updatedAt: 2023-12-28T15:21:45.493Z,
+  __v: 0
+},{
+  _id: new ObjectId('658d8f3c6498e1036ecfbc20'),
+  name: 'First Name',
+  icon: 'First Icon',
+  createdAt: 2023-12-28T15:07:40.207Z,
+  updatedAt: 2023-12-28T15:07:40.207Z,
+  __v: 0
+},{
+  _id: new ObjectId('658ada8832ae0364285c4116'),
+  name: 'late night',
+  icon: 'party',
+  createdAt: 2023-12-26T13:52:08.510Z,
+  updatedAt: 2023-12-26T13:52:08.510Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a2ed58e6895448e47f012'),
+  name: 'sfsaf',
+  icon: 'asfdasdf',
+  createdAt: 2023-12-26T01:39:33.517Z,
+  updatedAt: 2023-12-26T01:39:33.517Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a2ebc8e6895448e47f00d'),
+  name: 'reff',
+  icon: 'rerww',
+  createdAt: 2023-12-26T01:39:08.101Z,
+  updatedAt: 2023-12-26T01:39:08.101Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a214b8e6895448e47efdd'),
+  name: 'Mainul Hasan',
+  icon: 'Hasan',
+  createdAt: 2023-12-26T00:41:47.559Z,
+  updatedAt: 2023-12-26T00:41:47.559Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a212f8e6895448e47efd8'),
+  name: 'Goog Morning',
+  icon: 'Mor',
+  createdAt: 2023-12-26T00:41:19.244Z,
+  updatedAt: 2023-12-26T00:41:19.244Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a21168e6895448e47efd3'),
+  name: 'New Morning Data',
+  icon: 'Morning Data',
+  createdAt: 2023-12-26T00:40:54.975Z,
+  updatedAt: 2023-12-26T00:40:54.975Z,
+  __v: 0
+},{
+  _id: new ObjectId('658a03bb8e6895448e47ef9c'),
+  name: 'New fff',
+  icon: 'pou',
+  createdAt: 2023-12-25T22:35:39.947Z,
+  updatedAt: 2023-12-25T22:35:39.947Z,
+  __v: 0
+},{
+  _id: new ObjectId('6589fee78e6895448e47ef89'),
+  name: 'Tire',
+  icon: 'tire',
+  createdAt: 2023-12-25T22:15:03.817Z,
+  updatedAt: 2023-12-25T22:15:03.817Z,
+  __v: 0
+},{
+  _id: new ObjectId('6589fed88e6895448e47ef84'),
+  name: 'New Type',
+  icon: 'new icon',
+  createdAt: 2023-12-25T22:14:48.186Z,
+  updatedAt: 2023-12-25T22:14:48.186Z,
+  __v: 0
+},{
+  _id: new ObjectId('6589607bc09c74646fc780a3'),
+  name: 'Gaas Bil',
+  icon: 'ioru',
+  createdAt: 2023-12-25T10:59:07.717Z,
+  updatedAt: 2023-12-25T10:59:07.717Z,
+  __v: 0
+},{
+  _id: new ObjectId('65893fe37014fccb9148e486'),
+  name: 'Gas bill',
+  icon: 'newicon',
+  createdAt: 2023-12-25T08:40:03.917Z,
+  updatedAt: 2023-12-25T08:40:03.917Z,
+  __v: 0
+},{
+  _id: new ObjectId('65893bf586be786ea992c07e'),
+  name: 'Bazar',
+  icon: 'Bazar kora',
+  createdAt: 2023-12-25T08:23:17.201Z,
+  updatedAt: 2023-12-25T08:23:17.201Z,
+  __v: 0
+},{
+  _id: new ObjectId('65893b8b86be786ea992c07a'),
+  name: 'Mobile',
+  icon: 'MOBILEicon',
+  createdAt: 2023-12-25T08:21:31.277Z,
+  updatedAt: 2023-12-25T08:21:31.277Z,
+  __v: 0
+},{
+  _id: new ObjectId('65893b0286be786ea992c06f'),
+  name: 'Gsza bill',
+  icon: 'newicon',
+  createdAt: 2023-12-25T08:19:14.594Z,
+  updatedAt: 2023-12-25T08:19:14.594Z,
+  __v: 0
+},{
+  _id: new ObjectId('657d7c444105e44b9a336b0a'),
+  name: 'erty',
+  icon: 'wergdf',
+  createdAt: 2023-12-16T10:30:28.082Z,
+  updatedAt: 2023-12-16T10:30:28.082Z,
+  __v: 0
+},{
+  _id: new ObjectId('657d7a95aee8df1aa1d9cf8f'),
+  name: 'rttrertfffr',
+  icon: 'wergdf',
+  createdAt: 2023-12-16T10:23:17.740Z,
+  updatedAt: 2023-12-16T10:23:17.740Z,
+  __v: 0
+},{
+  _id: new ObjectId('657d71d4b6918ad483037a63'),
+  name: 'rttrertr',
+  icon: 'wergdf',
+  createdAt: 2023-12-16T09:45:56.304Z,
+  updatedAt: 2023-12-16T09:45:56.304Z,
+  __v: 0
+}
+2024-01-07T09:27:55.845Z info: [42mMethod : validationLog() - Validation Successful[49m
+2024-01-07T09:27:55.847Z info: Method : signin() - Check User Info Start
+2024-01-07T09:27:55.852Z info: {
+  _id: new ObjectId('65960fd353c7a4d44a60a8bb'),
+  email: 'mainul0800@gmail.com',
+  username: 'mainul0080',
+  password: '$2b$10$vVqnjZr.e8xcLT8kVfbynOTzOjoJGDROEyzA72xxuoSDEylrDPQp6',
+  role: 'admin',
+  createdAt: 2024-01-04T01:54:27.070Z,
+  updatedAt: 2024-01-04T01:54:27.070Z,
+  __v: 0
+}
+2024-01-07T09:27:55.856Z info: Method : signin() - Check User Info Start End
+2024-01-07T09:27:55.857Z info: Method : signin() - User is Valid
+2024-01-07T09:27:55.858Z info: Method: comparePassword() -  Compare Password Funciton is Called
+2024-01-07T09:27:55.859Z info: Method : comparePassword() - Compare Password After Funciton Called
+2024-01-07T09:27:55.968Z info: Password Check From Compare Password : 
+2024-01-07T09:27:55.968Z info: true
+2024-01-07T09:27:55.969Z info: Method : signin() - Password is valid
+2024-01-07T09:27:55.969Z info: Method : signin() - JWT Token Creation
+2024-01-07T09:27:55.970Z info: Method : signin() - Token Created
+2024-01-07T09:28:07.584Z info: is Admin Middleware Requested user id = 65960fd353c7a4d44a60a8bb
+2024-01-07T09:28:07.585Z info: 65960fd353c7a4d44a60a8bb
+2024-01-07T09:28:07.614Z info: Is Admin MiddleWare Status - False and Unauthorized Accesss
+2024-01-07T09:28:16.107Z info: is Admin Middleware Requested user id = 65960fd353c7a4d44a60a8bb
+2024-01-07T09:28:16.108Z info: 65960fd353c7a4d44a60a8bb
+2024-01-07T09:28:16.114Z info: Is Admin MiddleWare Status - False and Unauthorized Accesss
+2024-01-07T09:59:45.215Z info: is Admin Middleware Requested user id = 65960fd353c7a4d44a60a8bb
+2024-01-07T09:59:45.218Z info: 65960fd353c7a4d44a60a8bb
+2024-01-07T09:59:45.223Z info: Is Admin MiddleWare Status - False and Unauthorized Accesss
+2024-01-07T10:00:33.151Z info: is Admin Middleware Requested user id = 65960fd353c7a4d44a60a8bb
+2024-01-07T10:00:33.152Z info: 65960fd353c7a4d44a60a8bb
+2024-01-07T10:00:33.155Z info: Is Admin MiddleWare Status - False and Unauthorized Accesss
+2024-01-07T10:12:29.905Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T10:12:30.031Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T10:14:15.366Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T10:14:15.409Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T10:32:54.517Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T10:32:54.584Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m
+2024-01-07T16:33:24.083Z info: [1m[43mTrying to Connect Mongo DB ....[49m[22m
+2024-01-07T16:33:24.151Z info: [37m[45mConneted To Mongodb Databse 127.0.0.1[49m[39m

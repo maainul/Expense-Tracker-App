@@ -1,18 +1,18 @@
 import axios from "axios";
-import API from "../../Services/API";
 import { Outlet } from "react-router-dom";
-import Spinner from './../Spinner/Spinner';
 import { useState, useEffect } from "react";
-import { useAuth } from "../../context/authContext";
+import Spinner from './../../Spinner/Spinner';
+import { useAuth } from "../../../context/authContext";
+import API from './../../../Services/API';
 
 
-export default function PrivateRoute() {
+export default function AdminRoute() {
     const [ok, setOk] = useState(false);
-    const [auth, setAuth] = useAuth();
+    const [auth] = useAuth();
     useEffect(() => {
         const authCheck = async () => {
             console.log("Private authCheck() Function Excess");
-            const res = await axios.get(API.AUTH_URL);
+            const res = await axios.get(API.ADMIN_AUTH_URL);
             console.log(`Response From Route ${JSON.stringify(res.data, null, 4)}`); // Log the response data
             if (res.data.ok) {
                 console.log(`Set Res Data: ${res.data.ok} Success`);
@@ -25,5 +25,5 @@ export default function PrivateRoute() {
         if (auth?.token) authCheck();
     }, [auth?.token]);
 
-    return ok ? <Outlet /> : <Spinner />;
+    return ok ? <Outlet /> : <Spinner path="" />;
 }

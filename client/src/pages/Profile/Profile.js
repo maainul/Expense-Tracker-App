@@ -10,6 +10,7 @@ import ResetAndCancelBtn from '../../Components/Buttons/ResetAndCancelBtn';
 import ButtonPrimary from '../../Components/Buttons/ButtonPrimary';
 import profileImage from '../../img/1.png';
 
+
 const Profile = () => {
     const [auth] = useAuth()
     console.log(auth)
@@ -49,7 +50,6 @@ const Profile = () => {
     }
     return (
         <MainLayout>
-            {/* <Breadcrumb items={breadcrumbItems} /> */}
             <div className='card'>
                 <h5 class="card-header">Profile Details</h5>
                 <div className="card-header-secondary">

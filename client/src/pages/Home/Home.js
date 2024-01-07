@@ -8,7 +8,7 @@ const Home = () => {
             <h1>Welcome to Extra</h1>
             <Link to="/signin">Siginin</Link>
             <h2> You don't have any account then sigin up </h2>
-            <Link to="/signup">Siginin</Link>
+            <Link to="/signup">SIGNUP</Link>
         </>
     )
 }

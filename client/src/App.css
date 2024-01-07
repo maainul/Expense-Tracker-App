@@ -4,7 +4,7 @@
     --bgWhitePrimary: #FFFFFF;
     --textColor: #566a7f;
     --navColor: #696cff;
-    --navHover: #F8F8F9;
+    --navHover: #252530;
     --iconColor: #697A8D;
     --navBorder: #696bfe;
     --primaryColor: #7367F0;
@@ -73,6 +73,7 @@
     font-weight: 500;
     margin: 0;
     padding: 0;
+    color: var(--textColor);
 }
 
 .text-secondary {
@@ -133,6 +134,23 @@
     font-size: var(--textFrontSize);
     font-weight: 500;
 }
+
+.two-step {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    grid-template-rows: 50px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.two-step input {
+    font-weight: bold;
+    color: #5a59e5;
+    font-size: 20px;
+    text-align: center;
+}
+
 
 .formgroup input:focus {
     border-color: var(--primaryColor) !important;
@@ -483,4 +501,19 @@ hr {
     background-color: #e9eef1;
     border-radius: 8px;
 
+}
+
+.back-to-home {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #5a59e5;
+    gap: 2px;
+    align-items: center;
+    align-content: center;
+
+}
+
+.back-to-home a {
+    text-decoration: none;
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 
 import 'boxicons/css/boxicons.min.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import BrandLogo from '../../Logos/BrandLogo/BrandLogo';
 import BrandTitle from '../../BrandTitle/BrandTitle';
 import { useAuth } from '../../../context/authContext';
 import toast from 'react-hot-toast';
 
-const Sidebar = () => {
+const UserSidebar = () => {
     const [auth, setAuth] = useAuth();
 
     const handleLogout = () => {
@@ -22,44 +22,49 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className="brand-logo-text sidebarlogo">
-                <Link to={'/dashboard'}>
+                <NavLink to={'/dashboard/user'}>
                     <BrandLogo />
-                </Link>
-                <Link to={'/dashboard'} style={{ textDecoration: 'none' }} >
+                </NavLink>
+                <NavLink to={'/dashboard/user'} style={{ textDecoration: 'none' }} >
                     <BrandTitle />
-                </Link>
+                </NavLink>
             </div>
             <div className='menu'>
                 <div className='menuItem'>
                     <i className='menu-icon tf-icons bx bx-home-circle'></i>
-                    <Link to={'/dashboard'} className='menu-link'>Home</Link>
+                    <NavLink
+                        to={'/dashboard/user'}
+                        className='menu-NavLink'
+                    >
+                        Dashboard
+                    </NavLink>
                 </div>
 
                 <div className='menuItem'>
                     <i className='menu-icon tf-icons bx bx-store'></i>
-                    <Link to={'/dashboard/expense'} className='menu-link'>Expense</Link>
+                    <NavLink to={'/dashboard/user/expense'} className='menu-NavLink'>Expense</NavLink>
                 </div>
                 <div className='menuItem'>
                     <i class="menu-icon tf-icons bx bx-chart"></i>
-                    <Link to={'/dashboard/analytics'} className='menu-link'>Analytics</Link>
+                    <NavLink to={'/dashboard/user/analytics'} className='menu-NavLink'>Analytics</NavLink>
                 </div>
                 <div className='menuItem'>
                     <i class="menu-icon tf-icons bx bx-user"></i>
-                    <Link to={'/dashboard/profile'} className='menu-link'>Profile</Link>
+                    <NavLink to={'/dashboard/user/profile'} className='menu-NavLink'>Profile</NavLink>
                 </div>
                 <div className='menuItem'>
                     <i class="menu-icon tf-icons bx bx-user"></i>
-                    <Link onClick={handleLogout} to={"/signin"} className='menu-link'>Logout</Link>
+                    <NavLink onClick={handleLogout} to={"/signin"} className='menu-NavLink'>Logout</NavLink>
                 </div>
                 <div className='menu-last '>
                     <div className='menuItem'>
                         <i class="menu-icon tf-icons bx bx-support"></i>
-                        <Link to={'/dashboard/analytics'} className='menu-link'>Supports</Link>
+                        <NavLink to={'/dashboard/analytics'} className='menu-NavLink'>Supports</NavLink>
                         <span></span>
                     </div>
                     <div className='menuItem'>
                         <i class="menu-icon tf-icons bx bx-support"></i>
-                        <Link to={'/dashboard/analytics'} className='menu-link'>Documentation</Link>
+                        <NavLink to={'/dashboard/analytics'} className='menu-NavLink'>Documentation</NavLink>
                     </div>
                 </div>
             </div>
@@ -67,4 +72,4 @@ const Sidebar = () => {
     )
 }
 
-export default Sidebar
+export default UserSidebar

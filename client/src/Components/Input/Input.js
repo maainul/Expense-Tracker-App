@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Input = ({
     type,
@@ -8,28 +8,36 @@ const Input = ({
     setState,
     errorState,
     label,
-    labelTitle
+    labelTitle,
+    maxlength
 }) => {
-
-    // handle Change 
+    // handleChange
     const handleChange = (e) => {
-        const { id, value } = e.target
-        setState(value)
-    }
+        const { value } = e.target;
+        setState(value);
+    };
 
     return (
         <div className="formgroup">
-            {label && <label htmlFor={fieldName} >{labelTitle}</label>}
+            {label && <label htmlFor={fieldName}>{labelTitle}</label>}
             <input
                 type={type}
                 placeholder={placeholder}
                 value={state}
                 id={fieldName}
                 onChange={handleChange}
+                {...(maxlength && { maxLength: maxlength })}
             />
-            {errorState.map((error) => error.field === fieldName && <div style={{ color: 'red' }} >{error.error}</div>)}
+            {errorState &&
+                errorState
+                    .filter((error) => error.field === fieldName)
+                    .map((filteredError) => (
+                        <div key={filteredError.error} style={{ color: 'red' }}>
+                            {filteredError.error}
+                        </div>
+                    ))}
         </div>
-    )
-}
+    );
+};
 
-export default Input
+export default Input;

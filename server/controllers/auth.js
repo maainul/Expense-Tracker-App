@@ -62,9 +62,10 @@ const signin = async (req, res) => {
             });
         }
 
-        logger.info("Method : signin() - Check User Already exists Start")
+        logger.info("Method : signin() - Check User Info Start")
         const validUser = await UserModel.findOne({ username });
-        logger.info("Method : signin() - Check User Already exists End")
+        logger.info(validUser)
+        logger.info("Method : signin() - Check User Info Start End")
 
         if (!validUser) {
             return res.status(201).send({
@@ -101,7 +102,8 @@ const signin = async (req, res) => {
                 _id: validUser._id,
                 username: validUser.username,
                 email: validUser.email,
-                mobileNumber: validUser.mobileNumber
+                mobileNumber: validUser.mobileNumber,
+                role: validUser.role
             },
             token
         })
