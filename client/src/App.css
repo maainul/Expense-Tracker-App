@@ -290,6 +290,12 @@
     color: var(--primaryColor);
 }
 
+.brand-logo-text .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-between;
+}
 
 .brand-text {
     color: #7367F0;
@@ -516,4 +522,125 @@ hr {
 
 .back-to-home a {
     text-decoration: none;
+}
+
+
+/***************************************  */
+/* ************ LANDING PAGE *********** */
+/***************************************  */
+.landing-page {
+    min-height: 100vh;
+}
+
+.landing-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.landing-page .footer {
+    padding-top: 40px;
+    height: 20%;
+    /* background-color: #5a59e5; */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+
+}
+
+.footer .brand-logo-title {
+    text-align: center;
+}
+
+.footer p {
+    color: #566a7f;
+}
+
+.footer .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.social-icons {
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+
+.navbar .nav-link {
+    text-decoration: none;
+    color: var(--primaryColor);
+    padding: 2px 4px;
+    border-radius: 5px;
+    /* border: 1px solid #696cff; */
+}
+
+.navbar .nav-link:hover {
+    text-decoration: none;
+    color: var(--textColor);
+    padding: 4px;
+    border-radius: 8px;
+    /* border: 1px solid #696cff; */
+    transform: translateY(-2px) !important;
+    transition: 0.1s ease-in;
+
+    /* box-shadow: 0 0.125rem 0.25rem 0 #696cff !important; */
+}
+
+.footer-Copyright {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-hero {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+
+}
+
+.brand-logo-title {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: #2C3F46 !important;
+}
+
+.landing-page-header {
+    color: #2C3F46 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #D0F5EE;
+}
+
+.header-nav .navbar {
+    display: flex;
+    gap: 30px;
+    color: #2C3F46 !important;
+}
+
+.header-nav .navbar .nav-link:hover {
+    text-decoration: dashed;
+    color: #2C3F46 !important;
 }
