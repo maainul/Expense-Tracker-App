@@ -7,10 +7,9 @@ import Twitter from '../../Components/SocialIcons/Twitter';
 import Gmail from '../../Components/SocialIcons/Gmail';
 import Github from '../../Components/SocialIcons/Github';
 import InboxImage from '../../img/get-update-inbox.png';
-import Port1 from '../../img/Port1.png';
-import Port2 from '../../img/prot2.png';
-import Port3 from '../../img/port3.png';
-import Port4 from '../../img/port4.jpg';
+
+import FirstAppScreen from '../../img/h1.png'
+import SecondAppScreen from '../../img/h2.png'
 const LandingPage = () => {
     return (
         <>
@@ -60,11 +59,40 @@ const LandingPage = () => {
                                             </button>
                                         </Link>
                                     </div>
+
+                                    <div className='landing-page-btn'>
+                                        <Link to={"/signin"} style={{
+                                            textDecoration: 'none',
+                                            color: "#FFF"
+                                        }}>
+                                            <button className='btndown downloadbtn'>
+                                                <div className='downbtndes'>
+
+                                                    <i className='bx bxl-apple biggericon'></i>
+                                                    <p>Download on the <br />APP Store</p>
+                                                </div>
+                                            </button>
+                                        </Link>
+                                        <Link to={"/signup"} style={{
+                                            textDecoration: 'none',
+                                            color: "#FFF"
+                                        }}>
+                                            <button className='btndown downloadbtn' >
+                                                <div className='downbtndes'>
+                                                    <i className='bx bxl-play-store biggericon2' ></i>
+                                                    <p> GET IT ON <br />Google Play</p>
+                                                </div>
+                                            </button>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                             {/* Left Hero End */}
                             <div className='right-hero-container'>
-                                2
+                                <div className='img-div'>
+                                    <img src={FirstAppScreen} alt='first' />
+                                    <img src={SecondAppScreen} alt='first' className='secondImge' />
+                                </div>
                             </div>
                         </div>
 
@@ -72,28 +100,92 @@ const LandingPage = () => {
                 </div>
                 <div className='app-features'>
                     <div className='app-features-container'>
-                        <p className='text-heading'>Features</p>
-                        <h2 className='app-features-secondary-heading'>Pages of Websites Works</h2>
-                        <div class="grid-container">
-                            <div class="grid-item">
-                                <img src={Port4} alt='hi' className='image-size' />
+                        <div className='left-app-feat'>
+                            <div>
+                                <p className='text-heading'><span style={{
+                                    fontSize: "32px"
+                                }}><span style={{
+                                    color: "rgb(115, 103, 240)",
+
+                                }}>
+                                        Expense
+                                        <span
+                                            style={{
+                                                color: "#ff7272"
+                                            }}
+                                        >
+                                            Tracker
+                                        </span>
+                                    </span> <span
+                                        style={{
+                                            color: "rgb(9, 154, 151)"
+                                        }}
+                                    >Applicaiton</span></span> </p>
+                                <h2 className='app-features-secondary-heading'>Present your app in a <br /> beautiful and elegant way.</h2>
+                                <p className='app-feat-sec'>
+                                    White iPhone Mockup Templates. A collection of three mockups showing an<br />
+                                    iPhone on a dark leather seat. High resolution PSD files, each coming with a<br />
+                                    smart object.
+                                </p>
                             </div>
-                            <div class="grid-item">
-                                <img src={Port4} alt='hi' className='image-size' />
-                            </div>
-                            <div class="grid-item">
-                                <img src={Port4} alt='hi' className='image-size' />
-                            </div>
-                            <div class="grid-item">
-                                <img src={Port4} alt='hi' className='image-size' />
-                            </div>
-                            <div class="grid-item">
-                                <img src={Port4} alt='hi' className='image-size' />
-                            </div>
-                            <div class="grid-item">
-                                <img src={Port4} alt='hi' className='image-size' />
+
+                            <div className='grid-3'>
+                                <div className='grid-card'>
+                                    <div className='content'>
+                                        <i className='bx bx-envelope app-icon-design'></i>
+                                        <p className='card-title-text'>Minimal Design</p>
+                                        <p style={{
+                                            color: ' #566a7f'
+                                        }}>
+                                            Generate Lorem Ipsum place holder
+                                            text for use in your Explore
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className='grid-card'>
+                                    <i className='bx bx-grid-small app-icon-design' ></i>
+                                    <p className='card-title-text'>Best Material</p>
+                                    <p style={{
+                                        color: ' #566a7f'
+                                    }}>
+                                        Generate Lorem Ipsum place holder
+                                        text for use in your Explore
+                                    </p>
+                                </div>
+                                <div className='grid-card'>
+                                    <i className='bx bx-devices app-icon-design'></i>
+                                    <p className='card-title-text'>Responsive Design</p>
+                                    <p style={{
+                                        color: ' #566a7f'
+                                    }}>
+                                        Generate Lorem Ipsum place holder
+                                        text for use in your Explore
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+
+                </div>
+                <div className='tech-stack'>
+                    <div>
+                        <div>
+                            <p className='tech-stack-primary'>Tech Stack</p>
+                            <h2 className='app-features-secondary-heading'>All Modern Technology <br /> are use</h2>
+                            <p className='app-feat-sec'>
+                                White iPhone Mockup Templates. A collection of three mockups showing an<br />
+                                iPhone on a dark leather seat. High resolution PSD files, each coming with a<br />
+                                smart object.
+                            </p>
+                        </div>
+                    </div>
+                    <div className='icon-flex'>
+                        <i className='bx bxl-react tech-stack-icon' style={{ color: "#5ED3F3" }} ></i>
+                        <i className='bx bxl-mongodb tech-stack-icon' style={{ color: "#00684A" }}></i>
+                        <i className='bx bxl-css3 tech-stack-icon' style={{ color: "#214CE5" }}></i>
+                        <i className='bx bxl-nodejs tech-stack-icon' style={{ color: "#026e00" }} ></i>
+                        <i className='bx bxl-html5 tech-stack-icon' style={{ color: "#DD4B25" }} ></i>
+                        <i className='bx bxl-docker tech-stack-icon' style={{ color: "#1D63ED" }} ></i>
                     </div>
                 </div>
                 <div className='get-latest-update'>
@@ -105,7 +197,6 @@ const LandingPage = () => {
                                     <p className='join-community'>Join our community</p>
                                     <h1 className='latest-app-header'>Get latest app updates<br />
                                         right at your inbox</h1>
-
                                     <div className='subscribe-form-container'>
                                         <form>
                                             <label>
@@ -132,10 +223,13 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <footer className='footer'>
-                    <div className='brand-logo-title'>
-                        <BrandLogo />
-                        <BrandTitle />
+                    <div>
+                        <div className='brand-logo-title'>
+                            <BrandLogo />
+                            <BrandTitle />
+                        </div>
                     </div>
+
                     <p>We'll help you achieve Your personal & business goals</p>
                     <div className='navbar'>
                         <Link className='nav-link' to={"/"}>Home</Link>
@@ -145,16 +239,17 @@ const LandingPage = () => {
                         <Link className='nav-link' to={"/contact"}>Contact</Link>
                     </div>
                     <div className='social-icons'>
-                        <div class="flex-align-center gap10">
+                        <div className="flex-align-center gap10">
                             <Facebook />
                             <Twitter />
                             <Gmail />
                             <Github />
                         </div>
                     </div>
-                    <p className='footer-Copyright'>© 2024 Designed and Developed By <strong>ButterflyTech</strong>. All Rights Reserved</p>
                 </footer>
-
+                <div className='footer-last'>
+                    <p className='footer-Copyright'>© 2024 Designed and Developed By <strong>ButterflyTech</strong>. All Rights Reserved</p>
+                </div>
             </div >
         </>
     )

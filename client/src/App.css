@@ -592,10 +592,7 @@ hr {
     transition: 0.1s ease-in;
 }
 
-.footer-Copyright {
-    font-size: 12px;
-    font-weight: 400;
-}
+
 
 .landing-container {
     width: 100%;
@@ -934,27 +931,41 @@ subsbutton:hover {
 /* ************ APP FEATURES */
 /*******************************************/
 .app-features {
-    background-color: #FFF;
+    background-color: #F2F5FB;
     height: 700px;
+    padding-bottom: 50px;
+
 }
 
 .app-features-container {
     width: 75%;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+.app-feat-sec {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.77777;
+    color: inherit;
+}
+
 
 .text-heading {
     padding-top: 100px;
     color: #252530;
     color: #ff7272;
-    text-align: center;
+    text-align: left;
     font-weight: 700;
 }
 
 .app-features-secondary-heading {
-    text-align: center;
+    text-align: left;
     font-size: 48px;
     font-weight: 700;
+    color: #25373f;
 }
 
 .grid-container {
@@ -972,4 +983,144 @@ subsbutton:hover {
     /* To remove extra space below the image */
     margin: 0 auto;
     /* Center the image horizontally */
+}
+
+.downbtndes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.biggericon {
+    font-size: 32px;
+    color: tomato;
+}
+
+
+.biggericon2 {
+    font-size: 32px;
+    color: #099A97;
+}
+
+.btndown {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 0px 15px;
+    border: 2px solid #099A97;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    color: #566a7f;
+
+}
+
+.btndown:hover {
+    background-color: #689e9d;
+    color: #FFF;
+    border: 2px solid #FFF;
+    box-shadow: rgba(9, 154, 151, 0.6) 0px 10px 20px;
+}
+
+.img-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.secondImge {
+    margin-top: 7.3%;
+}
+
+/* Tech Stack */
+
+.tech-stack {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    justify-content: space-between;
+    padding-top: 70px;
+
+}
+
+.tech-stack-title {}
+
+.tech-stack-container {
+    border-top: 1px solid #351e1e;
+    width: 100vh;
+}
+
+.tech-stack-icon {
+    font-size: 60px;
+    background-color: #d8e8ee;
+    border-radius: 500px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-last {
+    background-color: #fcfcfc;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 30px;
+    align-items: center;
+    border-top: 1px solid #faf2f2;
+    padding-bottom: 20px;
+}
+
+.footer-Copyright {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+.grid-3 {
+    display: flex;
+    gap: 20px;
+}
+
+.grid-card {
+    padding: 20px;
+    padding-left: 0px;
+    border-radius: 8px;
+}
+
+.app-icon-design {
+    color: white;
+    font-size: 40PX;
+    padding: 7px;
+    background-color: #099A97;
+    border-radius: 500px;
+
+}
+
+.app-icon-design:hover {
+    background-color: #252530;
+    cursor: pointer;
+}
+
+.card-title-text {
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.tech-stack-primary {
+    color: #ff7272;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.icon-flex {
+    display: flex;
+    gap: 20px;
 }
