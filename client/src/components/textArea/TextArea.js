@@ -1,8 +1,15 @@
 import React from 'react'
 
-const TextArea = ({ rows, columns }) => {
+const TextArea = ({ label, fieldName, rows, columns, labelTitle }) => {
     return (
-        <textarea name="content" rows={4} cols={40} />
+        <div className='formgroup'>
+            {label && <label htmlFor={fieldName}>{labelTitle}</label>}
+            <textarea
+                name="content"
+                rows={4}
+                cols={40}
+            />
+        </div>
     )
 }
 

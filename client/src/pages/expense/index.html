@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
         }
-        .btn-expense{
-            padding: 10px 15px; /* top-bottom left-right */
+
+        .btn-expense {
+            padding: 10px 15px;
+            /* top-bottom left-right */
             cursor: pointer;
             background-color: black;
             color: white;
         }
-        .overlay{
+
+        .overlay {
             width: 100%;
             height: 100vh;
             background-color: rgba(0, 0, 0, 0.5);
@@ -25,11 +29,13 @@
             opacity: 0;
             transition: 1s;
         }
+
         .showoverlay {
             opacity: 1;
             z-index: 1;
         }
-        .modal-form{
+
+        .modal-form {
             width: 350px;
             padding: 30px 20px;
             background-color: white;
@@ -37,16 +43,14 @@
             position: absolute;
             box-shadow: 0px 0px 10px 3px #ccc;
             left: 50%;
-            /* top: 50%; */
+            top: 50%;
             z-index: 9;
-            top: -50%;
             transform: translate(-50%, -50%);
             transition: 2s;
         }
-        .showmodal-form{
-            top: 50%;
-        }
-        .modal-form input{
+
+
+        .modal-form input {
             width: 100%;
             margin-bottom: 15px;
             margin-top: 10px;
@@ -54,13 +58,14 @@
             border: 1px solid rebeccapurple;
             border-radius: 8px;
         }
-        .modal-form button{
+
+        .modal-form button {
             background-color: black;
             color: white;
             padding: 10px 15px;
         }
 
-        .modal-form span{
+        .modal-form span {
             position: absolute;
             right: 0px;
             top: 0px;
@@ -74,13 +79,14 @@
         }
     </style>
 </head>
+
 <body>
     <!-- <button class="btn-expense" onclick="showModalForm()" >Add</button> -->
-    <button class="btn-expense" >Add</button>
+    <button class="btn-expense">Add</button>
 
     <div class="overlay" onclick="closeModalForm()"></div>
     <div class="modal-form">
-        <span >&times;</span>
+        <span>&times;</span>
         <form>
             <div>
                 <label for="">UserName</label>
@@ -96,20 +102,20 @@
     </div>
 </body>
 <script>
-    function showModalForm(){
+    function showModalForm() {
         console.log("###################")
         document.querySelector('.overlay').classList.add('showoverlay');
         document.querySelector('.modal-form').classList.add('showmodal-form');
     }
-    function closeModalForm(){
+    function closeModalForm() {
         console.log("###################")
         document.querySelector('.overlay').classList.remove('showoverlay');
         document.querySelector('.modal-form').classList.remove('showmodal-form');
     }
-    
+
 
     let btnExpense = document.querySelector('.btn-expense') // Button
-    btnExpense.addEventListener("click",showModalForm) // Button Click
+    btnExpense.addEventListener("click", showModalForm) // Button Click
 
     let close = document.querySelector("span")
     close.addEventListener("click", closeModalForm)

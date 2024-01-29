@@ -1592,21 +1592,21 @@ textarea {
     background-color: #fff;
     font-size: 14px;
     resize: none;
-  }
+}
 
-  textarea:focus { 
+textarea:focus {
     outline: none !important;
     border-color: #8787f3;
     box-shadow: 0 0 10px #8787f3;
 }
-  
+
 
 .custom-select {
     min-width: 350px;
     position: relative;
-  }
+}
 
-  select {
+select {
     appearance: none;
     /*  safari  */
     -webkit-appearance: none;
@@ -1619,30 +1619,88 @@ textarea {
     border-radius: 0.25rem;
     color: #000;
     cursor: pointer;
-  }
- 
+}
+
 .custom-select::before,
 .custom-select::after {
-  --size: 0.3rem;
-  content: "";
-  position: absolute;
-  right: 1rem;
-  pointer-events: none;
+    --size: 0.3rem;
+    content: "";
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
 }
+
 .custom-select::before {
     border-left: var(--size) solid transparent;
     border-right: var(--size) solid transparent;
     border-bottom: var(--size) solid #8787f3;
     top: 40%;
-  }
-  .custom-select::after {
+}
+
+.custom-select::after {
     border-left: var(--size) solid transparent;
     border-right: var(--size) solid transparent;
     border-top: var(--size) solid #8787f3;
     top: 55%;
-  }
+}
 
 .custom-select select:focus {
     border-color: #8787f3;
-    outline: none; /* Add this line */
+    outline: none;
+    /* Add this line */
+}
+
+.formgroup {
+    padding-bottom: 10px;
+}
+
+.overlay {
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 99.5%;
+    height: 98vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0%;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+}
+
+.showoverlay {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+.modal-form {
+    width: 500px;
+    padding: 40px 40px;
+    background-color: white;
+    border-radius: 8px;
+    position: absolute;
+    box-shadow: 0px 0px 10px 3px #ccc;
+    left: 50%;
+    top: -50%;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+}
+
+.showmodal-form {
+    top: 50%;
+}
+
+.modal-form span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30px;
+    background-color: rgba(236, 78, 112, 0.712);
+    cursor: pointer;
+    height: 30px;
+    text-align: center;
+    color: white;
+    line-height: 30px;
 }
