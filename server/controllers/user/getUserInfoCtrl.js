@@ -11,6 +11,7 @@ export const getUserInfoCtrl = async (req, res) => {
                 error: 'Invalid or missing user ID in the request',
             });
         }
+        
         const userInfo = await UserModel.findById(req.user.id)
         if (!userInfo) {
             return res.status(404).send({
@@ -19,6 +20,7 @@ export const getUserInfoCtrl = async (req, res) => {
                 errors: [{ "field": "id", "error": "user not found" }]
             });
         }
+
         // Define fields to include in the response
         const fields = ["_id", "username", "email", "mobileNumber", "role", "firstname", "lastname", "area", "town", "city"];
         const userResponse = filterFields(userInfo, fields)

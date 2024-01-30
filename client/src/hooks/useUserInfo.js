@@ -1,27 +1,30 @@
-// import axios from 'axios'
-// import { useEffect, useState } from 'react'
-// import API from '../Services/API'
+// 
+import { useEffect, useState } from 'react'
 
-// const useUserInfo = () => {
-//     const [userInfo, setUserInfo] = useState()
+// 
+import axios from 'axios'
 
-//     const getUserInfo = async () => {
-//         try {
-//             const userInfo = await axios.get(API.R_SINGLE_URL)
-//             console.log("#############################################")
-//             console.log(useUserInfo)
-//             console.log("#############################################")
-//             setUserInfo(userInfo.data.data)
-//         } catch (error) {
-//             console.log(`Error While Fetch User Info`)
-//         }
-//     }
+// api
+import { R_SINGLE_URL } from "api/auth";
 
-//     useEffect(() => {
-//         getUserInfo();
-//     }, [])
+export const useUserInfo = () => {
+    const [userInfo, setUserInfo] = useState()
 
-//     return userInfo
-// }
+    const getUserInfo = async () => {
+        try {
+            const userInfo = await axios.get(R_SINGLE_URL)
+            console.log("################## USER INFO DATA ###########################")
+            console.log(useUserInfo)
+            console.log("################## USER INFO DATA ###########################")
+            setUserInfo(userInfo.data.data)
+        } catch (error) {
+            console.log(`Error While Fetch User Info`)
+        }
+    }
 
-// export default useUserInfo
+    useEffect(() => {
+        getUserInfo();
+    }, [])
+
+    return {userInfo,getUserInfo}
+}

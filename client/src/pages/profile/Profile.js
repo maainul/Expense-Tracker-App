@@ -12,6 +12,10 @@ import SIGNUP_URL from 'API'
 const Profile = () => {
     const [auth] = useAuth()
     console.log(auth)
+    console.log("##############################")
+    console.log()
+    console.log("##############################")
+
     const [firstName, setFirstName] = useState()
     const [lastName, setLastName] = useState()
     const [email, setEmail] = useState()
