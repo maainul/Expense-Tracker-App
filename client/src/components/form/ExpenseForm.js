@@ -13,7 +13,7 @@ import TextArea from 'components/textArea/TextArea'
 
 // Context and Hooks:
 import { useAuth } from 'context/authContext'
-// import { useAllExpenseTypes } from 'hooks/useExpenseTypes'
+import { useAllExpenseTypes } from 'hooks/useExpenseTypes'
 
 // API-related Imports
 import { C_EXP_URL } from "api/expense";
@@ -29,10 +29,14 @@ const ExpenseForm = () => {
     const [loading, setLoading] = useState(false);
 
     // Expenses and Expense Types
-    // const { expenseTypeList } = useAllExpenseTypes([])
+    const { expenseTypeList } = useAllExpenseTypes([])
     const [expenseList, setExpenseList] = useState([]);
     const [errors, setErrors] = useState([])
 
+
+    console.log("#$$$$$$$$$$ EX $$$$$$$$$$$$$$$$$$$$$$")
+    console.log(expenseTypeList)
+    console.log("#$$$$$$$$$$ EX $$$$$$$$$$$$$$$$$$$$$$")
     // Submit Form Data
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -71,9 +75,7 @@ const ExpenseForm = () => {
     }
 
     function closeModalForm() {
-        console.log("###################");
         const overlayElement = document.querySelector('.overlay');
-        console.log(overlayElement); // Log the selected element
         overlayElement.classList.remove('showoverlay');
         document.querySelector('.modal-form').classList.remove('showmodal-form');
     }
@@ -120,6 +122,7 @@ const ExpenseForm = () => {
                         fieldName='expenseType'
                         label={true}
                         errorState={errors}
+                        iterableItems={expenseTypeList}
                         labelTitle={"EXPENSE TYPE"}
                     />
 

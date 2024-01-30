@@ -1,15 +1,13 @@
 import React from 'react';
 
 const Select = ({
-    type,
-    fieldName,
-    placeholder,
     state,
+    fieldName,
+    iterableItems,
     setState,
     errorState,
     label,
     labelTitle,
-    maxlength
 }) => {
     // handleChange
     const handleChange = (e) => {
@@ -17,14 +15,19 @@ const Select = ({
         setState(value);
     };
 
+    console.log("########### Iterable item #####################")
+    console.log(iterableItems)
+    console.log("############ Iterable item ####################")
+
     return (
         <div className="formgroup">
             {label && <label htmlFor={fieldName}>{labelTitle}</label>}
             <div class="custom-select">
-                <select>
+                <select value={state} onChange={handleChange}>
                     <option value="">Select One Option</option>
-                    <option value="debit">Expense</option>
-                    <option value="credit">Income</option>
+                    {iterableItems.map((ie) => (
+                        <option key={ie.id} value={ie._id}>{ie.name}</option>
+                    ))}
                 </select>
             </div>
             {errorState &&
@@ -40,3 +43,13 @@ const Select = ({
 };
 
 export default Select;
+
+/*
+            <label htmlFor="expenseType">Expense Type:</label><br />
+            <select id="expenseType" value={expenseType} onChange={handleChange}>
+                <option value="">-----</option>
+                {expenseTypeList.map((exp) => (
+                    <option key={exp.id} value={exp._id}>{exp.name}</option>
+                ))}
+
+*/
