@@ -16,8 +16,7 @@ import { useAuth } from 'context/authContext'
 import { C_Exp_TYP_URL } from "api/expenseType";
 import { closeModalForm } from 'utils/modalForm';
 
-const ExpenseTypeForm = () => {
-
+const ExpenseTypeForm = ({getExpTyps}) => {
     const [auth] = useAuth()
     const [name, setName] = useState('')
     const [icon, setIcon] = useState('')
@@ -33,10 +32,7 @@ const ExpenseTypeForm = () => {
                 name,
                 icon,
                 userid: auth.user._id,
-            })
-            console.log("$$$$$$$$$$$$ After Submit $$$$%%%%%%%%%%%%%%%%%%%%%%")
-            console.log(response)
-            console.log("$$$$$$$$$$$$ After Submit $$$$%%%%%%%%%%%%%%%%%%%%%%")
+            })             
             if (response.data.errors) {
                 setErrors(response.data.errors)
                 toast.error(response.data.message)
@@ -46,6 +42,8 @@ const ExpenseTypeForm = () => {
                 setName('')
                 setIcon('')
                 setErrors([])
+                // Call getExpenseTypes to update the list after adding a new expense type
+                getExpTyps()
             }
         } catch (error) {
             console.error(`Invalid Expense Type : ${error}`)

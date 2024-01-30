@@ -19,5 +19,5 @@ export const useAllExpenseTypes = () => {
         getExpTyps();
     }, []);
 
-    return { expenseTypeList };
+    return { expenseTypeList, getExpTyps };
 };

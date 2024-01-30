@@ -7,7 +7,7 @@ import { showModalForm } from 'utils/modalForm';
 
 const ExpenseTypes = () => {
 
-    const {expenseTypeList } = useAllExpenseTypes([])
+    const {expenseTypeList, getExpTyps } = useAllExpenseTypes([])
     return (
         <>
         <MainLayout>
@@ -16,11 +16,14 @@ const ExpenseTypes = () => {
                 <ButtonPrimary
                     clsName={"bx bx-plus me-sm-1"}
                     title={"Add"}
-                    onClick={showModalForm}
+                    onClick={() =>{
+                        showModalForm(); 
+                        getExpTyps()
+                    }}
                 />
             </div>
         </MainLayout>
-        <ExpenseTypeForm />
+        <ExpenseTypeForm getExpTyps={getExpTyps} />
         </>
     )
 }
