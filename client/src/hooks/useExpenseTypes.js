@@ -1,26 +1,23 @@
 import { useEffect, useState } from "react";
-
 import axios from "axios";
-
 import { R_EX_TYP_URL } from "api/expenseType";
 
-
 export const useAllExpenseTypes = () => {
-    const [expenseTypeList, setExpenseTypeList] = useState([])
-    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    console.log(expenseTypeList)
-    console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    const getExpenseTypes = async () => {
+    const [expenseTypeList, setExpenseTypeList] = useState([]);
+
+    const getExpTyps = async () => {
         try {
-            const expTypList = await axios.get(R_EX_TYP_URL)
-            console.log(expTypList.data.data)
-            setExpenseTypeList(expTypList.data.data)
+            const response = await axios.get(R_EX_TYP_URL);
+            console.log("Expense Type Data: ", response.data);
+            setExpenseTypeList(response.data.data || []);
         } catch (error) {
-            console.log('Expense Types List Not Found')
+            console.log("Error While Getting Expense Types: ", error);
         }
-    }
+    };
+
     useEffect(() => {
-        getExpenseTypes()
-    }, [])
-    return { expenseTypeList }
-}
+        getExpTyps();
+    }, []);
+
+    return { expenseTypeList };
+};

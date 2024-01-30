@@ -22,12 +22,9 @@ const validationRules = {
 
 export const createExpTypeCtrl = async (req, res) => {
     try {
-        const { name, icon } = req.body;
-        logger.info(`Request data ===>\n name : ${name} icon :${icon}`.bgBlue);
-
+        const { name, icon,userid } = req.body;
         // Validation
         const validationResult = await MValidator(req.body, validationRules, ExpenseTypeModel);
-
         // Validation log
         validationLog(validationResult)
 
@@ -40,8 +37,8 @@ export const createExpTypeCtrl = async (req, res) => {
         }
 
         // Save Data in Database
-        const expenseType = await serv.expenseTypeService.createExpTypeServ({ name, icon })
-        logger.info(`Expense Type Added Successfully :\n ${expenseType}`);
+        const expenseType = await serv.expenseTypeService.createExpTypeServ({ name, icon,userid })
+        console.log(`Expense Type Added Successfully :\n ${expenseType}`);
 
         return res.status(201).send({
             success: true,

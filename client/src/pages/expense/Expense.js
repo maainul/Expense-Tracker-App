@@ -18,6 +18,7 @@ import { DDMMYY } from 'utils/dateUtils';
 
 // API-related Imports
 import { R_EXP_ALL_URL } from "api/expense";
+import { showModalForm } from 'utils/modalForm';
 
 
 const Expense = () => {
@@ -54,17 +55,6 @@ const Expense = () => {
         }
         getExpenses()
     }, [frequency, firstDate, secondDate, categoryFilter, expenseTypeFilter])
-
-
-    function showModalForm() {
-        console.log("########## Show Modal Called #########");
-        document.querySelector('.overlay').classList.add('showoverlay');
-        document.querySelector('.modal-form').classList.add('showmodal-form');
-    }
-
-
-
-
 
     return (
         <>

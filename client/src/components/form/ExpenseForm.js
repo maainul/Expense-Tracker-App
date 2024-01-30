@@ -34,6 +34,10 @@ const ExpenseForm = () => {
     const [errors, setErrors] = useState([])
 
 
+console.log("#@@@@@@@@@@@@##########@@@@@@@@@@@@@@@@@")
+console.log(expenseTypeList)
+console.log("#@@@@@@@@@@@@##########@@@@@@@@@@@@@@@@@")
+
     // Submit Form Data
     const handleSubmit = async (e) => {
         e.preventDefault();
