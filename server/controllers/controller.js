@@ -9,7 +9,6 @@ export const controller = {
     userCtrl,
     expenseCtrl,
     analyticsCtrl,
-    expenseTypeCtrl,
-
+    expenseTypeCtrl
 
 }

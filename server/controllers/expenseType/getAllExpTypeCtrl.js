@@ -9,10 +9,17 @@ export const getAllExpTypeCtrl = async (req, res) => {
         const { sortOrder } = req.body;
         // Set default sort order if not provided or unexpected
         const expeTyps = await serv.expenseTypeService.getAllExpTypeServ({ sortOrder })
+        if (!expeTyps) {
+            return res.status(200).send({
+                success: true,
+                message: 'No categories Found'
+            })
+        }
         logger.info(`Expense Type data ==> \n ${expeTyps}`)
         return res.status(200).send({
             success: true,
             message: 'Get all expense Type successfully',
+            totalExpTypes: expeTyps.length,
             data: expeTyps
         });
     } catch (error) {

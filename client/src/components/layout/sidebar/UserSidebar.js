@@ -1,11 +1,13 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useAuth } from 'context/authContext';
 import toast from 'react-hot-toast';
+import { UserMenu } from './UserMenu';
+import SideNav from 'components/sideNavComp/SideNav';
 
 const UserSidebar = () => {
     const [auth, setAuth] = useAuth();
-
+    const location = useLocation()
     const handleLogout = () => {
         setAuth({
             ...auth,
@@ -17,49 +19,17 @@ const UserSidebar = () => {
     }
     return (
         <div >
-            <div className='sidebar-icon-link'>
-                <NavLink to={'/dashboard/user/expense'} className='navlink' >
-                    <i className='menu-icon tf-icons bx bx-store'></i>
-                    <span>Expense</span>
-                </NavLink>
-            </div>
-            <div className='sidebar-icon-link'>
-                <NavLink to={'/dashboard/user/analytics'} className='navlink'>
-                    <i className="menu-icon tf-icons bx bx-chart"></i>
-                    <span>
-                        Analytics
-                    </span>
-                </NavLink>
-            </div>
-
-            <div className='sidebar-icon-link'>
-                <NavLink to={'/dashboard/user/expense-type'} className='navlink'>
-                    <i className="menu-icon tf-icons bx bx-user"></i>
-                    <span>
-                        Expense-Type
-                    </span>
-                </NavLink>
-            </div>
-
-            <div className='sidebar-icon-link'>
-                <NavLink to={'/dashboard/user/profile'} className='navlink'>
-                    <i className="menu-icon tf-icons bx bx-user"></i>
-                    <span>
-                        Profile
-                    </span>
-                </NavLink>
-            </div>
-
-
-            <div className='sidebar-icon-link'>
-                <NavLink to={"/signin"} className='navlink' onClick={handleLogout}>
-                    <i className='menu-icon bx bx-log-out'></i>
-                    <span>
-                        Logout
-                    </span>
-                </NavLink>
-            </div>
-        </div>
+            {UserMenu.map((menu) => {
+                const isActive = location.pathname === menu.path
+                return (
+                    <div className={`menu-item ${isActive && 'active'}`} >
+                        < div className={`sidebar-icon-link ${isActive && 'active'}`}>
+                            <SideNav to={menu.path} icon={menu.icon} name={menu.name} />
+                        </div>
+                    </div>
+                )
+            })}
+        </div >
     )
 }
 

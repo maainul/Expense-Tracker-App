@@ -1198,6 +1198,14 @@ subsbutton:hover {
 
 }
 
+.active {
+    background-color: #dbdbfc;
+    border-radius: 0.5rem;
+    color: #5a59e5 !important;
+
+}
+
+
 
 /***********************************************/
 /* ****************** FOOTER */
