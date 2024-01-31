@@ -6,9 +6,20 @@ import { serv } from './../../service/services.js';
 
 export const getAllExpTypeCtrl = async (req, res) => {
     try {
-        const { sortOrder } = req.body;
+        // data destructure from query string like ?key=value
+        //const { name } = req.query
+        // condition for searching
+        // const queryObject = {
+        //     createdBy : req.user.userId
+        // }
+
+
+
+
+
+
         // Set default sort order if not provided or unexpected
-        const expeTyps = await serv.expenseTypeService.getAllExpTypeServ({ sortOrder })
+        const expeTyps = await serv.expenseTypeService.getAllExpTypeServ({ req })
         if (!expeTyps) {
             return res.status(200).send({
                 success: true,
