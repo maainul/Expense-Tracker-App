@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useAuth } from 'context/authContext';
 import toast from 'react-hot-toast';
 import { UserMenu } from './UserMenu';

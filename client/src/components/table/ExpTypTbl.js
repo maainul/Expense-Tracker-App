@@ -1,7 +1,8 @@
-const ExpTypTbl = ({expenseTypeList}) =>{
+
+const ExpTypTbl = ({ expenseTypeList }) => {
     return (
         <>
-           <div className='content-container'>
+            <div className='content-container'>
                 <table>
                     <thead>
                         <tr>
@@ -18,7 +19,15 @@ const ExpTypTbl = ({expenseTypeList}) =>{
                         ))}
                     </tbody>
                 </table>
-            </div>
+                <div className="pagination-container">
+                    <span className="paginationNumber"> <i class='pagination-icon bx bx-chevrons-left'></i> </span>
+                    <span className="paginationNumber">1</span>
+                    <span className="paginationNumber">2</span>
+                    <span className="paginationNumber">3</span>
+                    <span className="paginationNumber">4</span>
+                    <span className="paginationNumber"><i class='pagination-icon bx bx-chevrons-right'></i></span>
+                </div>
+            </div >
         </>
     )
 }

@@ -1713,3 +1713,33 @@ select {
     color: white;
     line-height: 30px;
 }
+
+.pagination-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    text-align: center;
+    gap: 7px;
+    justify-content: center;
+
+}
+
+.paginationNumber {
+    padding: 0.5125rem 0.825rem;
+    font-size: 16px;
+    color: #697a8d;
+    background-color: #f0f2f4;
+    border-radius: 0.25rem;
+    border-color: #d9dee3;
+    font-weight: 500;
+}
+
+.paginationNumber:hover {
+    color: #fff;
+    background-color: #5a59e5;
+    cursor: pointer;
+}
+
+.pagination-icon {
+    font-size: 20px;
+}
