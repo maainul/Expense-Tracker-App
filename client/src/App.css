@@ -1697,6 +1697,33 @@ select {
     transition: 2s;
 }
 
+.details-modal-form {
+    width: 500px;
+    padding: 40px 40px;
+    background-color: white;
+    border-radius: 8px;
+    position: absolute;
+    box-shadow: 0px 0px 10px 3px #ccc;
+    left: 50%;
+    top: -50%;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+}
+
+.details-modal-form span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30px;
+    background-color: rgba(236, 78, 112, 0.712);
+    cursor: pointer;
+    height: 30px;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+}
+
 .showmodal-form {
     top: 50%;
 }
@@ -1742,4 +1769,8 @@ select {
 
 .pagination-icon {
     font-size: 20px;
+}
+
+.editIcon {
+    cursor: pointer;
 }

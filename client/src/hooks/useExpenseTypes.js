@@ -8,7 +8,6 @@ export const useAllExpenseTypes = () => {
     const getExpTyps = async () => {
         try {
             const response = await axios.get(R_EX_TYP_URL);
-            console.log("Expense Type Data: ", response.data);
             setExpenseTypeList(response.data.data || []);
         } catch (error) {
             console.log("Error While Getting Expense Types: ", error);

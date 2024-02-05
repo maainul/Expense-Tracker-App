@@ -8,19 +8,18 @@ export const updateExpTypeCtrl = async (req, res) => {
     try {
         const { id } = req.params
         const { name, icon } = req.body
-
         const updatedExpeTyps = await serv.expenseTypeService.updateExpenseTypeByIdServ({ id, name, icon })
         if (!updatedExpeTyps) {
             return res.status(500).send({
                 success: true,
-                message: "No Category Found"
+                message: "No Expnese Type Found"
             })
         }
-        logger.info(`Expense Type data ==> \n ${expeTyps}`)
+        logger.info(`Expense Type data ==> \n ${updatedExpeTyps}`)
         return res.status(200).send({
             success: true,
             message: 'Expense Type updated successfully',
-            data: expeTyps
+            data: updatedExpeTyps
         });
     } catch (error) {
         console.error('Error In update Expense Type API', error);
