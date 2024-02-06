@@ -113,18 +113,15 @@ const ExpenseTypes = () => {
         }
     }
 
-    // document.getElementById('dotsIcon').addEventListener('click', function () {
-    //     var modal = document.getElementById('editDeleteModal');
-    //     modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-    // });
+    // Show Modal For Edit and Delete
+    function toggleModal(modalId) {
+        var modal = document.getElementById('editDeleteModal');
+        if (modal) {
+            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        }
 
-    // Close the modal if the user clicks outside of it
-    // document.addEventListener('click', function (event) {
-    //     var modal = document.getElementById('editDeleteModal');
-    //     if (event.target !== modal && !modal.contains(event.target)) {
-    //         modal.style.display = 'none';
-    //     }
-    // });
+      
+    }
 
 
     return (
@@ -146,23 +143,21 @@ const ExpenseTypes = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {expenseTypeList.map((expl) => (
-                                <tr>
-                                    <td>{expl._id}</td>
-                                    <td>{expl.icon}</td>
-                                    <td>{expl.name}</td>
-                                    <td key={expl.id}>
-                                        <i id="dotsIcon" class="bx bx-dots-vertical-rounded dashboard-icon"></i>
-                                        <i class="bx bx-dots-vertical-rounded dashboard-icon"
-                                            onClick={() => showDetails({ expl })}
-                                        ></i>
-
-                                        <i class="bx bxs-edit dashboard-icon editIcon"
-                                            onClick={() => handleEditForm({ expl })}
-                                        ></i>
-                                    </td>
-                                </tr>
-                            ))}
+                        {expenseTypeList.map((expl, index) => (
+                            <tr key={expl._id}>
+                                <td>{expl._id}</td>
+                                <td>{expl.icon}</td>
+                                <td>{expl.name}</td>
+                                <td>
+                                    <i 
+                                    class="bx bx-dots-vertical-rounded dashboard-icon" 
+                                    onClick={() => toggleModal(`editDeleteModal${index}`)}
+                                    ></i>
+                                    <i class="bx bx-dots-vertical-rounded dashboard-icon" onClick={() => showDetails({ expl })}></i>
+                                    <i class="bx bxs-edit dashboard-icon editIcon" onClick={() => handleEditForm({ expl })}></i>
+                                </td>
+                            </tr>
+                        ))}
                         </tbody>
                     </table>
                     <div className="pagination-container">

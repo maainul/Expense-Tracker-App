@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .buttons {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; /* Ensure buttons wrap properly if there are many */
+        }
+
+        .buttons button {
+            margin: 5px; /* Add some margin between buttons */
+        }
+        
+.editDeleteModalContainer {
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+    height: 70px;
+    background-color: #7678fd;
+    width: 150px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    /* right: 745px; */
+    /* top: 220px; */
+    /* hide */
+    display: none;
+    display: block;
+
+}
+
+.edit-del-icon {
+    margin-right: 10px;
+}
+
+.editDel {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+.editDel:hover {
+    color: rebeccapurple;
+    background-color: wheat;
+    cursor: pointer;
+}
+.parent-div{
+    background-color: bisque;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+    </style>
+</head>
+<body>
+    <div class="parent-div">
+    <div class="buttons">
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+        <button id="button3">Button 3</button>
+        <button id="button4">Button 4</button>
+        <button id="button5">Button 5</button>
+    </div>
+    <div id="editDeleteModal" class='editDeleteModalContainer'>
+        <div class='editDel'><span>Edit</span></div>
+        <div class='editDel'><span>Delete</span></div>
+    </div>
+</div>
+    <script>
+       
+        document.getElementById('button1').addEventListener('click',function(){
+            let modal = document.getElementById('editDeleteModal')
+            if (modal) {
+                modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+            }
+        })
+
+        document.getElementById('button2').addEventListener('click',function(){
+            let modal = document.getElementById('editDeleteModal')
+            if (modal) {
+                modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+                modal.style.top = '250px' 
+            }
+        })
+    </script>
+</body>
+
+</html>
