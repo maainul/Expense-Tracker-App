@@ -23,6 +23,7 @@ const validationRulesLogin = {
 
 export const signinCtrl = async (req, res) => {
     try {
+        console.log("Singin Server : Signin Ctrl Called")
         const { username, password } = req.body;
         const validationResult = await MValidator(
             req.body,

@@ -1774,3 +1774,43 @@ select {
 .editIcon {
     cursor: pointer;
 }
+
+.editDeleteModalContainer {
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+    height: 70px;
+    width: 150px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    color: var(--textColor);
+}
+
+.edit-del-icon {
+    margin-right: 10px;
+}
+
+.editDel {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+.editDel:hover {
+    color: var(--navBorder);
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.table-header {
+    background-color: #7367F0;
+    color: white;
+}
+
+
+
+
+
+.table-header th {
+    color: white;
+}

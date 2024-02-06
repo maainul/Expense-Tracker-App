@@ -72,7 +72,7 @@ const ExpenseTypes = () => {
             if (isEditing) {
                 console.log("Editing Mode")
                 // Update existing expense type
-                const response = await axios.put(`http://192.168.0.194:8081/api/v1/expense-type/update/${editExpenseTypeData.id}`, {
+                const response = await axios.put(`http://localhost:8081/api/v1/expense-type/update/${editExpenseTypeData.id}`, {
                     name,
                     icon,
                     userid: auth.user._id,
@@ -118,9 +118,13 @@ const ExpenseTypes = () => {
             <MainLayout>
                 {/* Expense Table */}
                 <div className='content-container'>
+                    <div className='editDeleteModalContainer'>
+                        <div className='editDel'><i class="bx bx-edit-alt me-1 edit-del-icon"></i><span>Edit</span></div>
+                        <div className='editDel'><i class="bx bx-trash me-1 edit-del-icon"></i><span>Delete</span></div>
+                    </div>
                     <table>
                         <thead>
-                            <tr>
+                            <tr className='table-header'>
                                 <th>ID</th>
                                 <th>Icon</th>
                                 <th>Name</th>

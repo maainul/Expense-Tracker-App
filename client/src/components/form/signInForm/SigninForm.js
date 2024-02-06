@@ -1,4 +1,4 @@
-import React,{ useState } from "react"
+import React, { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import axios from "axios";
 import { toast } from 'react-hot-toast';
@@ -32,11 +32,12 @@ const SigninForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
+            console.log("Client : Signin Hanlder")
             const res = await axios.post(SIGNIN_URL, {
                 username,
                 password,
             })
-            console.log('Signin() User/Admin Info : ', res)
+            console.log('Signin() User/Admin Info : ', res.data.user)
             if (res.data.errors) {
                 setErrors(res.data.errors)
                 toast.error(res.data.message)
