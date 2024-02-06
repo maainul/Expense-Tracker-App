@@ -1778,11 +1778,18 @@ select {
 .editDeleteModalContainer {
     box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
     height: 70px;
+    background-color: #7678fd;
     width: 150px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    color: var(--textColor);
+    color: var(--bgWhitePrimary);
+    /* Extra For Hide */
+    position: absolute;
+    display: none;
+    z-index: 1;
+    top: 285px;
+    right: 150px;
 }
 
 .edit-del-icon {
@@ -1798,7 +1805,7 @@ select {
 
 .editDel:hover {
     color: var(--navBorder);
-    background-color: #ddd;
+    background-color: var(--bgMain);
     cursor: pointer;
 }
 
@@ -1810,6 +1817,10 @@ select {
 
 
 
+
+.table-height {
+    margin-top: 30px;
+}
 
 .table-header th {
     color: white;

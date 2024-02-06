@@ -113,16 +113,30 @@ const ExpenseTypes = () => {
         }
     }
 
+    // document.getElementById('dotsIcon').addEventListener('click', function () {
+    //     var modal = document.getElementById('editDeleteModal');
+    //     modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+    // });
+
+    // Close the modal if the user clicks outside of it
+    // document.addEventListener('click', function (event) {
+    //     var modal = document.getElementById('editDeleteModal');
+    //     if (event.target !== modal && !modal.contains(event.target)) {
+    //         modal.style.display = 'none';
+    //     }
+    // });
+
+
     return (
         <>
             <MainLayout>
                 {/* Expense Table */}
                 <div className='content-container'>
-                    <div className='editDeleteModalContainer'>
+                    <div id="editDeleteModal" className='editDeleteModalContainer'>
                         <div className='editDel'><i class="bx bx-edit-alt me-1 edit-del-icon"></i><span>Edit</span></div>
                         <div className='editDel'><i class="bx bx-trash me-1 edit-del-icon"></i><span>Delete</span></div>
                     </div>
-                    <table>
+                    <table className='table-height'>
                         <thead>
                             <tr className='table-header'>
                                 <th>ID</th>
@@ -138,7 +152,7 @@ const ExpenseTypes = () => {
                                     <td>{expl.icon}</td>
                                     <td>{expl.name}</td>
                                     <td key={expl.id}>
-                                        <i class="bx bx-dots-vertical-rounded dashboard-icon"></i>
+                                        <i id="dotsIcon" class="bx bx-dots-vertical-rounded dashboard-icon"></i>
                                         <i class="bx bx-dots-vertical-rounded dashboard-icon"
                                             onClick={() => showDetails({ expl })}
                                         ></i>
