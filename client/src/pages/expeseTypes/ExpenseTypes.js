@@ -120,7 +120,7 @@ const ExpenseTypes = () => {
             modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
         }
 
-      
+
     }
 
 
@@ -143,21 +143,23 @@ const ExpenseTypes = () => {
                             </tr>
                         </thead>
                         <tbody>
-                        {expenseTypeList.map((expl, index) => (
-                            <tr key={expl._id}>
-                                <td>{expl._id}</td>
-                                <td>{expl.icon}</td>
-                                <td>{expl.name}</td>
-                                <td>
-                                    <i 
-                                    class="bx bx-dots-vertical-rounded dashboard-icon" 
-                                    onClick={() => toggleModal(`editDeleteModal${index}`)}
-                                    ></i>
-                                    <i class="bx bx-dots-vertical-rounded dashboard-icon" onClick={() => showDetails({ expl })}></i>
-                                    <i class="bx bxs-edit dashboard-icon editIcon" onClick={() => handleEditForm({ expl })}></i>
-                                </td>
-                            </tr>
-                        ))}
+                            {expenseTypeList.map((expl, index) => (
+                                <tr key={expl._id}>
+                                    <td>{expl._id}</td>
+                                    <td>{expl.icon}</td>
+                                    <td>{expl.name}</td>
+                                    <td>
+                                        {/* <i
+                                            class="bx bx-dots-vertical-rounded dashboard-icon"
+                                            onClick={() => toggleModal(`editDeleteModal${index}`)}
+                                        ></i> */}
+                                        {/* <i class="bx bx-dots-vertical-rounded dashboard-icon" onClick={() => showDetails({ expl })}>View</i> */}
+                                        <button className='tableButtonView' onClick={() => showDetails({ expl })}>View</button>
+                                        <button className='tableButtonUpdate' onClick={() => handleEditForm({ expl })}>Update</button>
+                                        {/* <i class="bx bxs-edit dashboard-icon editIcon" onClick={() => handleEditForm({ expl })}></i> */}
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                     <div className="pagination-container">

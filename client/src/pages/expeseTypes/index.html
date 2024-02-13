@@ -1,98 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document Mainul</title>
     <style>
-       .buttons {
-        margin-top: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap; /* Ensure buttons wrap properly if there are many */
+        .buttons {
+            margin-top: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* Ensure buttons wrap properly if there are many */
         }
 
         .buttons button {
-            margin: 5px; /* Add some margin between buttons */
+            margin: 5px;
+            /* Add some margin between buttons */
         }
-        
-.editDeleteModalContainer {
-    box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
-    height: 70px;
-    background-color: #7678fd;
-    width: 150px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    /* position: absolute; */
-    /* right: 745px; */
-    /* top: 220px; */
-    /* hide */
-    display: none;
-    display: block;
 
-}
+        .editDeleteModalContainer {
+            box-shadow: 0 0 5px rgba(155, 89, 182, 0.5);
+            height: 120px;
+            background-color: #7678fd;
+            width: 150px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 670px;
+            top: 220px;
+            /* hide */
+            display: none;
+            display: block;
 
-.edit-del-icon {
-    margin-right: 10px;
-}
+        }
 
-.editDel {
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-top: 5px;
-    font-weight: 500;
-}
+        .edit-del-icon {
+            margin-right: 10px;
+        }
 
-.editDel:hover {
-    color: rebeccapurple;
-    background-color: wheat;
-    cursor: pointer;
-}
-.parent-div{
-    background-color: bisque;
-    height: 500px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 200px;
-}
+        .editDel {
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-top: 5px;
+            font-weight: 500;
+        }
+
+        .editDel:hover {
+            color: rebeccapurple;
+            background-color: wheat;
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
     <div class="parent-div">
-    <div class="buttons">
-        <button id="button1">Button 1</button>
-        <button id="button2">Button 2</button>
-        <button id="button3">Button 3</button>
-        <button id="button4">Button 4</button>
-        <button id="button5">Button 5</button>
+
+        <input type="text" id="new-task" />
+        <h1 id="header">ToDo-Element</h1>
+
+        <div class="buttons">
+            <button id="button1">Button 1</button>
+            <button id="button2">Button 2</button>
+            <button id="button3">Button 3</button>
+            <button id="button4">Button 4</button>
+            <button id="button5">Button 5</button>
+        </div>
+        <div id="editDeleteModal" class='editDeleteModalContainer'>
+            <div class='editDel'><span>Edit</span></div>
+            <div class='editDel'><span>Delete</span></div>
+            <div class='editDel'><span>Delete2</span></div>
+            <div class='editDel'><span>Delete3</span></div>
+        </div>
     </div>
-    <div id="editDeleteModal" class='editDeleteModalContainer'>
-        <div class='editDel'><span>Edit</span></div>
-        <div class='editDel'><span>Delete</span></div>
-    </div>
-</div>
     <script>
-       
-        document.getElementById('button1').addEventListener('click',function(){
+        document.getElementById('button1').addEventListener('click', function () {
             let modal = document.getElementById('editDeleteModal')
             if (modal) {
                 modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+                modal.style.top = '220px'
             }
         })
 
-        document.getElementById('button2').addEventListener('click',function(){
+        document.getElementById('button2').addEventListener('click', function () {
             let modal = document.getElementById('editDeleteModal')
             if (modal) {
                 modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-                modal.style.top = '250px' 
+                modal.style.top = '250px'
             }
         })
+
+        document.getElementById('button3').addEventListener('click', function () {
+            let modal = document.getElementById('editDeleteModal')
+            if (modal) {
+                modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+                modal.style.top = '280px'
+            }
+        })
+
+        document.getElementById('button4').addEventListener('click', function () {
+            let modal = document.getElementById('editDeleteModal')
+            if (modal) {
+                modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+                modal.style.top = '310px'
+            }
+        })
+
+        document.getElementById('button5').addEventListener('click', function () {
+            let modal = document.getElementById('editDeleteModal')
+            if (modal) {
+                modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+                modal.style.top = '350px'
+            }
+        })
+        // console.dir(document)
+        // console.log(document)
+        // console.dir(document.title)
+        // console.dir(document.URL)
+        // console.log(document.head)
+        // console.log(document.body)
+        // document.title = "Mainul - DOM"
+        // console.log(document.all)
+        // for (let element of document.all) {
+        //     console.log(element)
+        // }
+
+        // 1. Get Element By ID
+
+        console.log(document.getElementById('new-task'))
+
+        let headerElement = document.getElementById('header')
+        console.dir(headerElement)
+        headerElement.style.color = 'red'
+        headerElement.style.borderBottom = '2px solid red'
+        headerElement.style.fontSize = '40px'
+        headerElement.style.fontWeight = 'bold'
+        // headerElement.textContent = "I LOVE YOU"
+        // headerElement.innerHTML = "I LOVE YOU 2"
+        // headerElement.innerText = "I LOVE YOU 2"
+
+        // Difference Between textContent and  innerHTML
+        // textContent : All html er opor kaj chalay
+        // innerHTML : style gulo ignore korbe na..ja browser a dekhay ta dekhabe
+
+        // get element By Class
+        // console.log(document.getElementsByClassName('buttons'))
+
+        // Get ELement By TAG name
+
+        // Query selector
+        // let btn = document.querySelector('.editDel:last-child') // to pick class = use .
+        // let hheeader = document.querySelector('.buttons') // to pick id = use #
+        // btn.style.color = 'red'
+        // console.log(btn)
+
+        //let btns = document.querySelectorAll('.editDel')
+        //for (let element of btns) {
+        //    element.style.color = 'yellow'
+        // }
+        // Parent child relation
+
+        //const parent = document.querySelector('.items')
+        //const children = parent.children
+
+        // Create New Element
+        // const divElement = document.createElement('div')
+        // divElement.className = 'red'
+        // divElement.setAttribute('id', 'red')
+        // divElement.setAttribute('title', 'Red Div')
+        // const container = document.querySelector('.parent-div')
+        // const inputBox = container.querySelector('#new-task')
+        // container.insertBefore(divElement, inputBox)
+
+        // document.getElementById('red').innerHTML = 'Hi There'
+        // document.getElementById('red').style.color = 'blue'
+        // document.getElementById('red').style.backgroundColor = 'red'
+        // document.getElementById('red').style.padding = '20px'
+        // document.getElementById('red').style.marginBottom = '20px'
+        // document.getElementById('red').style.border = '10px solid #ddd'
+        // document.getElementById('red').style.borderRadius = '10px'
+
+
+
+
     </script>
 </body>
 
