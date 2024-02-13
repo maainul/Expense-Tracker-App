@@ -4,7 +4,7 @@ import ExpenseTypeModel from "../../models/ExpenseType.js"
 
 export const getAllExpTypeServ = async ({ req }) => {
     // Query Parameter for Search
-    const {search, sort } = req.query;
+    const { search, sort } = req.query;
 
     //conditons for searching filters
     let queryObject = {};
@@ -30,6 +30,7 @@ export const getAllExpTypeServ = async ({ req }) => {
     if (sort === "z-a") {
         queryResult = queryResult.sort("-name");
     }
+
     //pagination
     const page = Number(req.query.page) || 1;
     const limit = Number(req.query.limit) || 10;
