@@ -19,6 +19,7 @@ import { closeDetailsModalForm, showDetails, showModalForm } from 'utils/modalFo
 // API-related Imports
 import { C_Exp_TYP_URL, R_EX_TYP_URL } from "api/expenseType";
 import { closeModalForm } from 'utils/modalForm';
+import Pagination from 'components/pagination/Pagination';
 
 
 const ExpenseTypes = () => {
@@ -37,6 +38,19 @@ const ExpenseTypes = () => {
     const [search, setSearch] = useState('')
 
 
+    // Pagination
+    const [numberOfPage, setNumberOfPage] = useState(5)
+    const [page, setPage] = useState('1')
+    const [limit, setLimit] = useState('10')
+
+
+    console.log("$$$$$$$$$$$$$$ numberOfPage$$$$$$$$$$$$$$$$$$$$$$$")
+    console.log(numberOfPage)
+    console.log(limit)
+    console.log("$$$$$$$$$$$$$$ numberOfPage$$$$$$$$$$$$$$$$$$$$$$$")
+
+
+
     // All Expesne Tyles List
     const [expenseTypeList, setExpenseTypeList] = useState([])
 
@@ -49,12 +63,14 @@ const ExpenseTypes = () => {
         showModalForm();
     };
 
+    // const numberOfPage = expenseTypeList.length
     // Update Table Data while call the URL
     useEffect(() => {
         const getExpTypsgetExpTyps = async () => {
             try {
-                const response = await axios.get(`http://localhost:8081/api/v1/expense-type/read/all?sort=${sorting}&search=${search}`);
+                const response = await axios.get(`http://localhost:8081/api/v1/expense-type/read/all?sort=${sorting}&search=${search}&page=${page}&limit=${limit}`);
                 setExpenseTypeList(response.data.data || [])
+                setNumberOfPage(response.data.numOfPage)
                 setErrors(null)
             } catch (error) {
                 console.log("Error While Getting Expense Types", error)
@@ -130,6 +146,17 @@ const ExpenseTypes = () => {
                 <div className='content-container'>
                     <div className='button-filter'>
                         <div className='filter-design filter-width'>
+                            <span className='filter-title'>Limit</span>
+                            <select value={limit} onChange={(e) => setLimit(e.target.value)} className='form-select'>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">20</option>
+                                <option value="20">30</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <div className='filter-design filter-width'>
                             <span className='filter-title'>Sort</span>
                             <select value={sorting} onChange={(e) => setSorting(e.target.value)} className='form-select'>
                                 <option value="latest">Latest</option>
@@ -176,14 +203,7 @@ const ExpenseTypes = () => {
                             ))}
                         </tbody>
                     </table>
-                    <div className="pagination-container">
-                        <span className="paginationNumber"> <i class='pagination-icon bx bx-chevrons-left'></i> </span>
-                        <span className="paginationNumber">1</span>
-                        <span className="paginationNumber">2</span>
-                        <span className="paginationNumber">3</span>
-                        <span className="paginationNumber">4</span>
-                        <span className="paginationNumber"><i class='pagination-icon bx bx-chevrons-right'></i></span>
-                    </div>
+                    <Pagination numberOfPage={numberOfPage} setPage={setPage} />
                     <div className="modal-width">
                         <div className='overlay' onClick={closeDetailsModalForm}></div>
                         <div className='details-modal-form'>
