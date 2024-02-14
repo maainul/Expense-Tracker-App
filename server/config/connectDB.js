@@ -4,7 +4,7 @@ import { logger } from "../middleware/logMiddleware.js";
 const connectDB = async () => {
   try {
     logger.info("Trying to Connect Mongo DB ....".bgYellow.bold);
-    const CT = process.env.CONNECTION_STRING || "mongodb://127.0.0.1:27017/extrackerdb";
+    const CT = process.env.CONNECTION_STRING || process.env.MONGO_LOCAL_URL;
     const conn = await mongoose.connect(CT);
     logger.info(
       `Conneted To Mongodb Databse ${conn.connection.host}`.bgMagenta.white
