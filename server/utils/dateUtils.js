@@ -14,7 +14,6 @@ const dateToTimestamp = (date) => {
 const timestampToDate = (timestamp) => new Date(timestamp)
 
 
-
 // Function to convert date to week number (Saturday-Friday week structure)
 function getCurrentWeeKRange() {
     // Current Date
