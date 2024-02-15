@@ -22,3 +22,5 @@ server/logs/
 server/.env
 
 server/server.log
+# Local Netlify folder
+.netlify
