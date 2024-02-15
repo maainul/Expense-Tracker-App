@@ -24,6 +24,7 @@ const SignupForm = () => {
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
+        console.log('############# sign up####################')
         e.preventDefault()
         if (password !== confirmPassword) {
             setErrors(["Passwords do not match"]);

@@ -8,19 +8,18 @@ import { toast } from 'react-hot-toast';
 // Component-related imports
 import Input from 'components/Input/Input'
 import Submit from 'components/buttons/Submit'
-import ButtonPrimary from 'components/buttons/ButtonPrimary';
 import MainLayout from 'components/layout/MainLayout/MainLayout'
 
 // Context and Hooks:
 import { useAuth } from 'context/authContext'
-import { useAllExpenseTypes } from 'hooks/useExpenseTypes';
 
 // Utility Function Imports
 import { closeDetailsModalForm, showDetails, showModalForm } from 'utils/modalForm';
 
 // API-related Imports
-import { C_Exp_TYP_URL } from "api/expenseType";
+import { C_Exp_TYP_URL, R_EX_TYP_URL } from "api/expenseType";
 import { closeModalForm } from 'utils/modalForm';
+import Pagination from 'components/pagination/Pagination';
 
 
 const ExpenseTypes = () => {
@@ -32,8 +31,28 @@ const ExpenseTypes = () => {
     const [errors, setErrors] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
 
+    // Sorting Based on this :  latest,oldest,a-z,z-a
+    const [sorting, setSorting] = useState('latest')
+
+    // Searching
+    const [search, setSearch] = useState('')
+
+
+    // Pagination
+    const [numberOfPage, setNumberOfPage] = useState(5)
+    const [page, setPage] = useState('1')
+    const [limit, setLimit] = useState('10')
+
+
+    console.log("$$$$$$$$$$$$$$ numberOfPage$$$$$$$$$$$$$$$$$$$$$$$")
+    console.log(numberOfPage)
+    console.log(limit)
+    console.log("$$$$$$$$$$$$$$ numberOfPage$$$$$$$$$$$$$$$$$$$$$$$")
+
+
+
     // All Expesne Tyles List
-    const { expenseTypeList, getExpTyps } = useAllExpenseTypes([])
+    const [expenseTypeList, setExpenseTypeList] = useState([])
 
     // Edit State Data
     const [editExpenseTypeData, setEditExpenseTypeData] = useState(null);
@@ -43,6 +62,23 @@ const ExpenseTypes = () => {
         setEditExpenseTypeData({ ...expl, id: expl._id }); // Assuming expl has an _id field
         showModalForm();
     };
+
+    // const numberOfPage = expenseTypeList.length
+    // Update Table Data while call the URL
+    useEffect(() => {
+        const getExpTypsgetExpTyps = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8081/api/v1/expense-type/read/all?sort=${sorting}&search=${search}&page=${page}&limit=${limit}`);
+                setExpenseTypeList(response.data.data || [])
+                setNumberOfPage(response.data.numOfPage)
+                setErrors(null)
+            } catch (error) {
+                console.log("Error While Getting Expense Types", error)
+            }
+        }
+        getExpTypsgetExpTyps()
+    }, [sorting, search])
+
 
     // Check if editExpenseTypeData is provided and set the form fields accordingly
     useEffect(() => {
@@ -57,20 +93,12 @@ const ExpenseTypes = () => {
         }
     }, [editExpenseTypeData]);
 
-    // Check mode for debugging
-    if (isEditing) {
-        console.log("Editing Mode")
-    } else {
-        console.log("Adding Mode")
-    }
-
     // Submit Form Data
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             setLoading(true);
             if (isEditing) {
-                console.log("Editing Mode")
                 // Update existing expense type
                 const response = await axios.put(`http://localhost:8081/api/v1/expense-type/update/${editExpenseTypeData.id}`, {
                     name,
@@ -81,11 +109,11 @@ const ExpenseTypes = () => {
                     setErrors(response.data.errors)
                     toast.error(response.data.message)
                 } else {
+                    setExpenseTypeList(prevExp => [...prevExp, response.data.data])
                     toast.success(response.data && response.data.message)
                     console.log(`Expense Type Added Successfully`)
                 }
             } else {
-                console.log("Adding Mode")
                 const response = await axios.post(C_Exp_TYP_URL, {
                     name,
                     icon,
@@ -95,6 +123,7 @@ const ExpenseTypes = () => {
                     setErrors(response.data.errors)
                     toast.error(response.data.message)
                 } else {
+                    setExpenseTypeList(prevExp => [...prevExp, response.data.data])
                     toast.success(response.data && response.data.message)
                     console.log(`Expense Type Added Successfully`)
                 }
@@ -102,8 +131,6 @@ const ExpenseTypes = () => {
             setName('')
             setIcon('')
             setErrors([])
-            // Call getExpenseTypes to update the list after adding a new expense type
-            getExpTyps()
 
         } catch (error) {
             console.error(`Invalid Expense Type : ${error}`)
@@ -113,26 +140,46 @@ const ExpenseTypes = () => {
         }
     }
 
-    // Show Modal For Edit and Delete
-    function toggleModal(modalId) {
-        var modal = document.getElementById('editDeleteModal');
-        if (modal) {
-            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-        }
-
-      
-    }
-
-
     return (
         <>
             <MainLayout>
-                {/* Expense Table */}
                 <div className='content-container'>
-                    <div id="editDeleteModal" className='editDeleteModalContainer'>
-                        <div className='editDel'><i class="bx bx-edit-alt me-1 edit-del-icon"></i><span>Edit</span></div>
-                        <div className='editDel'><i class="bx bx-trash me-1 edit-del-icon"></i><span>Delete</span></div>
+                    <div className='button-filter'>
+                        <div className='filter-design filter-width'>
+                            <span className='filter-title'>Limit</span>
+                            <select value={limit} onChange={(e) => setLimit(e.target.value)} className='form-select'>
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">20</option>
+                                <option value="20">30</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                        <div className='filter-design filter-width'>
+                            <span className='filter-title'>Sort</span>
+                            <select value={sorting} onChange={(e) => setSorting(e.target.value)} className='form-select'>
+                                <option value="latest">Latest</option>
+                                <option value="oldest">Oldest</option>
+                                <option value="a-z">A-Z</option>
+                                <option value="z-a">Z-A</option>
+                            </select>
+                        </div>
+                        <div className='filter-design filter-width'>
+                            <span className='filter-title'>Search</span>
+                            <input value={search} onChange={(e) => setSearch(e.target.value)} className='form-select' type='text' placeholder='Search.....' />
+                        </div>
+                        <div>
+                            <button className='addButton'
+                                title={"Add"}
+                                onClick={() => {
+                                    showModalForm();
+                                    // getExpTypsgetExpTyps()
+                                }}
+                            >Add</button>
+                        </div>
                     </div>
+
                     <table className='table-height'>
                         <thead>
                             <tr className='table-header'>
@@ -143,50 +190,32 @@ const ExpenseTypes = () => {
                             </tr>
                         </thead>
                         <tbody>
-                        {expenseTypeList.map((expl, index) => (
-                            <tr key={expl._id}>
-                                <td>{expl._id}</td>
-                                <td>{expl.icon}</td>
-                                <td>{expl.name}</td>
-                                <td>
-                                    <i 
-                                    class="bx bx-dots-vertical-rounded dashboard-icon" 
-                                    onClick={() => toggleModal(`editDeleteModal${index}`)}
-                                    ></i>
-                                    <i class="bx bx-dots-vertical-rounded dashboard-icon" onClick={() => showDetails({ expl })}></i>
-                                    <i class="bx bxs-edit dashboard-icon editIcon" onClick={() => handleEditForm({ expl })}></i>
-                                </td>
-                            </tr>
-                        ))}
+                            {expenseTypeList.map((expl) => (
+                                <tr key={expl._id}>
+                                    <td>{expl._id}</td>
+                                    <td>{expl.icon}</td>
+                                    <td>{expl.name}</td>
+                                    <td>
+                                        <button className='tableButtonView' onClick={() => showDetails({ expl })}>View</button>
+                                        <button className='tableButtonUpdate' onClick={() => handleEditForm({ expl })}>Update</button>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
-                    <div className="pagination-container">
-                        <span className="paginationNumber"> <i class='pagination-icon bx bx-chevrons-left'></i> </span>
-                        <span className="paginationNumber">1</span>
-                        <span className="paginationNumber">2</span>
-                        <span className="paginationNumber">3</span>
-                        <span className="paginationNumber">4</span>
-                        <span className="paginationNumber"><i class='pagination-icon bx bx-chevrons-right'></i></span>
+                    <Pagination numberOfPage={numberOfPage} setPage={setPage} />
+                    <div className="modal-width">
+                        <div className='overlay' onClick={closeDetailsModalForm}></div>
+                        <div className='details-modal-form'>
+                            <span onClick={closeDetailsModalForm}>&times;</span>
+                        </div>
                     </div>
                 </div >
-                <div className="modal-width">
-                    <div className='overlay' onClick={closeDetailsModalForm}></div>
-                    <div className='details-modal-form'>
-                        <span onClick={closeDetailsModalForm}>&times;</span>
-                    </div>
-                </div>
-                {/* Add Button */}
-                <div className='add-expense-btn'>
-                    <ButtonPrimary
-                        clsName={"bx bx-plus me-sm-1"}
-                        title={"Add"}
-                        onClick={() => {
-                            showModalForm();
-                            getExpTyps()
-                        }}
-                    />
-                </div>
+
             </MainLayout>
+
+
+
             {/* Form Expens Form */}
             <div className='overlay' onClick={closeModalForm}></div>
             <div className='modal-form'>

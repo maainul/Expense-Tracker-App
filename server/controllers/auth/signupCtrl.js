@@ -1,5 +1,6 @@
 import { logger } from "../../middleware/logMiddleware.js";
 import UserModel from "../../models/User.js";
+import { SignupUserService } from "../../service/Auth.js";
 import MValidator from "../../validator/MValidator.js";
 
 // Validation Rules
